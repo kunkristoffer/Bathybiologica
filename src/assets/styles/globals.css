@@ -104,11 +104,11 @@
   }
 
   header > :first-child {
-    @apply container mx-auto flex justify-between items-center p-4 h-20;
+    @apply container mx-auto h-20 flex justify-between items-center p-4;
   }
 
   main > section > :first-child {
-    @apply container mx-auto flex flex-col p-4;
+    @apply container mx-auto flex flex-col px-4 py-16 lg:py-24;
   }
 
   footer > :first-child {
