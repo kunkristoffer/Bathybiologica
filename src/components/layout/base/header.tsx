@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/ui/buttons/buttonLink";
 import { NavigationDesktop } from "@/components/layout/navigation/desktop";
 import { NavigationMobile } from "@/components/layout/navigation/mobile";
+import { DarkModeToggle } from "@/components/ui/buttons/darkModeToggle";
 
 export function Header() {
   return (
@@ -11,7 +12,7 @@ export function Header() {
         </span>
         <NavigationDesktop />
         <span className="flex-1 flex justify-end-safe items-center gap-2">
-          <ButtonLink href="/#" label="🌑" variant="secondary" style="outline" />
+          <DarkModeToggle />
           <ButtonLink href="/#" label="Donate Now" variant="secondary" className="max-lg:hidden" />
           <NavigationMobile />
         </span>
