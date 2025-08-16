@@ -97,7 +97,7 @@
 
 
   header > :first-child {
-    @apply container mx-auto flex justify-between items-center p-4;
+    @apply container mx-auto flex justify-between items-center p-4 h-20;
   }
 
   main > section > :first-child {
