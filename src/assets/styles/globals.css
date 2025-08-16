@@ -31,12 +31,20 @@
   --duration-hover: 300ms;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #b9d9eb;
+    --foreground: #d0e1eb;
+
+    --primary: #30c5ff;
+    --secondary: #0369a1;
+    --tertiary: #0369a1;
+
+    --color-text: #000000;
+    --color-surface: #000000;
+    --color-border: #000000;
   }
-} */
+}
 
 @layer utilities {
   .transition-hover {
@@ -94,7 +102,6 @@
     display: flex;
     flex-flow: column nowrap;
   }
-
 
   header > :first-child {
     @apply container mx-auto flex justify-between items-center p-4 h-20;
