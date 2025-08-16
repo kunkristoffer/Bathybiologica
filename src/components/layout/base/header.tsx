@@ -4,7 +4,7 @@ import { NavigationMobile } from "@/components/layout/navigation/mobile";
 
 export function Header() {
   return (
-    <header className="w-full fixed">
+    <header className="z-50 w-full fixed bg-background shadow-lg">
       <div>
         <span className="flex-1">
           <ButtonLink href="/#" label="logo" />
