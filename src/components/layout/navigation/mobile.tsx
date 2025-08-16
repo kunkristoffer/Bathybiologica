@@ -15,7 +15,7 @@ export function NavigationMobile() {
       <button onClick={() => setIsOpen(!isOpen)}>🍞</button>
       <ul
         className={`
-          z-40 fixed inset-0 top-20
+          fixed inset-0 top-20
           flex flex-col items-center justify-center gap-4 p-4
           ${isOpen ? "" : "translate-x-full"}
           backdrop-blur-md backdrop-brightness-50 transition-transform
