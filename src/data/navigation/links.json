@@ -1,26 +1,26 @@
 [
   {
-    "label": "About",
-    "href": "/about"
-  },
-  {
     "label": "Donate",
-    "href": "/#landing-donate"
+    "href": "/#donate"
   },
   {
     "label": "Volunteer",
-    "href": "/#landing-volunteer"
+    "href": "/#volunteer"
   },
   {
     "label": "Gallery",
-    "href": "/#landing-gallery"
+    "href": "/#gallery"
   },
   {
     "label": "Projects",
-    "href": "/#landing-projects"
+    "href": "/#projects"
   },
   {
     "label": "History",
-    "href": "/#landing-history"
+    "href": "/history"
+  },
+  {
+    "label": "About",
+    "href": "/about"
   }
 ]
