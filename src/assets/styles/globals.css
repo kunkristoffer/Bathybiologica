@@ -49,10 +49,14 @@
 
   /* Durations */
   --duration-hover: 300ms;
+
+  /* Layout */
+  --header-h: 5rem;
 }
 
 @layer base {
   html {
+    scroll-padding-top: var(--header-h);
     scroll-behavior: smooth;
   }
 
@@ -75,7 +79,8 @@
   }
 
   header > :first-child {
-    @apply container mx-auto h-20 flex justify-between items-center p-4;
+    height: var(--header-h);
+    @apply container mx-auto flex justify-between items-center p-4;
   }
 
   main > section > :first-child {
