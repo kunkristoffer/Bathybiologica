@@ -2,6 +2,7 @@ import { ButtonLink } from "@/components/ui/buttons/buttonLink";
 import { NavigationDesktop } from "@/components/layout/navigation/desktop";
 import { NavigationMobile } from "@/components/layout/navigation/mobile";
 import { DarkModeToggle } from "@/components/ui/buttons/darkModeToggle";
+import { ChangeLocaleButton } from "@/components/ui/buttons/changeLocaleButton";
 
 export function Header() {
   return (
@@ -13,7 +14,7 @@ export function Header() {
         <NavigationDesktop />
         <span className="flex-1 flex justify-end-safe items-center gap-2">
           <DarkModeToggle />
-          <ButtonLink href="/#" label="Donate Now" variant="secondary" className="max-lg:hidden" />
+          <ChangeLocaleButton />
           <NavigationMobile />
         </span>
       </div>
