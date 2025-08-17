@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Set default theme to dark if we can't get user prefference */
 :root {
@@ -6,13 +6,13 @@
 }
 
 /* Override if theme cookie exists, is set trough actions/changeTheme.ts */
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   color-scheme: dark;
 }
-:root[data-theme="light"] {
+:root[data-theme='light'] {
   color-scheme: light;
 }
-:root[data-theme="system"] {
+:root[data-theme='system'] {
   color-scheme: light dark;
 }
 
@@ -20,11 +20,15 @@
   /* Colors */
   --background: light-dark(#b9d9eb, #070b1b);
   --foreground: light-dark(#d0e1eb, #0f172a);
+  --panel: light-dark(#d0e1eb, #16213b);
+  --surface: light-dark(#d0e1eb, #151f36);
+  --input-field: light-dark(#d0e1eb, #2a3244);
+  --border: light-dark(#d0e1eb, #1e2a46);
 
   /* Text */
   --color-text: light-dark(#000000, #ffffff);
-  --color-surface: light-dark(#000000, #f8f9fa);
-  --color-border: light-dark(#000000, #e0e0e0);
+  --color-text-panel: light-dark(#000000, #f8f9fa);
+  --color-text-surface: light-dark(#000000, #f8f9fa);
 
   /* Action colors */
   --primary: #30c5ff;
@@ -111,6 +115,11 @@
   /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-panel: var(--panel);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-input-field: var(--input-field);
 
   --color-primary: var(--primary);
   --color-primary-active: var(--primary-active);
