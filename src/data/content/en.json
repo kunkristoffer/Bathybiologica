@@ -22,11 +22,13 @@
     "firstNamePlaceholder": "John",
     "lastName": "Last name",
     "lastNamePlaceholder": "Doe",
+    "email": "E-mail",
+    "emailPlaceholder": "john@doe.com",
     "subject": "Subject",
     "subjectPlaceholder": "What are you wondering about",
     "message": "Message",
     "messagePlaceholder": "message...",
     "submit": "Send message",
-    "submitting": "Sending..."
+    "pending": "Sending..."
   }
 }

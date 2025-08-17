@@ -19,14 +19,16 @@
   },
   "contactUsForm": {
     "firstName": "Fornavn",
-    "firstNamePlaceholder": "Ole",
+    "firstNamePlaceholder": "Ola",
     "lastName": "Etternavn",
     "lastNamePlaceholder": "Nordmann",
+    "email": "E-post",
+    "emailPlaceholder": "ola@nordmann.com",
     "subject": "Emne",
     "subjectPlaceholder": "Hva lurer du på?",
     "message": "Melding",
     "messagePlaceholder": "Melding...",
     "submit": "Send melding",
-    "submitting": "Sender..."
+    "pending": "Sender..."
   }
 }
