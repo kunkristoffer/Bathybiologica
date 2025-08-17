@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Set default theme to dark if we can't get user prefference */
 :root {
@@ -6,13 +6,13 @@
 }
 
 /* Override if theme cookie exists, is set trough actions/changeTheme.ts */
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   color-scheme: dark;
 }
-:root[data-theme="light"] {
+:root[data-theme='light'] {
   color-scheme: light;
 }
-:root[data-theme="system"] {
+:root[data-theme='system'] {
   color-scheme: light dark;
 }
 
@@ -20,11 +20,15 @@
   /* Colors */
   --background: light-dark(#b9d9eb, #070b1b);
   --foreground: light-dark(#d0e1eb, #0f172a);
+  --panel: light-dark(#a9ceeb, #16213b);
+  --surface: light-dark(#9baab3, #151f36);
+  --input-field: light-dark(#e7eaee, #2a3244);
+  --border: light-dark(#67c0c7, #1e2a46);
 
   /* Text */
-  --color-text: light-dark(#000000, #ffffff);
-  --color-surface: light-dark(#000000, #f8f9fa);
-  --color-border: light-dark(#000000, #e0e0e0);
+  --color-text: light-dark(#2d2c2e, #ffffff);
+  --color-text-panel: light-dark(#000000, #f8f9fa);
+  --color-text-surface: light-dark(#000000, #f8f9fa);
 
   /* Action colors */
   --primary: #30c5ff;
@@ -41,14 +45,19 @@
   --success: #08a33c;
   --warning: #f7be03;
   --danger: #ff9b42;
-  --error: #8a3033;
+  --error: #a84f52;
+  --disabled: light-dark(#dadada, #3b3b3b);
 
   /* Durations */
   --duration-hover: 300ms;
+
+  /* Layout */
+  --header-h: 5rem;
 }
 
 @layer base {
   html {
+    scroll-padding-top: var(--header-h);
     scroll-behavior: smooth;
   }
 
@@ -71,7 +80,8 @@
   }
 
   header > :first-child {
-    @apply container mx-auto h-20 flex justify-between items-center p-4;
+    height: var(--header-h);
+    @apply container mx-auto flex justify-between items-center p-4;
   }
 
   main > section > :first-child {
@@ -112,6 +122,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
+  --color-panel: var(--panel);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-input-field: var(--input-field);
+
   --color-primary: var(--primary);
   --color-primary-active: var(--primary-active);
   --color-primary-hover: var(--primary-hover);
@@ -126,6 +141,7 @@
   --color-warning: var(--warning);
   --color-danger: var(--danger);
   --color-error: var(--error);
+  --color-disabled: var(--disabled);
 
   /* font */
   --font-sans: var(--font-geist-sans);

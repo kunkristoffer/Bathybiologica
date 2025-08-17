@@ -1,9 +1,35 @@
 {
-  "Landing": {
-    "Mission": {
-      "Title": "Halla verden!",
-      "P1": "Officia iusto pariatur dignissimos perferendis consectetur? Laboriosam deleniti aperiam, totam officiis libero ad nihil iusto consectetur maiores, eligendi rem magnam illum tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      "P2": "Dolor nulla laudantium velit qui quasi, possimus iure harum! Quia numquam blanditiis voluptate dolor aut nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati non quibusdam autem eos reiciendis repellendus sit in voluptate sapiente eveniet."
+  "landing": {
+    "hero": {
+      "title": "Fra nysgjerrighet til havvern",
+      "subtitle": "Vi viderefører arbeidet deres ved å søtte grundig og åpen marinforskning.",
+      "donate": "Donasjon",
+      "volunteer": "Bli med oss"
+    },
+    "mission": {
+      "title": "Vårt formål",
+      "p1": "Vi støtter feltarbeid fra fjorder til åpent hav, investerer i åpne data og transparente metoder, og styrker mennesker og verktøy som gjør forskning etterprøvbar og nyttig. Ved å dele resultater bredt og samarbeide med lokalsamfunn, utdanning og forvaltning, bidrar vi til beslutninger som restaurerer natur, sikrer arter og bevarer havet for kommende generasjoner.",
+      "p2": "Dolor nulla laudantium velit qui quasi, possimus iure harum! Quia numquam blanditiis voluptate dolor aut nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati non quibusdam autem eos reiciendis repellendus sit in voluptate sapiente eveniet."
+    },
+    "contactUs": {
+      "title": "Kontakt oss",
+      "p1": "Har du noen spørsmål om oss, eller lurer på hvordan du kan bli involvert?",
+      "p2": "Vi ser fram til å høre fra deg"
     }
+  },
+  "contactUsForm": {
+    "firstName": "Fornavn",
+    "firstNamePlaceholder": "Ola",
+    "lastName": "Etternavn",
+    "lastNamePlaceholder": "Nordmann",
+    "email": "E-post",
+    "emailPlaceholder": "ola@nordmann.com",
+    "subject": "Emne",
+    "subjectPlaceholder": "Hva lurer du på?",
+    "message": "Melding",
+    "messagePlaceholder": "Melding...",
+    "submit": "Send melding",
+    "pending": "Sender...",
+    "status": "Kontakt oss skjema er under utvikling og sender ikke ut meldinger akkurat nå!"
   }
 }
