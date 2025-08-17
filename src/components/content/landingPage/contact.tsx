@@ -2,7 +2,7 @@ import { Section } from '@/components/layout/base/section';
 
 export function LandingContact() {
   return (
-    <Section sectionClassName='' className=''>
+    <Section id='contact' sectionClassName='' className=''>
       <p>Contact</p>
     </Section>
   );

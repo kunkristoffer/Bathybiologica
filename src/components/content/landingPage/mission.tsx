@@ -5,7 +5,7 @@ import Image from "next/image";
 export function LandingMission() {
   const i18n = useTranslations("Landing.Mission");
   return (
-    <Section sectionClassName="bg-foreground" className="flex-col md:flex-row gap-12 lg:gap-8">
+    <Section id="mission" sectionClassName="bg-foreground" className="flex-col md:flex-row gap-12 lg:gap-8">
       <div className="flex-1 flex flex-col gap-8">
         <h2 className="text-primary">{i18n("Title")}</h2>
         <p>{i18n("P1")}</p>
