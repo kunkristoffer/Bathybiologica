@@ -1,11 +1,13 @@
 import { Section } from "@/components/layout/base/section";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export function LandingMission() {
+  const i18n = useTranslations("HomePage");
   return (
     <Section sectionClassName="bg-foreground" className="flex-col md:flex-row gap-12 lg:gap-8">
       <div className="flex-1 flex flex-col gap-8">
-        <h2 className="text-primary">Our Mission</h2>
+        <h2 className="text-primary">{i18n("title")}</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati non quibusdam autem eos reiciendis
           repellendus sit in voluptate sapiente eveniet, dolor nulla laudantium velit qui quasi, possimus iure harum!
