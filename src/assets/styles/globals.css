@@ -20,13 +20,13 @@
   /* Colors */
   --background: light-dark(#b9d9eb, #070b1b);
   --foreground: light-dark(#d0e1eb, #0f172a);
-  --panel: light-dark(#d0e1eb, #16213b);
-  --surface: light-dark(#d0e1eb, #151f36);
-  --input-field: light-dark(#d0e1eb, #2a3244);
-  --border: light-dark(#d0e1eb, #1e2a46);
+  --panel: light-dark(#a9ceeb, #16213b);
+  --surface: light-dark(#9baab3, #151f36);
+  --input-field: light-dark(#e7eaee, #2a3244);
+  --border: light-dark(#67c0c7, #1e2a46);
 
   /* Text */
-  --color-text: light-dark(#000000, #ffffff);
+  --color-text: light-dark(#2d2c2e, #ffffff);
   --color-text-panel: light-dark(#000000, #f8f9fa);
   --color-text-surface: light-dark(#000000, #f8f9fa);
 
