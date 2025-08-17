@@ -85,11 +85,12 @@ export function ContactForm(props: ContactUsFormProps) {
         <ButtonAction
           type='submit'
           label={pending ? i18n('pending') : i18n('submit')}
-          disabled={pending}
+          disabled={true}
           variant='secondary'
           stretch
         />
       )}
+      <p className='text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
     </form>
   );
 }

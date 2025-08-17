@@ -29,6 +29,7 @@
     "message": "Melding",
     "messagePlaceholder": "Melding...",
     "submit": "Send melding",
-    "pending": "Sender..."
+    "pending": "Sender...",
+    "status": "Kontakt oss skjema er under utvikling og sender ikke ut meldinger akkurat nå!"
   }
 }

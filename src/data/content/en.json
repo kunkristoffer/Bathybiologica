@@ -29,6 +29,7 @@
     "message": "Message",
     "messagePlaceholder": "message...",
     "submit": "Send message",
-    "pending": "Sending..."
+    "pending": "Sending...",
+    "status": "Contact form is under development and does not work, please check back later!"
   }
 }
