@@ -1,9 +1,32 @@
 {
-  "Landing": {
-    "Mission": {
-      "Title": "Hello world!",
-      "P1": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati non quibusdam autem eos reiciendis repellendus sit in voluptate sapiente eveniet, dolor nulla laudantium velit qui quasi, possimus iure harum! Quia numquam blanditiis voluptate dolor aut nobis.",
-      "P2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto pariatur dignissimos perferendis consectetur? Laboriosam deleniti aperiam, totam officiis libero ad nihil iusto consectetur maiores, eligendi rem magnam illum tenetur."
+  "landing": {
+    "hero": {
+      "title": "From curiosity to conservation",
+      "subtitle": "Continuing their work with support for rigorous, open marine science.",
+      "donate": "Donate",
+      "volunteer": "Volunteer"
+    },
+    "mission": {
+      "title": "Our mission",
+      "p1": "We support field research from fjords to the open ocean, invest in open data and transparent methods, and back the people and tools that make marine science reproducible and useful. By sharing results widely and partnering with communities, educators, and policymakers, we help transform discovery into decisions that restore habitats, safeguard species, and sustain the ocean for future generations.",
+      "p2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia iusto pariatur dignissimos perferendis consectetur? Laboriosam deleniti aperiam, totam officiis libero ad nihil iusto consectetur maiores, eligendi rem magnam illum tenetur."
+    },
+    "contactUs": {
+      "title": "Contact us",
+      "p1": "Have questions about our work or how you can get involved? ",
+      "p2": "We'd love to hear from you."
     }
+  },
+  "contactUsForm": {
+    "firstName": "First name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Doe",
+    "subject": "Subject",
+    "subjectPlaceholder": "What are you wondering about",
+    "message": "Message",
+    "messagePlaceholder": "message...",
+    "submit": "Send message",
+    "submitting": "Sending..."
   }
 }
