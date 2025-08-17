@@ -1,9 +1,9 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { changeLocale } from "@/i18n/change";
+import { changeLocale } from "@/actions/changelocale";
 import { useLocale } from "next-intl";
 
-export function ChangeLocaleButton() {
+export function SelectLocaleButton() {
   const pathname = usePathname();
   const current = useLocale();
 
