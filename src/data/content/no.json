@@ -1,5 +1,9 @@
 {
-  "HomePage": {
-    "title": "Halla verden!"
+  "Landing": {
+    "Mission": {
+      "Title": "Halla verden!",
+      "P1": "Officia iusto pariatur dignissimos perferendis consectetur? Laboriosam deleniti aperiam, totam officiis libero ad nihil iusto consectetur maiores, eligendi rem magnam illum tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "P2": "Dolor nulla laudantium velit qui quasi, possimus iure harum! Quia numquam blanditiis voluptate dolor aut nobis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio obcaecati non quibusdam autem eos reiciendis repellendus sit in voluptate sapiente eveniet."
+    }
   }
 }
