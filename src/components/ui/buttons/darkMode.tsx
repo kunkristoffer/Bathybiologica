@@ -10,15 +10,12 @@ export function DarkModeToggle({ current }: { current: Theme }) {
   return (
     <form action={changeTheme}>
       <input type="hidden" name="path" value={pathname} />
-      <label htmlFor="theme-select" className="sr-only">
-        Theme
-      </label>
       <select
         id="theme-select"
         name="theme"
         defaultValue={current}
         onChange={(e) => e.currentTarget.form?.requestSubmit()}
-        className="rounded-md border px-3 py-2 text-sm bg-[var(--foreground)] text-[var(--color-text)]"
+        className=""
       >
         <option value="light">Light</option>
         <option value="dark">Dark</option>

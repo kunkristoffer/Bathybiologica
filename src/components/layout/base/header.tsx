@@ -1,11 +1,11 @@
 import type { Theme } from "@/actions/changeTheme";
 import Image from "next/image";
+import Link from "next/link";
 import { cookies } from "next/headers";
 import { NavigationDesktop } from "@/components/layout/navigation/desktop";
 import { NavigationMobile } from "@/components/layout/navigation/mobile";
 import { SelectLocaleButton } from "@/components/ui/buttons/selectLocale";
 import { DarkModeToggle } from "@/components/ui/buttons/darkMode";
-import Link from "next/link";
 
 export async function Header() {
   const theme = ((await cookies()).get("theme")?.value as Theme) || "system";
