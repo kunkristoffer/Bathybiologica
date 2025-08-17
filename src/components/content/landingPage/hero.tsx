@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/components/ui/buttons/buttonLink";
-import { Section } from "../base/section";
+import { Section } from "@/components/layout/base/section";
 import Image from "next/image";
 
 export function LandingHero() {
