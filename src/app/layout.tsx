@@ -5,6 +5,8 @@ import { Footer } from "@/components/layout/base/footer";
 import "@/assets/styles/globals.css";
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { cookies } from "next/headers";
+import { Theme } from "@/actions/changeTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,10 +28,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Get user prefered language
   const locale = await getLocale();
 
+  // Check if user has changed prefered color theme
+  const theme = ((await cookies()).get("theme")?.value as Theme) || undefined;
+  const themeAttrs = theme ? { "data-theme": theme } : {};
+
   return (
-    <html lang={locale}>
+    <html lang={locale} {...themeAttrs}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider>
           <Header />
