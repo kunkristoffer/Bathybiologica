@@ -1,6 +1,6 @@
-import { ComponentProps, ComponentPropsWithoutRef, PropsWithChildren } from 'react';
+import { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 
-type Variant = 'primary' | 'secondary' | 'tertiary' | 'success' | 'danger' | 'warning' | 'error';
+type Variant = 'primary' | 'secondary' | 'tertiary' | 'success' | 'danger' | 'warning' | 'error' | 'disabled';
 type Style = 'solid' | 'outline';
 
 type ButtonLinkProps = PropsWithChildren<ComponentPropsWithoutRef<'button'>> & {
@@ -18,13 +18,14 @@ export function ButtonAction({
   label,
   onClick,
   className,
+  disabled = false,
   fill = 'solid',
   variant = 'primary',
   stretch = false,
   ...rest
 }: ButtonLinkProps) {
   // Base for use with variants
-  const TW_BASE = 'flex justify-center py-2 px-4 rounded-md box-border border-2 transition-all ';
+  const TW_BASE = 'flex justify-center py-2 px-4 rounded-md box-border border-2 transition-all cursor-pointer';
 
   // Variant color maps
   const TW_VARIANTS: Record<Variant, { solid: string; outline: string }> = {
@@ -56,13 +57,19 @@ export function ButtonAction({
       solid: 'border-transparent bg-error text-white hover:brightness-115',
       outline: 'border-error text-error hover:brightness-200',
     },
+    disabled: {
+      solid: 'border-transparent bg-disabled hover:brightness-115',
+      outline: 'border-disabled text-disabled hover:brightness-200',
+    },
   };
 
   // Construct tailwind classes
-  const twClasses = `${stretch ? 'w-full' : 'w-fit'} ${TW_BASE} ${TW_VARIANTS[variant][fill]} ${className}`;
+  const twClasses = `${stretch ? 'w-full' : 'w-fit'} ${TW_BASE} ${
+    TW_VARIANTS[disabled ? 'disabled' : variant][fill]
+  } ${className}`;
 
   return (
-    <button type='submit' onClick={onClick} className={twClasses} {...rest}>
+    <button type='submit' onClick={onClick} className={twClasses} disabled={disabled} {...rest}>
       {label}
     </button>
   );

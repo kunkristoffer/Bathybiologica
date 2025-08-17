@@ -45,7 +45,8 @@
   --success: #08a33c;
   --warning: #f7be03;
   --danger: #ff9b42;
-  --error: #8a3033;
+  --error: #a84f52;
+  --disabled: light-dark(#dadada, #3b3b3b);
 
   /* Durations */
   --duration-hover: 300ms;
@@ -140,6 +141,7 @@
   --color-warning: var(--warning);
   --color-danger: var(--danger);
   --color-error: var(--error);
+  --color-disabled: var(--disabled);
 
   /* font */
   --font-sans: var(--font-geist-sans);
