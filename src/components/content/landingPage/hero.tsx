@@ -22,8 +22,8 @@ export function LandingHero() {
         <h1 className='transition'>{i18n('title')}</h1>
         <p>{i18n('subtitle')}</p>
         <span className='flex gap-2'>
-          <ButtonLink label={i18n('donate')} href='/#landing-donate' variant='secondary' />
-          <ButtonLink label={i18n('volunteer')} href='/#landing-donate' style='outline' className='!bg-foreground/50' />
+          <ButtonLink label={i18n('donate')} href='/#donate' variant='secondary' />
+          <ButtonLink label={i18n('volunteer')} href='/#volunteer' style='outline' className='!bg-foreground/50' />
         </span>
       </div>
     </Section>
