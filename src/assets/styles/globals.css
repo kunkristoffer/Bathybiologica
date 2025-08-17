@@ -55,6 +55,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     position: relative;
     display: flex;

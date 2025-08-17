@@ -1,5 +1,9 @@
 [
   {
+    "label": "Projects",
+    "href": "/#projects"
+  },
+  {
     "label": "Donate",
     "href": "/#donate"
   },
@@ -10,10 +14,6 @@
   {
     "label": "Gallery",
     "href": "/#gallery"
-  },
-  {
-    "label": "Projects",
-    "href": "/#projects"
   },
   {
     "label": "History",

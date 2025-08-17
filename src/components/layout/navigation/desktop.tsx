@@ -6,7 +6,7 @@ export function NavigationDesktop() {
     <nav className='hidden sm:block'>
       <ul className='flex justify-around gap-4'>
         {menuLinks.map((item) => (
-          <Link key={'navbar-desktop-' + item.label} href={item.href}>
+          <Link key={'navbar-desktop-' + item.label} href={item.href} scroll>
             {item.label}
           </Link>
         ))}
