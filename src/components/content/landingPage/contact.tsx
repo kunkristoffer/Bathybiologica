@@ -1,4 +1,4 @@
-import { ContactUsForm } from '@/components/forms/contactUs';
+import { ContactForm } from '@/components/forms/contact';
 import { Section } from '@/components/layout/base/section';
 import { useTranslations } from 'next-intl';
 
@@ -11,7 +11,7 @@ export function LandingContact() {
         <p>{i18n('p1')}</p>
         <p>{i18n('p2')}</p>
       </div>
-      <ContactUsForm className='flex-1' />
+      <ContactForm className='flex-1' />
     </Section>
   );
 }
