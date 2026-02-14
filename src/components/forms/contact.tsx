@@ -11,11 +11,10 @@ import { FormInputText } from '@/components/ui/input/text';
 import { FormInputTextArea } from '@/components/ui/input/textArea';
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
 
+// Initial form state
 const INITIAL: ContactActionState = { ok: false, values: {} };
 
-type ContactUsFormProps = ComponentPropsWithoutRef<'form'>;
-
-export function ContactForm(props: ContactUsFormProps) {
+export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
   const [state, formAction] = useActionState(submitContactForm, INITIAL);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -38,17 +37,17 @@ export function ContactForm(props: ContactUsFormProps) {
         <FormInputText
           name='firstName'
           label={i18n('firstName')}
-          defaultValue={state.values?.firstName}
+          defaultValue={state.values?.first_name}
           placeholder={i18n('firstNamePlaceholder')}
-          errorMessage={state.fieldErrors?.firstName && state.fieldErrors?.firstName.at(0)}
+          errorMessage={state.fieldErrors?.first_name && state.fieldErrors?.first_name.at(0)}
           required
         />
         <FormInputText
           name='lastName'
           label={i18n('lastName')}
-          defaultValue={state.values?.lastName}
+          defaultValue={state.values?.last_name}
           placeholder={i18n('lastNamePlaceholder')}
-          errorMessage={state.fieldErrors?.lastName && state.fieldErrors?.lastName.at(0)}
+          errorMessage={state.fieldErrors?.last_name && state.fieldErrors?.last_name.at(0)}
           required
         />
       </span>
@@ -85,12 +84,11 @@ export function ContactForm(props: ContactUsFormProps) {
         <ButtonAction
           type='submit'
           label={pending ? i18n('pending') : i18n('submit')}
-          disabled={true}
           variant='secondary'
           stretch
         />
       )}
-      <p className='text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
+      <p className='hidden text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
     </form>
   );
 }
