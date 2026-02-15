@@ -35,38 +35,31 @@ export class DiscordHook {
 
   /** Finalizes and sends webhook */
   async send() {
-    try {
-      // Validate that hook has postable content
-      if (this.embeds.length === 0 || this.embed.length > 10) {
-        throw new Error("Hooks must contain at least one embed as message, or max 10")
-      }
-
-      // Build payload
-      const payload: DiscordBody = {
-        ...this.body,
-        embeds: this.embeds,
-      }
-
-      console.log(this)
-
-      // Send message
-      const response = await fetch(this.webhookUrl, {
-        method: "POST",
-        headers: {
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      })
-
-      console.log(response)
-
-      // Check for ok response to validate successful submission
-      if (!response.ok) {
-        throw new Error(response.statusText)
-      }
+    // Validate that hook has postable content
+    if (this.embeds.length === 0 || this.embed.length > 10) {
+      throw new Error("Hooks must contain at least one embed as message, or max 10")
     }
-    catch (err) {
-      console.error(err)
+
+    // Build payload
+    const payload: DiscordBody = {
+      ...this.body,
+      embeds: this.embeds,
+    }
+
+    // Send message
+    const response = await fetch(this.webhookUrl, {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+
+    console.log(response)
+
+    // Check for ok response to validate successful submission
+    if (!response.ok) {
+      throw new Error(response.statusText)
     }
   }
 }

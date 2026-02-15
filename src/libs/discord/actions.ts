@@ -6,8 +6,6 @@ export async function discordNewMessage(form: Contact) {
     const url = process.env.DISCORD_WEBHOOK!
     const hook = new DiscordHook(url)
 
-    console.log(url)
-
     hook
       .message("Contact us form has been used!")
       .embed({
