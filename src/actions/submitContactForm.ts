@@ -39,15 +39,15 @@ export async function submitContactForm(
     // Pass contact details to db handler
     const dbResult = await dbPostContact(parsed.data)
     if (!dbResult) {
-      discordNewError("Unable to write to database")
+      await discordNewError("Unable to write to database")
       return { ok: false, message: "Unable to store your request, an admin has been notified" }
     }
 
     // Form was successfully submitted
-    discordNewMessage(parsed.data)
+    await discordNewMessage(parsed.data)
     return { ok: true, message: `We will get in touch as soon as possible ${dbResult.first_name}!`, values };
   } catch (err) {
-    discordNewError("An unknown error occured")
+    await discordNewError("An unknown error occured")
     return { ok: false, message: "An unknown error occured and an admin has been notified" }
   }
 }
