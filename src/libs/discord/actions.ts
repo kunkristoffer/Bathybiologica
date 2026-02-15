@@ -6,7 +6,7 @@ export async function discordNewMessage(form: Contact) {
     const url = process.env.DISCORD_WEBHOOK!
     const hook = new DiscordHook(url)
 
-    await hook
+    hook
       .message("Contact us form has been used!")
       .embed({
         color: 1127128,
@@ -17,7 +17,8 @@ export async function discordNewMessage(form: Contact) {
           { name: "Message", value: form.message }
         ]
       })
-      .send()
+
+    await hook.send()
   } catch (err) {
     console.error(err)
   }
@@ -28,7 +29,7 @@ export async function discordNewError(message: string) {
     const url = process.env.DISCORD_WEBHOOK!
     const hook = new DiscordHook(url)
 
-    await hook
+    hook
       .message("An error occured when the contact us form was used!")
       .embed({
         color: 16711680,
@@ -36,7 +37,8 @@ export async function discordNewError(message: string) {
           { name: "Reason", value: message }
         ]
       })
-      .send()
+
+    await hook.send()
   } catch (err) {
     console.error(err)
   }
