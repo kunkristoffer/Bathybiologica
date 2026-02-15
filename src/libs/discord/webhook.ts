@@ -37,7 +37,7 @@ export class DiscordHook {
   async send() {
     try {
       // Validate that hook has postable content
-      if (this.embeds.length === 0 || this.embed.length > 10) {
+      if (this.embeds.length === 0 || this.embeds.length > 10) {
         throw new Error("Hooks must contain at least one embed as message, or max 10")
       }
 
