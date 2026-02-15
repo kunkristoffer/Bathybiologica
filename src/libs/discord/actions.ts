@@ -19,7 +19,7 @@ export async function discordNewMessage(form: Contact) {
       })
       .send()
   } catch (err) {
-    console.log(err)
+    console.error(err)
   }
 }
 
@@ -38,6 +38,6 @@ export async function discordNewError(message: string) {
       })
       .send()
   } catch (err) {
-    console.log(err)
+    console.error(err)
   }
 }
