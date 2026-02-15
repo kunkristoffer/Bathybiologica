@@ -53,7 +53,7 @@ export class DiscordHook {
       const response = await fetch(this.webhookUrl, {
         method: "POST",
         headers: {
-          'Content-type': 'application/json'
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(payload)
       })
