@@ -58,8 +58,6 @@ export class DiscordHook {
         body: JSON.stringify(payload)
       })
 
-      console.log(response)
-
       // Check for ok response to validate successful submission
       if (!response.ok) {
         const text = await response.text().catch(() => "");
