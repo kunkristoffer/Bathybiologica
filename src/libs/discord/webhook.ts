@@ -53,7 +53,8 @@ export class DiscordHook {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        cache: "no-store"
       })
 
       // Check for ok response to validate successful submission
@@ -61,8 +62,7 @@ export class DiscordHook {
         const text = await response.text().catch(() => "");
         throw new Error(`An error occured when proccessing fetch in discordHook: ${response.statusText} - ${text}`)
       }
-    }
-    catch (err) {
+    } catch (err) {
       console.error(err)
     }
   }
