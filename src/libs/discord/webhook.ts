@@ -62,7 +62,8 @@ export class DiscordHook {
 
       // Check for ok response to validate successful submission
       if (!response.ok) {
-        throw new Error("An error occured when proccessing fetch in discordHook: " + response.statusText)
+        const text = await response.text().catch(() => "");
+        throw new Error(`An error occured when proccessing fetch in discordHook: ${response.statusText} - ${text}`)
       }
     }
     catch (err) {
