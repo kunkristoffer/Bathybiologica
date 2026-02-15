@@ -47,6 +47,7 @@ export class DiscordHook {
         embeds: this.embeds,
       }
 
+      console.log(payload)
 
       // Send message
       const response = await fetch(this.webhookUrl, {
