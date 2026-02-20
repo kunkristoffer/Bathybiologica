@@ -1,4 +1,7 @@
 {
   "tailwindCSS.classAttributes": ["class", "className", "sectionClassName", "contentClassName"],
   "typescript.preferences.importModuleSpecifier": "non-relative",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
 }
