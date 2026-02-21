@@ -1,4 +1,5 @@
 'use server';
+
 import { discordNewError, discordNewMessage } from '@/libs/discord/actions';
 import { dbPostContact } from '@/libs/supabase/actions';
 import { ContactSchema, type ContactInput } from '@/validation/contactForm';

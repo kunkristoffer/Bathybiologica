@@ -1,4 +1,6 @@
-import { supabase } from "@/libs/supabase/client"
+"use server"
+
+import { supabaseAdmin } from "@/libs/supabase/client"
 import { Contact } from "@/validation/contactForm"
 
 export async function dbPostContact(contact: Contact) {
@@ -7,7 +9,7 @@ export async function dbPostContact(contact: Contact) {
     const { hp, ...contactCleaned } = contact
 
     // Attempt db insert, id and created_at will be filled automatically
-    const { data, error } = await supabase.from("contacts").insert(contactCleaned).select()
+    const { data, error } = await supabaseAdmin.from("contacts").insert(contactCleaned).select()
 
     // Propigate errors to caller
     if (error) {
