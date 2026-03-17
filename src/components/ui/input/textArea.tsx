@@ -29,7 +29,7 @@ export function FormInputTextArea({
         defaultValue={defaultValue}
         placeholder={placeholder}
         required={required}
-        className={`bg-input-field rounded-md p-2`}
+        className={`bg-input text-text-input placeholder:text-text-input/50 rounded-md p-2`}
       />
       {errorMessage && <p className='text-error'>{errorMessage}</p>}
     </label>
