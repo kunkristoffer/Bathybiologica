@@ -5,13 +5,19 @@
   color-scheme: dark;
 
   /* Backgrounds */
-  --background: light-dark(hsl(200, 55%, 80%), hsl(230, 60%, 5%));
-  --foreground: light-dark(hsl(200, 40%, 85%), hsl(220, 50%, 10%));
+  --background: light-dark(hsl(200, 55%, 80%), hsl(211, 53%, 11%));
+  --foreground: light-dark(hsl(200, 40%, 85%), hsl(219, 37%, 17%));
   --panel: light-dark(hsl(205, 60%, 80%), hsl(220, 45%, 15%));
   --surface: light-dark(hsl(205, 15%, 65%), hsl(220, 45%, 15%));
 
   /* Borders */
   --border: light-dark(hsl(185, 45%, 60%), hsl(220, 40%, 20%));
+  --border-panel: light-dark(from var(--panel) h s calc(l - 20), from var(--panel) h s calc(l + 20));
+  --border-surface: light-dark(from var(--surface) h s calc(l - 20), from var(--surface) h s calc(l + 20));
+
+  /* Shadows */
+  --shadow-panel: light-dark(from var(--panel) h s calc(l - 20), from var(--panel) h s calc(l + 20));
+  --shadow-surface: light-dark(from var(--surface) h s calc(l - 20), from var(--surface) h s calc(l + 20));
 
   /* Text */
   --input-field: light-dark(hsl(215, 15%, 90%), hsl(220, 25%, 20%));
