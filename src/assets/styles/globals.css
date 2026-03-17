@@ -6,24 +6,30 @@
 
   /* Backgrounds */
   --background: light-dark(hsl(200, 55%, 80%), hsl(211, 53%, 11%));
-  --foreground: light-dark(hsl(200, 40%, 85%), hsl(219, 37%, 17%));
   --panel: light-dark(hsl(205, 60%, 80%), hsl(220, 45%, 15%));
   --surface: light-dark(hsl(205, 15%, 65%), hsl(220, 45%, 15%));
 
   /* Borders */
   --border: light-dark(hsl(185, 45%, 60%), hsl(220, 40%, 20%));
-  --border-panel: light-dark(from var(--panel) h s calc(l - 20), from var(--panel) h s calc(l + 20));
-  --border-surface: light-dark(from var(--surface) h s calc(l - 20), from var(--surface) h s calc(l + 20));
+  --border-panel: light-dark(hsl(from var(--panel) h s calc(l - 20)), hsl(from var(--panel) h s calc(l + 20)));
+  --border-surface: light-dark(hsl(from var(--surface) h s calc(l - 20)), hsl(from var(--surface) h s calc(l + 20)));
 
   /* Shadows */
-  --shadow-panel: light-dark(from var(--panel) h s calc(l - 20), from var(--panel) h s calc(l + 20));
-  --shadow-surface: light-dark(from var(--surface) h s calc(l - 20), from var(--surface) h s calc(l + 20));
+  --shadow-color-panel: light-dark(
+    hsl(from var(--panel) h s calc(l - 20) / 0.2),
+    hsl(from var(--panel) h s calc(l + 20) / 0.2)
+  );
+  --shadow-color-surface: light-dark(
+    hsl(from var(--surface) h s calc(l - 20) / 0.2),
+    hsl(from var(--surface) h s calc(l + 20) / 0.2)
+  );
 
   /* Text */
   --input-field: light-dark(hsl(215, 15%, 90%), hsl(220, 25%, 20%));
   --text: light-dark(hsl(270, 5%, 20%), hsl(0, 0%, 100%));
-  --text-panel: light-dark(hsl(0, 0%, 0%), hsl(210, 20%, 100%));
-  --text-surface: light-dark(hsl(0, 0%, 0%), hsl(210, 20%, 100%));
+  --text-muted: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
+  --text-panel: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
+  --text-surface: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
 
   /* Action colors */
   --primary: hsl(200, 100%, 60%);
@@ -124,15 +130,21 @@
 }
 
 @theme inline {
-  /* Colors */
+  /* Backgrounds */
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
   --color-panel: var(--panel);
   --color-surface: var(--surface);
-  --color-border: var(--border);
   --color-input-field: var(--input-field);
 
+  /* Borders */
+  --color-border-panel: 1px solid var(--border-panel);
+  --color-border-surface: 1px solid var(--border-surface);
+
+  /* Shadows */
+  --shadow-panel: 0 2px 2px var(--shadow-color-panel), 0 4px 4px var(--shadow-color-panel);
+  --shadow-surface: 0 2px 2px var(--shadow-color-surface), 0 4px 4px var(--shadow-color-surface);
+
+  /* Accents */
   --color-primary: var(--primary);
   --color-primary-active: var(--primary-active);
   --color-primary-hover: var(--primary-hover);
@@ -143,13 +155,16 @@
   --color-tertiary-active: var(--tertiary-active);
   --color-tertiary-hover: var(--tertiary-hover);
 
+  /* State colors */
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-danger: var(--danger);
   --color-error: var(--error);
   --color-disabled: var(--disabled);
 
-  /* font */
+  /* Typography */
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
