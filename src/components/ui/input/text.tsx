@@ -28,7 +28,7 @@ export function FormInputText({
         defaultValue={defaultValue}
         placeholder={placeholder}
         required={required}
-        className='w-full bg-input-field rounded-md p-2'
+        className='w-full bg-input text-text-input placeholder:text-text-input/50 rounded-md p-2'
       />
       {errorMessage && <p className='text-error'>{errorMessage}</p>}
     </label>

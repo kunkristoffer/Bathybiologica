@@ -8,6 +8,7 @@
   --background: light-dark(hsl(200, 85%, 95%), hsl(219, 37%, 17%));
   --surface: light-dark(hsl(from var(--background) h s calc(l - 3)), hsl(from var(--background) h s calc(l + 3)));
   --panel: light-dark(hsl(from var(--background) h s calc(l - 8)), hsl(from var(--background) h s calc(l + 8)));
+  --input: light-dark(hsl(200, 10%, 100%), hsl(220, 20%, 85%));
 
   /* Borders */
   --border: light-dark(hsl(185, 45%, 60%), hsl(220, 40%, 20%));
@@ -19,8 +20,8 @@
   --shadow-color-surface: light-dark(hsl(from var(--surface) h s 20 / 0.2), hsl(from var(--surface) h s 2 / 0.2));
 
   /* Text */
-  --input-field: light-dark(hsl(200, 10%, 100%), hsl(220, 25%, 20%));
   --text: light-dark(hsl(270, 5%, 20%), hsl(0, 0%, 100%));
+  --text-input: light-dark(hsl(270, 5%, 20%), hsl(270, 5%, 10%));
   --text-muted: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
   --text-panel: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
   --text-surface: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
@@ -132,7 +133,7 @@
   --color-background: var(--background);
   --color-panel: var(--panel);
   --color-surface: var(--surface);
-  --color-input-field: var(--input-field);
+  --color-input: var(--input);
 
   /* Borders */
   --color-border-panel: 1px solid var(--border-panel);
@@ -162,6 +163,7 @@
 
   /* Typography */
   --color-text: var(--text);
+  --color-text-input: var(--text-input);
   --color-text-muted: var(--text-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
