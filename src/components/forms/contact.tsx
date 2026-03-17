@@ -28,8 +28,8 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
       action={formAction}
       {...rest}
       className={`
-        flex flex-col p-4 gap-4
-        rounded-md border border-surface bg-surface
+        flex flex-col gap-4
+        rounded-md panel
         ${className}
       `}
     >
