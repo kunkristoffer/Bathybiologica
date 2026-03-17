@@ -29,7 +29,7 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
       {...rest}
       className={`
         flex flex-col p-4 gap-4
-        rounded-md border border-border bg-panel
+        rounded-md border border-surface bg-surface
         ${className}
       `}
     >
@@ -81,12 +81,7 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
           {state.message}
         </span>
       ) : (
-        <ButtonAction
-          type='submit'
-          label={pending ? i18n('pending') : i18n('submit')}
-          variant='secondary'
-          stretch
-        />
+        <ButtonAction type='submit' label={pending ? i18n('pending') : i18n('submit')} variant='secondary' stretch />
       )}
       <p className='hidden text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
     </form>
