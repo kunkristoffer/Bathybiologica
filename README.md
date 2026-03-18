@@ -6,11 +6,7 @@ This project was started in 2025 to facilitate and organize an online presence f
 
 ## Getting Started locally
 
-If is possible to run this project locally for development purposes, this section will guide you through the process
-
-### Required software
-
-> [!NOTE]  
+> [!TIP]  
 > The programs listed in this sections are just suggestions, if you have prefered software that handles Javascript based applications you can use those.
 
 You'll need the following pieces of software for running or modifying this application
@@ -23,17 +19,23 @@ You'll need the following pieces of software for running or modifying this appli
 
 You have two options when it comes to getting a local copy of this codebase, you can eiter clone with GIT ([tutorial](https://code.visualstudio.com/docs/sourcecontrol/quickstart)) or manually [download](https://github.com/kunkristoffer/Bathybiologica/archive/refs/heads/main.zip) it
 
+#### Cloning
+
 If you want to clone with GIT, open your terminal from the folder you want to save it in and run
 
 ```console
 git clone https://github.com/kunkristoffer/Bathybiologica
 ```
 
+#### Installing dependencies
+
 After you have a local copy of the files you can now install all required libraries through Node package manager command
 
 ```console
 npm install
 ```
+
+#### Running application
 
 > [!WARNING]  
 > Before we start the server you need to create the `.env.local` file in the root directory, you can base it off [.env.template](./.env.template). You can then contact a maintainer for development keys.
@@ -52,13 +54,13 @@ You should now see some status messages and a localhost link you can click on to
 
 If you're running into this warning when trying to run the console commands
 
-```diff
-- npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system.
-- For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
-- At line:1 char:1
-- npm run dev
-- ~~~
-- CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess
+```
+npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system.
+For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
+npm run dev
+~~~
+CategoryInfo : SecurityError: (:) [], PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess
 ```
 
 You need to allow the execution script from node to start by setting up an execution policy, you can read more [here](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy) or as a tl;dr you can run this command from the projects root directory
@@ -69,13 +71,13 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ### Command not found
 
-If you get this error when trying to start the project, check that you're in the projects root directory and that you have installed all dependencies.
+If you get this error when trying to start the project, check that you're in the projects root directory and that you have installed all dependencies as explained [here](#installing-dependencies).
 
-```diff
-- my-app@0.1.0 dev
-- next dev --turbopack
+```
+my-app@0.1.0 dev
+next dev --turbopack
 
-- sh: line 1: next: command not found
+sh: line 1: next: command not found
 ```
 
 You can try to re-install dependencies
