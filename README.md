@@ -4,6 +4,8 @@ Welcome to the repository for our website and community pages. In this document 
 
 This project was started in 2025 to facilitate and organize an online presence for our non-profit foundation, the plan is to have a website we can use to spread awareness and our reach. While the current page works as a static site which covers basic neccesseties, we have plans to expand it with CMS-driven articles and blog content, secure user authentication, and a community platform where members can communicate, collaborate, and organize events.
 
+You can find our roadmap in the milestone section [here](https://github.com/kunkristoffer/Bathybiologica/milestones)
+
 ## Getting Started locally
 
 > [!TIP]  
