@@ -28,6 +28,7 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
       action={formAction}
       {...rest}
       className={`
+        relative
         flex flex-col gap-4
         rounded-md panel
         ${className}
@@ -75,7 +76,7 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
         errorMessage={state.fieldErrors?.message && state.fieldErrors?.message.at(0)}
         required
       />
-      <input type='text' name='hp' tabIndex={-1} autoComplete='off' className='hidden' />
+      <input type='text' name='hp' tabIndex={-1} autoComplete='off' className='absolute -top-8 -z-1' />
       {state.message ? (
         <span role='status' className={`text-center py-4 ${state.ok ? 'text-success' : 'text-error'}`}>
           {state.message}
