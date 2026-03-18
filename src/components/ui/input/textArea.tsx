@@ -22,7 +22,7 @@ export function FormInputTextArea({
   errorMessage,
 }: FormInputTextAreaProps) {
   return (
-    <label htmlFor='' className='flex flex-col'>
+    <label className='flex flex-col'>
       <p>{label}</p>
       <textarea
         name={name}
