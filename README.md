@@ -97,6 +97,10 @@ npm install
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Javascript resource and documentation
 - [Typescriptlang](https://www.typescriptlang.org/docs/handbook/intro.html) - Typescript documentation
 
+## Getting in touch
+
+While we have a Discord community, this is an invite only area for now. You can use the contact form on our website or by clicking [here](https://www.bathybiologica.com/#contact), we'll then get in touch with you.
+
 ## Contributing to this project
 
 If you want to contribute to this project you're more than welcome to, but please create issues first as all pull request must have an linked issue for tracking. You can create a fork of this repository while working on your own branch and submit an upstream pull request when it's ready. All contributers will be credited for their work.
