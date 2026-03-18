@@ -30,6 +30,12 @@ export async function submitContactForm(
     const parsed = ContactSchema.safeParse(values);
     if (!parsed.success) {
       const { fieldErrors } = parsed.error.flatten();
+
+      // HP triggered indicating a bot
+      if (fieldErrors.hp) {
+        return { ok: true, message: "We will contact you soon!" }
+      }
+
       return { ok: false, fieldErrors };
     }
 
