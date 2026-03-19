@@ -1,14 +1,14 @@
-import type { Theme } from '@/actions/changeTheme';
+import type { ThemeOptions } from '@/actions/changeTheme';
 import Image from 'next/image';
 import Link from 'next/link';
 import { cookies } from 'next/headers';
 import { NavigationDesktop } from '@/components/layout/navigation/desktop';
 import { NavigationMobile } from '@/components/layout/navigation/mobile';
-import { SelectLocaleButton } from '@/components/ui/buttons/selectLocale';
-import { DarkModeToggle } from '@/components/ui/buttons/darkMode';
+import { HeaderMenuTheme } from '@/components/ui/menus/HeaderThemeMenu';
+import { HeaderMenuLocale } from '@/components/ui/menus/HeaderLocaleMenu';
 
 export async function Header() {
-  const theme = ((await cookies()).get('theme')?.value as Theme) || 'system';
+  const theme = ((await cookies()).get('theme')?.value as ThemeOptions) || 'system';
   return (
     <header className='z-50 w-full fixed bg-background shadow-lg'>
       <div>
@@ -25,9 +25,9 @@ export async function Header() {
           </p>
         </Link>
         <NavigationDesktop />
-        <span className='flex-1 flex justify-end-safe items-center gap-2'>
-          <DarkModeToggle current={theme} />
-          <SelectLocaleButton />
+        <span className='flex-1 flex justify-end-safe items-center gap-6'>
+          <HeaderMenuTheme current={theme} />
+          <HeaderMenuLocale />
           <NavigationMobile />
         </span>
       </div>
