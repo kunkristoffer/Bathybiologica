@@ -1,7 +1,5 @@
-import { describe, expect, it, test } from 'vitest'
-import { Contact, ContactSchema, ContactInput } from "./contactForm"
-
-
+import { describe, expect, it } from 'vitest'
+import { Contact, ContactSchema } from "./contactForm"
 
 describe("Contact form validation", () => {
   const CONTACT_BASE: Contact = {
@@ -28,7 +26,7 @@ describe("Contact form validation", () => {
     expect(parsed.success).toBe(false)
   })
 
-  it("Missing name triggers error", ()=>{
+  it("Missing name triggers error", () => {
     const contact = { ...CONTACT_BASE }
     contact.first_name = ""
 
@@ -36,7 +34,7 @@ describe("Contact form validation", () => {
     expect(parsed.success).toBe(false)
   })
 
-  it("Too short message triggers error", ()=>{
+  it("Too short message triggers error", () => {
     const contact = { ...CONTACT_BASE }
     contact.message = "123456789"
 
