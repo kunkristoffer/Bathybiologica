@@ -1,9 +1,11 @@
 import { DiscordBody, DiscordEmbeds, DiscordEmbedsField } from "@/types/discord.types"
 
 export class DiscordHook {
+  private static readonly MAX_EMBEDS_PER_HOOK = 10
+  private static readonly MAX_FIELDS_PER_EMBED = 25
+
   private webhookUrl: string = ""
-  private embeds: DiscordEmbeds[] = []
-  private body: DiscordBody = {}
+  body: DiscordBody = {}
 
   constructor(url: string) {
     if (!url || url.length === 0) {
@@ -19,16 +21,17 @@ export class DiscordHook {
   }
 
   /** Embed a block to the webhook, each block can contain 25 fields */
-  embed({ title, color, fields }: { title?: string, color?: string | number, fields: DiscordEmbedsField[] }) {
-    const fieldsSliced = fields.slice(0, 25)
-
-    if (fieldsSliced) {
-      this.embeds.push({
-        title,
-        color,
-        fields: fieldsSliced
-      })
+  embed({ title, color, fields }: DiscordEmbeds) {
+    if (fields.length > DiscordHook.MAX_FIELDS_PER_EMBED) {
+      throw new Error("Discord webhook embed called with too many items, max is 25")
     }
+
+    this.body.embeds ??= []
+    if (this.body.embeds.length >= DiscordHook.MAX_EMBEDS_PER_HOOK) {
+      throw new Error("Discord webhook messages can contain a maximum of 10 embeds")
+    }
+
+    this.body.embeds.push({ title, color, fields })
 
     return this
   }
@@ -36,16 +39,8 @@ export class DiscordHook {
   /** Finalizes and sends webhook */
   async send() {
     try {
-      // Validate that hook has postable content
-      if (this.embeds.length === 0 || this.embeds.length > 10) {
-        throw new Error("Hooks must contain at least one embed as message, or max 10")
-      }
-
-      // Build payload
-      const payload: DiscordBody = {
-        ...this.body,
-        embeds: this.embeds,
-      }
+      // Validate that hook has content
+      if (!this.body.content || !this.body.embeds?.length) throw new Error("Discord webhook called without message or embeds")
 
       // Send message
       const response = await fetch(this.webhookUrl, {
@@ -53,14 +48,14 @@ export class DiscordHook {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(this.body),
         cache: "no-store"
       })
 
       // Check for ok response to validate successful submission
       if (!response.ok) {
         const text = await response.text().catch(() => "");
-        throw new Error(`An error occured when proccessing fetch in discordHook: ${response.statusText} - ${text}`)
+        throw new Error(`An error occurred when processing fetch in discordHook: ${response.statusText} - ${text}`)
       }
     } catch (err) {
       console.error(err)
