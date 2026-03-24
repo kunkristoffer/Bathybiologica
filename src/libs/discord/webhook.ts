@@ -57,6 +57,8 @@ export class DiscordHook {
         const text = await response.text().catch(() => "");
         throw new Error(`An error occurred when processing fetch in discordHook: ${response.statusText} - ${text}`)
       }
+
+      return response
     } catch (err) {
       console.error(err)
     }
