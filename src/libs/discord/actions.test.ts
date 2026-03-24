@@ -4,20 +4,26 @@ import { http, HttpResponse } from "msw"
 import { setupServer } from "msw/node"
 import { DiscordHook } from '@/libs/discord/webhook'
 
-const webhookUrl = process.env.TEST_DISCORD_WEBHOOK!
-const server = setupServer()
-
-// Start server before all tests
-beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
-
-// Close server after all tests
-afterAll(() => server.close())
-
-// Reset handlers after each test for test isolation
-afterEach(() => server.resetHandlers())
-
-
 describe("Discord webhook client", () => {
+  const webhookUrl = process.env.TEST_DISCORD_WEBHOOK!
+
+  const handlers = [
+    http.post(webhookUrl, async (req) => {
+      const content = await req.request.json()
+      return HttpResponse.json(content)
+    })
+  ]
+  const server = setupServer(...handlers)
+
+  // Start server before all tests
+  beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
+
+  // Close server after all tests
+  afterAll(() => server.close())
+
+  // Reset handlers after each test for test isolation
+  afterEach(() => server.resetHandlers())
+
   it("Throws when constructed without url", () => {
     expect(() => new DiscordHook("")).toThrow("DiscordHook class called without a webhook url")
   })
@@ -68,7 +74,20 @@ describe("Discord webhook client", () => {
     expect(() => hook.embed(embed)).toThrow("Discord webhook messages can contain a maximum of 10 embeds")
   })
 
-  it("Constructs and sends valid payload", () => {
+  it("Constructs and sends valid payload", async () => {
     const hook = new DiscordHook(webhookUrl)
+
+    hook
+      .message("This is just a test running")
+      .embed({
+        title: 'Test submission',
+        color: 12345,
+        fields: [{ name: 'Test', value: 'Tester' }],
+      });
+
+    const response = await hook.send()
+    const responseJson = await response?.json()
+
+    expect(hook.body).toMatchObject(responseJson)
   })
 })
