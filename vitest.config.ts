@@ -6,6 +6,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+  envPrefix: "TEST_",
   resolve: {
     tsconfigPaths: true
   }
