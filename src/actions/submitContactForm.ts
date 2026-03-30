@@ -1,7 +1,7 @@
 'use server';
 
 import { discordNewError, discordNewMessage } from '@/libs/discord/actions';
-import { verifyRecaptcha } from '@/libs/recaptcha/verify';
+// import { verifyRecaptcha } from '@/libs/recaptcha/verify';
 import { dbPostContact } from '@/libs/supabase/actions';
 import { ContactSchema, type ContactInput } from '@/validation/contactForm';
 
@@ -41,12 +41,12 @@ export async function submitContactForm(
     }
 
     // Extract reCAPTCHA
-    const recaptchaToken = (formData.get('recaptchaToken') || '').toString().trim();
+    /* const recaptchaToken = (formData.get('recaptchaToken') || '').toString().trim();
     const recaptcha = await verifyRecaptcha({
       token: recaptchaToken,
       expectedAction: 'submit',
       minScore: 0.5,
-    });
+    }); */
 
     /* if (!recaptcha.ok) {
       // Recaptcha failed, but for now we'll let them through cause the messages are funny
@@ -64,7 +64,7 @@ export async function submitContactForm(
     // Form was successfully submitted
     await discordNewMessage(parsed.data)
     return { ok: true, message: `We will get in touch as soon as possible ${dbResult?.first_name}!`, values };
-  } catch (err) {
+  } catch {
     await discordNewError("An unknown error occurred")
     return { ok: false, message: "An unknown error occurred and an admin has been notified" }
   }

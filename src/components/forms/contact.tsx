@@ -1,9 +1,8 @@
 'use client';
 
 // Global
-import { startTransition, useActionState, useRef, type ComponentPropsWithoutRef } from 'react';
+import { startTransition, useActionState, type ComponentPropsWithoutRef } from 'react';
 import { type ContactActionState, submitContactForm } from '@/actions/submitContactForm';
-import { useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
 
 // Components
@@ -90,7 +89,7 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
           {state.message}
         </span>
       ) : (
-        <ButtonAction type='submit' label={pending ? i18n('pending') : i18n('submit')} variant='secondary' stretch />
+        <ButtonAction type='submit' label={pending && ready ? i18n('pending') : i18n('submit')} variant='secondary' stretch />
       )}
       <p className='hidden text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
     </form>
