@@ -1,33 +1,15 @@
+# Major|Minor|Patch update - version X.X.X
 ## Release summary
 
 Describe what is being released from `development` into `main`.
 
-## Included work
-
-List the main features, fixes, and improvements included in this release.
-
--
--
--
-
 ## Related pull requests / issues
 
-Reference important PRs or issues included in this release.
+Reference important PRs or issues included in this release (remember closing keywords).
 
 -
 -
 -
-
-## Verification
-
-Describe what has been verified before merging to `main`.
-
-- [ ] Regression testing completed
-- [ ] Critical user flows verified
-- [ ] Build passes
-- [ ] Lint passes
-- [ ] Tests pass
-- [ ] Required documentation is updated
 
 ## Deployment / release notes
 
