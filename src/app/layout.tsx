@@ -6,7 +6,7 @@ import "@/assets/styles/globals.css";
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { cookies } from "next/headers";
-import { Theme } from "@/actions/changeTheme";
+import { ThemeOptions } from "@/actions/changeTheme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +32,7 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   // Check if user has changed prefered color theme
-  const theme = ((await cookies()).get("theme")?.value as Theme) || undefined;
+  const theme = ((await cookies()).get("theme")?.value as ThemeOptions) || undefined;
   const themeAttrs = theme ? { "data-theme": theme } : {};
 
   return (

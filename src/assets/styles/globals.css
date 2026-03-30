@@ -12,8 +12,8 @@
 
   /* Borders */
   --border: light-dark(hsl(185, 45%, 60%), hsl(220, 40%, 20%));
-  --border-surface: light-dark(hsl(from var(--surface) h s calc(l - 5)), hsl(from var(--surface) h s calc(l + 10)));
-  --border-panel: light-dark(hsl(from var(--panel) h s calc(l - 5)), hsl(from var(--panel) h s calc(l + 2)));
+  --border-surface: light-dark(hsl(from var(--surface) h s 80), hsl(from var(--surface) h s 55));
+  --border-panel: light-dark(hsl(from var(--panel) h s 80), hsl(from var(--panel) h s 55));
 
   /* Shadows */
   --shadow-color-panel: light-dark(hsl(from var(--panel) h s 30 / 0.2), hsl(from var(--panel) h s 3 / 0.2));
@@ -124,7 +124,7 @@
   }
 
   .panel {
-    @apply p-4 rounded-md bg-panel border border-panel shadow-panel;
+    @apply p-4 rounded-md bg-panel border border-panel-border shadow-panel;
   }
 }
 
@@ -136,8 +136,8 @@
   --color-input: var(--input);
 
   /* Borders */
-  --color-border-panel: 1px solid var(--border-panel);
-  --color-border-surface: 1px solid var(--border-surface);
+  --color-panel-border: var(--border-panel);
+  --color-surface-border: var(--border-surface);
 
   /* Shadows */
   --shadow-panel: 0 4px 4px var(--shadow-color-panel), 0 8px 8px var(--shadow-color-panel);

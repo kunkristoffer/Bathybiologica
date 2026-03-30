@@ -20,7 +20,7 @@ export function FormInputText({
   errorMessage,
 }: FormInputTextProps) {
   return (
-    <label htmlFor='' className='flex-1 flex flex-col'>
+    <label className='flex-1 flex flex-col'>
       <p>{label}</p>
       <input
         type='text'
