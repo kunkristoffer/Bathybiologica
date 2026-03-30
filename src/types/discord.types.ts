@@ -8,7 +8,7 @@ export interface DiscordBody {
 export interface DiscordEmbeds {
   title?: string
   /** Discord uses decimal instead of hex */
-  color?: string | number
+  color?: number
   fields: DiscordEmbedsField[]
 }
 
