@@ -1,0 +1,28 @@
+name: Origins
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  enforce-origin:
+    name: Main require development as source branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fail unless PR comes from development
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          if [ "$HEAD_REF" != "development" ]; then
+            echo "Pull requests into main must come from the development branch."
+            echo "Current source branch: $HEAD_REF"
+            exit 1
+          fi
+
+      - name: Confirm allowed source branch
+        run: echo "PR source branch is development. Check passed."
