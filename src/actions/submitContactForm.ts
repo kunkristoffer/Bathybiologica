@@ -1,6 +1,7 @@
 'use server';
 
 import { discordNewError, discordNewMessage } from '@/libs/discord/actions';
+import { verifyRecaptcha } from '@/libs/recaptcha/verify';
 import { dbPostContact } from '@/libs/supabase/actions';
 import { ContactSchema, type ContactInput } from '@/validation/contactForm';
 
@@ -13,7 +14,7 @@ export type ContactActionState = {
 
 export async function submitContactForm(
   _prevState: ContactActionState | undefined,
-  formData: FormData
+  formData: FormData,
 ): Promise<ContactActionState> {
   try {
     // Extract form bindings and convert to database schema naming
@@ -39,22 +40,32 @@ export async function submitContactForm(
       return { ok: false, fieldErrors };
     }
 
-    // TODO: (future me) verify reCAPTCHA here:
-    // const token = formData.get("g-recaptcha-response")?.toString();
-    // if (!(await verifyCaptcha(token))) return { ok:false, message:"Captcha failed" };
+    // Extract reCAPTCHA
+    const recaptchaToken = (formData.get('recaptchaToken') || '').toString().trim();
+    const recaptcha = await verifyRecaptcha({
+      token: recaptchaToken,
+      expectedAction: 'submit',
+      minScore: 0.5,
+    });
+
+    /* if (!recaptcha.ok) {
+      // Recaptcha failed, but for now we'll let them through cause the messages are funny
+      await discordNewMessage(parsed.data)
+      return { ok: false, message: "We will contact you soon!" }
+    } */
 
     // Pass contact details to db handler
     const dbResult = await dbPostContact(parsed.data)
     if (!dbResult) {
-      await discordNewError("Unable to write to database")
+      await discordNewMessage(parsed.data)
       return { ok: false, message: "Unable to store your request, an admin has been notified" }
     }
 
     // Form was successfully submitted
     await discordNewMessage(parsed.data)
-    return { ok: true, message: `We will get in touch as soon as possible ${dbResult.first_name}!`, values };
+    return { ok: true, message: `We will get in touch as soon as possible ${dbResult?.first_name}!`, values };
   } catch (err) {
-    await discordNewError("An unknown error occured")
-    return { ok: false, message: "An unknown error occured and an admin has been notified" }
+    await discordNewError("An unknown error occurred")
+    return { ok: false, message: "An unknown error occurred and an admin has been notified" }
   }
 }
