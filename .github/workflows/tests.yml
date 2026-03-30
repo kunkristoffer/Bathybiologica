@@ -1,0 +1,40 @@
+name: Tests
+
+on:
+  pull_request:
+    branches: [main, development]
+    types: [opened, reopened, synchronize, ready_for_review]
+
+jobs:
+  vitest:
+    name: Run Vitest
+    runs-on: ubuntu-latest
+    environment:
+      name: test
+      deployment: false
+
+    env:
+      NODE_ENV: test
+      TEST_SUPABASE_URL: ${{ vars.TEST_SUPABASE_URL }}
+      TEST_SUPABASE_PUBLISHABLE_KEY: ${{ vars.TEST_SUPABASE_PUBLISHABLE_KEY }}
+      TEST_SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.TEST_SUPABASE_SERVICE_ROLE_KEY }}
+      TEST_DISCORD_WEBHOOK: ${{ secrets.TEST_DISCORD_WEBHOOK }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx vitest --reporter=verbose
+  build:
+    name: Run eslint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm lint
