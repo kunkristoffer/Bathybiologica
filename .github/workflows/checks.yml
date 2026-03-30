@@ -1,4 +1,4 @@
-name: Tests
+name: Checks
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   vitest:
-    name: Run Vitest
+    name: Vitest
     runs-on: ubuntu-latest
     environment:
       name: test
@@ -36,7 +36,7 @@ jobs:
       - run: npm run test
 
   build:
-    name: Run eslint
+    name: ESLint
     runs-on: ubuntu-latest
 
     steps:
