@@ -1,7 +1,7 @@
 'use client';
 
 // Global
-import { useActionState, useRef, type ComponentPropsWithoutRef } from 'react';
+import { startTransition, useActionState, useRef, type ComponentPropsWithoutRef } from 'react';
 import { type ContactActionState, submitContactForm } from '@/actions/submitContactForm';
 import { useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
@@ -10,21 +10,29 @@ import { useTranslations } from 'next-intl';
 import { FormInputText } from '@/components/ui/input/text';
 import { FormInputTextArea } from '@/components/ui/input/textArea';
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
+import { useRecaptcha } from '@/providers/recaptcha/hook';
 
 // Initial form state
 const INITIAL: ContactActionState = { ok: false, values: {} };
 
 export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
-  const [state, formAction] = useActionState(submitContactForm, INITIAL);
-  const formRef = useRef<HTMLFormElement>(null);
-
   const { className, ...rest } = props;
-  const { pending } = useFormStatus();
+
+  const { ready, executeRecaptcha } = useRecaptcha();
+  const [state, serverAction, pending] = useActionState(submitContactForm, INITIAL);
 
   const i18n = useTranslations('contactUsForm');
+
+  async function formAction(formData: FormData) {
+    const token = await executeRecaptcha('submit');
+    formData.set('recaptchaToken', token);
+    startTransition(() => {
+      serverAction(formData);
+    });
+  }
+
   return (
     <form
-      ref={formRef}
       action={formAction}
       {...rest}
       className={`
