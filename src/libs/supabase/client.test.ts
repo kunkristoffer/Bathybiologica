@@ -3,9 +3,9 @@
 import { createClient, type SupabaseClientOptions } from "@supabase/supabase-js";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
-const supabaseUrl = process.env.TEST_SUPABASE_URL!
-const supabasePublicKey = process.env.TEST_SUPABASE_PUBLISHABLE_KEY!
-const supabaseServiceKey = process.env.TEST_SUPABASE_SERVICE_ROLE_KEY!
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabasePublicKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
 const supabaseClientOptions: SupabaseClientOptions<"public">["auth"] = {
   autoRefreshToken: false,
   persistSession: false,

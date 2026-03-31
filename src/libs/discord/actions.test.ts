@@ -5,7 +5,7 @@ import { setupServer } from "msw/node"
 import { DiscordHook } from '@/libs/discord/webhook'
 
 describe("Discord webhook client", () => {
-  const webhookUrl = process.env.TEST_DISCORD_WEBHOOK!
+  const webhookUrl = process.env.DISCORD_WEBHOOK!
 
   const handlers = [
     http.post(webhookUrl, async (req) => {
