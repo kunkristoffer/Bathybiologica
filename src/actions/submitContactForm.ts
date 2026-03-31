@@ -1,7 +1,7 @@
 'use server';
 
-import { discordNewError, discordNewMessage } from '@/libs/discord/actions';
-// import { verifyRecaptcha } from '@/libs/recaptcha/verify';
+import { discordNewError, discordNewContact } from '@/libs/discord/actions';
+import { verifyRecaptcha } from '@/libs/recaptcha/verify';
 import { dbPostContact } from '@/libs/supabase/actions';
 import { ContactSchema, type ContactInput } from '@/validation/contactForm';
 
@@ -43,33 +43,32 @@ export async function submitContactForm(
     }
 
     // Extract reCAPTCHA
-    /* const recaptchaToken = (formData.get('recaptchaToken') || '').toString().trim();
+    const recaptchaToken = (formData.get('recaptchaToken') || '').toString().trim();
     const recaptcha = await verifyRecaptcha({
       token: recaptchaToken,
       expectedAction: 'submit',
       minScore: 0.5,
-    }); */
+    });
 
-    /* if (!recaptcha.ok) {
+    if (!recaptcha.ok) {
       // Recaptcha failed, but for now we'll let them through cause the messages are funny
-      await discordNewMessage(parsed.data)
+      await discordNewContact(parsed.data, { isSpam: true, reason: `reCaptcha gave this submission a score of ${recaptcha.score} / 1.0` })
       return { ok: false, message: "We will contact you soon!" }
-    } */
+    }
 
     // Pass contact details to db handler
-    const dbResult = await dbPostContact(parsed.data)
-    if (!dbResult) {
-      await discordNewMessage(parsed.data)
+    const { error } = await dbPostContact(parsed.data)
+    if (error) {
+      // await discordNewContact(parsed.data, { reason: error.message })
+      await discordNewError(`Contact form database error: ${JSON.stringify(error)}`)
       return { ok: false, message: "Unable to store your request, an admin has been notified" }
     }
 
     // Form was successfully submitted
-    await discordNewMessage(parsed.data)
-    return { ok: true, message: `We will get in touch as soon as possible ${dbResult?.first_name}!`, values };
-  } catch (err) {
-    console.log(err);
-
-    await discordNewError("An unknown error occurred")
-    return { ok: false, message: "An unknown error occurred and an admin has been notified" }
+    await discordNewContact(parsed.data)
+    return { ok: true, message: `We will get in touch as soon as possible ${parsed.data.first_name}!`, values };
+  } catch (error) {
+    await discordNewError(`Contact form unknown error: ${typeof error === "string" ? error : JSON.stringify(error)}`)
+    return { ok: false, message: "An error occurred while handling your request, an admin has been notified" }
   }
 }
