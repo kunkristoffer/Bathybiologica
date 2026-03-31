@@ -5,8 +5,8 @@ import { Contact } from "@/validation/contactForm"
 
 export async function dbPostContact(contact: Contact) {
   try {
-    // Remove honeypot if somehow supplied
-    const { hp, ...contactCleaned } = contact
+    // Remove honeypot if somehow supplied and strip consent
+    const { hp, consent, ...contactCleaned } = contact
 
     // Attempt db insert, id and created_at will be filled automatically
     const { data, error } = await supabaseAdmin.from("contacts").insert(contactCleaned).select()

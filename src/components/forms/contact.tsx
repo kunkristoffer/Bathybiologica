@@ -10,6 +10,7 @@ import { FormInputText } from '@/components/ui/input/text';
 import { FormInputTextArea } from '@/components/ui/input/textArea';
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
 import { useRecaptcha } from '@/providers/recaptcha/hook';
+import { FormInputConsentCheckBox } from '@/components/ui/input/consentCheckBox';
 
 // Initial form state
 const INITIAL: ContactActionState = { ok: false, values: {} };
@@ -83,15 +84,36 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
         errorMessage={state.fieldErrors?.message && state.fieldErrors?.message.at(0)}
         required
       />
+      <FormInputConsentCheckBox
+        name='consent'
+        errorMessage={state.fieldErrors?.consent && state.fieldErrors?.consent.at(0)}
+        defaultChecked={state.values?.consent}
+      />
       <input type='text' name='hp' tabIndex={-1} autoComplete='off' className='absolute -top-8 -z-1' />
       {state.message ? (
         <span role='status' className={`text-center py-4 ${state.ok ? 'text-success' : 'text-error'}`}>
           {state.message}
         </span>
       ) : (
-        <ButtonAction type='submit' label={pending && ready ? i18n('pending') : i18n('submit')} variant='secondary' stretch />
+        <ButtonAction
+          type='submit'
+          label={pending && ready ? i18n('pending') : i18n('submit')}
+          variant='secondary'
+          stretch
+        />
       )}
       <p className='hidden text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
+      <p className='text-center text-xs/relaxed text-text-muted'>
+        This form is protected by reCAPTCHA and the Google
+        <a className='whitespace-nowrap text-primary hover:underline px-1' href='https://policies.google.com/privacy'>
+          Privacy Policy
+        </a>
+        and
+        <a className='whitespace-nowrap text-primary hover:underline px-1' href='https://policies.google.com/terms'>
+          Terms of Service
+        </a>
+        apply.
+      </p>
     </form>
   );
 }
