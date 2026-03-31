@@ -24,6 +24,7 @@ export async function submitContactForm(
       email: (formData.get('email') || '').toString().trim(),
       subject: (formData.get('subject') || '').toString().trim(),
       message: (formData.get('message') || '').toString().trim(),
+      consent: (formData.get('consent')) === "on",
       hp: (formData.get('hp') || '').toString(),
     };
 
@@ -37,7 +38,8 @@ export async function submitContactForm(
         return { ok: true, message: "We will contact you soon!" }
       }
 
-      return { ok: false, fieldErrors };
+      // Formdata missing, returning vales so user can correct them
+      return { ok: false, fieldErrors, values };
     }
 
     // Extract reCAPTCHA
@@ -64,7 +66,9 @@ export async function submitContactForm(
     // Form was successfully submitted
     await discordNewMessage(parsed.data)
     return { ok: true, message: `We will get in touch as soon as possible ${dbResult?.first_name}!`, values };
-  } catch {
+  } catch (err) {
+    console.log(err);
+
     await discordNewError("An unknown error occurred")
     return { ok: false, message: "An unknown error occurred and an admin has been notified" }
   }

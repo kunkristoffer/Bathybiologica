@@ -1,5 +1,4 @@
-import { Database } from "@/types/supabase.types";
-import { createClient, SupabaseClient } from "@supabase/supabase-js";
+import { createClient } from "@supabase/supabase-js";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const supabaseUrl = process.env.TEST_SUPABASE_URL!
