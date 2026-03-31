@@ -2,7 +2,7 @@
 
 import { discordNewError, discordNewContact } from '@/libs/discord/actions';
 import { verifyRecaptcha } from '@/libs/recaptcha/verify';
-import { dbPostContact } from '@/libs/supabase/actions';
+import { dbPostContact } from '@/libs/supabase/contact/actions';
 import { ContactSchema, type ContactInput } from '@/validation/contactForm';
 
 export type ContactActionState = {
