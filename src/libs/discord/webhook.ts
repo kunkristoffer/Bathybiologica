@@ -36,6 +36,11 @@ export class DiscordHook {
     return this
   }
 
+  /** Mute notifications for the webhook, basically adds `@silent` mode */
+  mute() {
+    this.body.flags = 4096
+  }
+
   /** Finalizes and sends webhook */
   async send() {
     try {
