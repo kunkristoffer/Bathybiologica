@@ -30,6 +30,11 @@
     "messagePlaceholder": "Melding...",
     "submit": "Send melding",
     "pending": "Sender...",
-    "status": "Kontakt oss skjema er under utvikling og sender ikke ut meldinger akkurat nå!"
+    "status": "Kontakt oss skjema er under utvikling og sender ikke ut meldinger akkurat nå!",
+    "consent": {
+      "p1": "Jeg samtykker til behandling av mine personopplysninger for å kunne besvare min henvendelse. Les vår",
+      "p2": "for mer informasjon eller dersom du ønsker å trekke tilbake samtykket ditt.",
+      "label": "personvernerklæring"
+    }
   }
 }
