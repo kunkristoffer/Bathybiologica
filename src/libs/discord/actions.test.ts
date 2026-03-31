@@ -54,7 +54,7 @@ describe("Discord webhook client", () => {
   it("Throws when adding more than 25 fields at a time", () => {
     const hook = new DiscordHook(webhookUrl)
 
-    const fields: DiscordEmbedsField[] = Array.from(Array(26), (x) => ({ name: 'Test', value: 'Tester' }))
+    const fields: DiscordEmbedsField[] = Array.from(Array(26), () => ({ name: 'Test', value: 'Tester' }))
     const embeds: DiscordEmbeds = {
       title: 'Test submission',
       color: 12345,

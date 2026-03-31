@@ -1,4 +1,4 @@
-import { DiscordBody, DiscordEmbeds, DiscordEmbedsField } from "@/types/discord.types"
+import { DiscordBody, DiscordEmbeds } from "@/types/discord.types"
 
 export class DiscordHook {
   private static readonly MAX_EMBEDS_PER_HOOK = 10
