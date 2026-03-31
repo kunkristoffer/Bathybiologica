@@ -5,8 +5,14 @@ import { Contact } from "@/validation/contactForm"
 
 export async function dbPostContact(contact: Contact) {
   try {
-    // Remove honeypot if somehow supplied and strip consent
-    const { hp, consent, ...contactCleaned } = contact
+    // Created a cleaned version
+    const contactCleaned: Omit<Contact, "hp" | "consent"> = {
+      first_name: contact.first_name,
+      last_name: contact.last_name,
+      email: contact.email,
+      subject: contact.subject,
+      message: contact.message
+    }
 
     // Attempt db insert, id and created_at will be filled automatically
     const { data, error } = await supabaseAdmin.from("contacts").insert(contactCleaned).select()
