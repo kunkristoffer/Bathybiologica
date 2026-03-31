@@ -8,6 +8,7 @@ describe("Contact form validation", () => {
     email: "ola@nordman.no",
     subject: "Dette er et test emne",
     message: "Dette er en test melding",
+    consent: true,
     hp: ""
   }
 
@@ -37,6 +38,14 @@ describe("Contact form validation", () => {
   it("Too short message triggers error", () => {
     const contact = { ...CONTACT_BASE }
     contact.message = "123456789"
+
+    const parsed = ContactSchema.safeParse(contact);
+    expect(parsed.success).toBe(false)
+  })
+
+  it("Missing consent triggers error", () => {
+    const contact = { ...CONTACT_BASE }
+    contact.consent = false
 
     const parsed = ContactSchema.safeParse(contact);
     expect(parsed.success).toBe(false)
