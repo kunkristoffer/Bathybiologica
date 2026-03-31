@@ -1,4 +1,4 @@
-import { DiscordBody, DiscordEmbeds, DiscordEmbedsField } from "@/types/discord.types"
+import { DiscordBody, DiscordEmbeds } from "@/types/discord.types"
 
 export class DiscordHook {
   private static readonly MAX_EMBEDS_PER_HOOK = 10
@@ -34,6 +34,11 @@ export class DiscordHook {
     this.body.embeds.push({ title, color, fields })
 
     return this
+  }
+
+  /** Mute notifications for the webhook, basically adds `@silent` mode */
+  mute() {
+    this.body.flags = 4096
   }
 
   /** Finalizes and sends webhook */

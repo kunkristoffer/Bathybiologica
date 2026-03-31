@@ -1,4 +1,4 @@
-import type { DiscordEmbeds, DiscordEmbedsField } from '@/types/discord.types';
+import type { DiscordBody, DiscordEmbeds, DiscordEmbedsField } from '@/types/discord.types';
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest'
 import { http, HttpResponse } from "msw"
 import { setupServer } from "msw/node"
@@ -44,10 +44,17 @@ describe("Discord webhook client", () => {
     expect(hook.body.embeds).toContainEqual(embed)
   })
 
+  it("Supports muting webhook", () => {
+    const silentFlag: DiscordBody["flags"] = 4096
+    const hook = new DiscordHook(webhookUrl)
+    hook.mute()
+    expect(hook.body.flags).toBe(silentFlag)
+  })
+
   it("Throws when adding more than 25 fields at a time", () => {
     const hook = new DiscordHook(webhookUrl)
 
-    const fields: DiscordEmbedsField[] = Array.from(Array(26), (x) => ({ name: 'Test', value: 'Tester' }))
+    const fields: DiscordEmbedsField[] = Array.from(Array(26), () => ({ name: 'Test', value: 'Tester' }))
     const embeds: DiscordEmbeds = {
       title: 'Test submission',
       color: 12345,
