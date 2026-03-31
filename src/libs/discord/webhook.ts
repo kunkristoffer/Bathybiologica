@@ -7,7 +7,7 @@ export class DiscordHook {
   private webhookUrl: string = ""
   body: DiscordBody = {}
 
-  constructor(url: string) {
+  constructor(url = process.env.DISCORD_WEBHOOK) {
     if (!url || url.length === 0) {
       throw new Error("DiscordHook class called without a webhook url")
     }
