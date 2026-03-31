@@ -29,7 +29,7 @@ describe("Discord webhook client", () => {
   })
 
   it("Supports adding message and embeds", () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     const message = "Test message"
     hook.message(message)
@@ -46,13 +46,13 @@ describe("Discord webhook client", () => {
 
   it("Supports muting webhook", () => {
     const silentFlag: DiscordBody["flags"] = 4096
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
     hook.mute()
     expect(hook.body.flags).toBe(silentFlag)
   })
 
   it("Throws when adding more than 25 fields at a time", () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     const fields: DiscordEmbedsField[] = Array.from(Array(26), () => ({ name: 'Test', value: 'Tester' }))
     const embeds: DiscordEmbeds = {
@@ -65,7 +65,7 @@ describe("Discord webhook client", () => {
   })
 
   it("Throws when adding more than 10 embeds", () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     const embed: DiscordEmbeds = {
       title: 'Test submission',
@@ -82,7 +82,7 @@ describe("Discord webhook client", () => {
   })
 
   it("Constructs and sends valid payload", async () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     hook
       .message("This is just a test running")

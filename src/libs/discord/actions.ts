@@ -8,8 +8,7 @@ interface NewContactOptional {
 
 export async function discordNewContact(form: Contact, options?: NewContactOptional) {
   try {
-    const url = process.env.DISCORD_WEBHOOK!
-    const hook = new DiscordHook(url)
+    const hook = new DiscordHook()
 
     hook.message("Contact us form has been used!")
     hook.embed({
@@ -44,8 +43,7 @@ export async function discordNewContact(form: Contact, options?: NewContactOptio
 
 export async function discordNewError(message: string) {
   try {
-    const url = process.env.DISCORD_WEBHOOK!
-    const hook = new DiscordHook(url)
+    const hook = new DiscordHook()
 
     hook
       .message("An error occurred when the contact us form was used!")
