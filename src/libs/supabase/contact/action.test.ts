@@ -3,7 +3,7 @@
 import { dbPostContact } from "@/libs/supabase/contact/actions";
 import { Contact } from "@/validation/contactForm";
 import { createClient, type SupabaseClientOptions } from "@supabase/supabase-js";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, describe, expect, it } from "vitest";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!
