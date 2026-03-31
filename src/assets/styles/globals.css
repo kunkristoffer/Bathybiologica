@@ -181,3 +181,8 @@
     @apply transition-colors duration-300 ease-in-out;
   }
 }
+
+/* Hiding the reCAPTCHA badge since we've included links in our user flow */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
