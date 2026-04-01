@@ -13,7 +13,7 @@ body:
     attributes:
       label: Story summary
       description: A short name for the work being delivered
-      placeholder: Example: Add validation feedback to contact form
+      placeholder: Add validation feedback to contact form
     validations:
       required: true
 
@@ -22,7 +22,7 @@ body:
     attributes:
       label: Parent epic
       description: Reference the parent epic issue number
-      placeholder: Example: #42
+      placeholder: #42
     validations:
       required: true
 
