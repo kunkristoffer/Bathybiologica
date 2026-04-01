@@ -1,0 +1,65 @@
+name: Task
+description: Create a focused implementation issue within a story
+title: '[Task] '
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Task summary
+      description: A short, action-oriented description of the work
+      placeholder: Add server-side validation to contact form action
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Briefly explain why this task exists and what it contributes to
+      placeholder: |
+        This task is part of the contact form submission story and ensures
+        invalid data is rejected before processing or storage.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Which parts of the project does this task affect?
+      multiple: true
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Authentication
+        - Infrastructure
+        - CI/CD
+        - CMS
+        - Content
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: done-criteria
+    attributes:
+      label: Done criteria
+      description: What must be true before this task can be closed?
+      placeholder: |
+        - [ ] Validation runs on the server
+        - [ ] Invalid submissions are rejected
+        - [ ] Errors are returned in the expected format
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Technical notes, references, links, or constraints
+      placeholder: Reuse the existing contact schema and align with current action state handling.
+    validations:
+      required: false
