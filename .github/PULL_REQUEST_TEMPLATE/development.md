@@ -1,5 +1,5 @@
 ## Summary
-Short summary of this PR.
+Short summary of this PR
 
 ## Related issue
 - Closes #
@@ -17,7 +17,9 @@ Describe what you tested manually or what behavior was verified.
 Add screenshots, logs, or other useful context if relevant.
 
 ## Checklist
+- [ ] I have linked the relevant issue
 - [ ] I have added or updated tests where relevant
+- [ ] I have checked for lint/type/test issues
 - [ ] I have updated relevant documentation (if applicable)
 - [ ] I have noted any breaking changes, config changes, or migration steps (if applicable)
-- [ ] This PR targets the `development` branch (if applicable)
+- [ ] This PR targets the `development` branch
