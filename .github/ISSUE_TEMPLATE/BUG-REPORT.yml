@@ -1,0 +1,120 @@
+name: Bug report
+description: Report something that is broken or not working as expected
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Bug summary
+      description: Give a short and clear description of the bug
+      placeholder: Contact form fails when submitting with valid input
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: What happened?
+      description: Describe the current behavior
+      placeholder: When I submit the form, the page refreshes and no success message is shown.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What did you expect to happen?
+      description: Describe what you expected instead
+      placeholder: The form should submit successfully and display a confirmation message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the bug
+      placeholder: |
+        1. Go to the contact page
+        2. Fill in all required fields
+        3. Click submit
+        4. Observe the error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Which part of the project is affected?
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Authentication
+        - CI/CD
+        - Content
+        - Build
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How serious is the issue?
+      options:
+        - Blocking (P0)
+        - Major
+        - Minor
+        - Cosmetic
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Add any relevant environment details
+      placeholder: |
+        - OS: Arch Btw
+        - Browser: Ladybug 146
+        - Device: Smartpony
+        - Branch: development
+        - Commit: abc123
+        - URL: https://localhost/contact
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs-screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Paste relevant logs or add screenshots
+      placeholder: Paste error logs here or drag screenshots into the issue after it is created.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add anything else that may help us understand the issue
+      placeholder: This only happens in preview deployments after logging in.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched for existing issues before creating this report
+          required: true
+        - label: I have tested this on the latest relevant branch/build
+          required: false
