@@ -36,5 +36,43 @@
       "p2": "for more information or if you want to withdraw your consent.",
       "label": "Privacy Policy"
     }
+  },
+  "footer": {
+    "followUs": {
+      "title": "Follow us on"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "placeholder": "Sign up for our newsletter",
+      "comingSoon": "Newsletter signup coming soon"
+    },
+    "mission": {
+      "title": "Our mission",
+      "text": "Bathybiologica is a foundation dedicated to sharing knowledge, creating awareness, and supporting meaningful work connected to marine life and conservation."
+    },
+    "sitemap": {
+      "title": "Sitemap",
+      "landing": "Landing",
+      "about": "About us",
+      "history": "Our history"
+    },
+    "links": {
+      "title": "Quick links",
+      "login": "Login",
+      "dashboard": "Dashboard",
+      "inbox": "Inbox",
+      "events": "Events",
+      "comingSoon": "Features coming soon"
+    },
+    "contact": {
+      "title": "Contact us",
+      "p1": "Please use the",
+      "p2": "it you want to contact us. We are currently working on sitting up different communication channels.",
+      "label": "contact form"
+    },
+    "bottom": {
+      "copyright": "© Bathybiologica @ 2026",
+      "privacy": "Privacy Policy"
+    }
   }
 }

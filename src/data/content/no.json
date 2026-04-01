@@ -36,5 +36,43 @@
       "p2": "for mer informasjon eller dersom du ønsker å trekke tilbake samtykket ditt.",
       "label": "personvernerklæring"
     }
+  },
+  "footer": {
+    "followUs": {
+      "title": "Følg oss"
+    },
+    "newsletter": {
+      "title": "Nyhetsbrev",
+      "placeholder": "Meld deg på vårt nyhetsbrevet",
+      "comingSoon": "Påmelding til nyhetsbrev kommer snart"
+    },
+    "mission": {
+      "title": "Vårt oppdrag",
+      "text": "Bathybiologica er en stiftelse som arbeider for å dele kunnskap, skape bevissthet og støtte meningsfullt arbeid knyttet til marint liv og bevaring."
+    },
+    "sitemap": {
+      "title": "Oversikt",
+      "landing": "Forsiden",
+      "about": "Om oss",
+      "history": "Vår historie"
+    },
+    "links": {
+      "title": "Hurtiglenker",
+      "login": "Logg inn",
+      "dashboard": "Dashbord",
+      "inbox": "Innboks",
+      "events": "Arrangementer",
+      "comingSoon": "Funksjonalitet kommer snart"
+    },
+    "contact": {
+      "title": "Kontakt oss",
+      "p1": "Vennligst bruk",
+      "p2": "dersom du ønsker å kontakte oss. Vi jobber for tiden med å sette opp ulike kommunikasjonskanaler.",
+      "label": "kontaktskjemaet"
+    },
+    "bottom": {
+      "copyright": "© Bathybiologica @ 2026",
+      "privacy": "Personvernerklæring"
+    }
   }
 }
