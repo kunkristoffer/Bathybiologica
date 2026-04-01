@@ -2,27 +2,12 @@ name: Story
 description: Create a child issue under an epic for one actionable deliverable
 title: "[Bug|Task|Feature]: Title"
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Use this template for a focused piece of work that belongs to an epic.
-        A story should be small enough to complete clearly, but large enough to have its own acceptance criteria.
-
   - type: input
     id: summary
     attributes:
       label: Story summary
       description: A short name for the work being delivered
       placeholder: Add validation feedback to contact form
-    validations:
-      required: true
-
-  - type: input
-    id: parent
-    attributes:
-      label: Parent epic
-      description: Reference the parent epic issue number
-      placeholder: #42
     validations:
       required: true
 
@@ -67,17 +52,6 @@ body:
       placeholder: |
         - Item 1
         - Item 2
-    validations:
-      required: false
-
-  - type: textarea
-    id: blockers
-    attributes:
-      label: Dependencies / blockers
-      description: List issues or PRs this story depends on, or work it blocks
-      placeholder: |
-        - Blocked by #123
-        - Blocks #456
     validations:
       required: false
 
