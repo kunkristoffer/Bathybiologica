@@ -1,8 +1,6 @@
 name: Story
 description: Create a focused, deliverable piece of work within an epic
 title: "[Story] "
-labels:
-  - story
 body:
   - type: input
     id: summary
