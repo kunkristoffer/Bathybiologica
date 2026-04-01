@@ -1,0 +1,94 @@
+name: Story
+description: Create a focused, deliverable piece of work within an epic
+title: "[Story] "
+labels:
+  - story
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Story summary
+      description: A short description of the deliverable
+      placeholder: Add server-side validation for contact form submissions
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What should this story deliver when complete?
+      placeholder: |
+        The contact form should validate submitted data on the server and return
+        clear error messages when the input is invalid.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Which parts of the project does this story affect?
+      multiple: true
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Authentication
+        - Infrastructure
+        - CI/CD
+        - CMS
+        - Content
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included in this story?
+      placeholder: |
+        - Validate required fields on the server
+        - Return field-specific errors
+        - Prevent invalid submissions from being stored
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: What conditions must be met before this story is done?
+      placeholder: |
+        - [ ] Invalid submissions are rejected on the server
+        - [ ] Validation errors are returned in a usable format
+        - [ ] Valid submissions continue through the normal flow
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation notes
+      description: Technical notes, references, constraints, or related details
+      placeholder: |
+        Use the existing contact schema and action handler.
+        Keep error formatting consistent with the current UI state shape.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Final checks before closing the story
+      options:
+        - label: I have linked this story to the relevant epic in the sidebar
+          required: false
+        - label: I have added or updated relevant documentation
+          required: false
+        - label: I have considered tests for this change
+          required: false
