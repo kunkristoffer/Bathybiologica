@@ -15,7 +15,7 @@ body:
     attributes:
       label: Epic summary
       description: A short name for the outcome or capability this epic represents
-      placeholder: Example: Build contact form workflow
+      placeholder: Build contact form workflow
     validations:
       required: true
 
