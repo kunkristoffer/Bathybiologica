@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ComponentProps, ComponentPropsWithoutRef } from 'react';
+import { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 function getSocialVariant(url: string) {
