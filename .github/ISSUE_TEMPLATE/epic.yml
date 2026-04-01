@@ -1,20 +1,14 @@
 name: Epic
 description: Create a parent issue that groups related stories around a larger outcome
-title: "[Epic]: "
+title: "[Epic] "
 labels:
   - epic
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Use this template for a larger piece of work that groups related stories.
-        Keep the epic outcome-focused rather than implementation-focused.
-
   - type: input
     id: summary
     attributes:
       label: Epic summary
-      description: A short name for the outcome or capability this epic represents
+      description: A short description of the outcome or capability this epic represents
       placeholder: Build contact form workflow
     validations:
       required: true
@@ -57,29 +51,6 @@ body:
       placeholder: |
         - Item 1
         - Item 2
-    validations:
-      required: false
-
-  - type: textarea
-    id: child-stories
-    attributes:
-      label: Planned child stories
-      description: List the stories that belong under this epic. Use checkboxes or issue references after creation.
-      placeholder: |
-        - [ ] Story: ...
-        - [ ] Story: ...
-        - [ ] Story: ...
-    validations:
-      required: false
-
-  - type: textarea
-    id: dependencies
-    attributes:
-      label: Dependencies / blockers
-      description: List any issues, PRs, or external dependencies that affect this epic
-      placeholder: |
-        - Blocked by #123
-        - Related to #456
     validations:
       required: false
 
