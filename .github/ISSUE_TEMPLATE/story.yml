@@ -1,6 +1,6 @@
 name: Story
 description: Create a child issue under an epic for one actionable deliverable
-title: "[Bug|Task|Feature]: Title"
+title: '[Bug|Task|Feature]: Title'
 body:
   - type: input
     id: summary
@@ -84,5 +84,13 @@ body:
     attributes:
       label: Additional context
       description: Links, designs, screenshots, technical notes, or implementation references
+    validations:
+      required: false
+
+  - type: upload
+    id: screenshots
+    attributes:
+      label: Upload screenshots
+      description: If applicable, add screenshots to help explain your problem.
     validations:
       required: false
