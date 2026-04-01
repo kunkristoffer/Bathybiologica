@@ -1,11 +1,11 @@
-import type { DiscordEmbeds, DiscordEmbedsField } from '@/types/discord.types';
+import type { DiscordBody, DiscordEmbeds, DiscordEmbedsField } from '@/types/discord.types';
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest'
 import { http, HttpResponse } from "msw"
 import { setupServer } from "msw/node"
 import { DiscordHook } from '@/libs/discord/webhook'
 
 describe("Discord webhook client", () => {
-  const webhookUrl = process.env.TEST_DISCORD_WEBHOOK!
+  const webhookUrl = process.env.DISCORD_WEBHOOK!
 
   const handlers = [
     http.post(webhookUrl, async (req) => {
@@ -29,7 +29,7 @@ describe("Discord webhook client", () => {
   })
 
   it("Supports adding message and embeds", () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     const message = "Test message"
     hook.message(message)
@@ -44,10 +44,17 @@ describe("Discord webhook client", () => {
     expect(hook.body.embeds).toContainEqual(embed)
   })
 
-  it("Throws when adding more than 25 fields at a time", () => {
-    const hook = new DiscordHook(webhookUrl)
+  it("Supports muting webhook", () => {
+    const silentFlag: DiscordBody["flags"] = 4096
+    const hook = new DiscordHook()
+    hook.mute()
+    expect(hook.body.flags).toBe(silentFlag)
+  })
 
-    const fields: DiscordEmbedsField[] = Array.from(Array(26), (x) => ({ name: 'Test', value: 'Tester' }))
+  it("Throws when adding more than 25 fields at a time", () => {
+    const hook = new DiscordHook()
+
+    const fields: DiscordEmbedsField[] = Array.from(Array(26), () => ({ name: 'Test', value: 'Tester' }))
     const embeds: DiscordEmbeds = {
       title: 'Test submission',
       color: 12345,
@@ -58,7 +65,7 @@ describe("Discord webhook client", () => {
   })
 
   it("Throws when adding more than 10 embeds", () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     const embed: DiscordEmbeds = {
       title: 'Test submission',
@@ -75,7 +82,7 @@ describe("Discord webhook client", () => {
   })
 
   it("Constructs and sends valid payload", async () => {
-    const hook = new DiscordHook(webhookUrl)
+    const hook = new DiscordHook()
 
     hook
       .message("This is just a test running")

@@ -30,6 +30,11 @@
     "messagePlaceholder": "message...",
     "submit": "Send message",
     "pending": "Sending...",
-    "status": "Contact form is under development and does not work, please check back later!"
+    "status": "Contact form is under development and does not work, please check back later!",
+    "consent": {
+      "p1": "I consent to the processing of my personal data for the purpose of responding to my inquiry. Read our",
+      "p2": "for more information or if you want to withdraw your consent.",
+      "label": "Privacy Policy"
+    }
   }
 }

@@ -6,6 +6,9 @@ export const ContactSchema = z.object({
   email: z.email('Enter a valid email address').max(254, 'Email is too long'),
   subject: z.string().min(2, 'Please include the subject').max(120, 'Keep the subject concise'),
   message: z.string().min(10, 'Tell us a bit more (min 10 characters)').max(4000, 'Message is too long'),
+  consent: z
+    .boolean()
+    .refine((val) => val === true, { message: 'You must accept our ToS to use this form' }),
   // Honeypot: must be empty
   hp: z.string().max(0, 'Spam detected'),
 });

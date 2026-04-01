@@ -1,5 +1,6 @@
 import { ContactForm } from '@/components/forms/contact';
 import { Section } from '@/components/layout/base/section';
+import { RecaptchaProvider } from '@/providers/recaptcha/provider';
 import { useTranslations } from 'next-intl';
 
 export function LandingContact() {
@@ -11,7 +12,9 @@ export function LandingContact() {
         <p>{i18n('p1')}</p>
         <p>{i18n('p2')}</p>
       </div>
-      <ContactForm className='flex-1' />
+      <RecaptchaProvider>
+        <ContactForm className='flex-1' />
+      </RecaptchaProvider>
     </Section>
   );
 }

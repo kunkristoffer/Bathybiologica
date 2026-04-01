@@ -1,7 +1,8 @@
 'use server';
 
-import { discordNewError, discordNewMessage } from '@/libs/discord/actions';
-import { dbPostContact } from '@/libs/supabase/actions';
+import { discordNewError, discordNewContact } from '@/libs/discord/actions';
+import { verifyRecaptcha } from '@/libs/recaptcha/verify';
+import { dbPostContact } from '@/libs/supabase/contact/actions';
 import { ContactSchema, type ContactInput } from '@/validation/contactForm';
 
 export type ContactActionState = {
@@ -13,7 +14,7 @@ export type ContactActionState = {
 
 export async function submitContactForm(
   _prevState: ContactActionState | undefined,
-  formData: FormData
+  formData: FormData,
 ): Promise<ContactActionState> {
   try {
     // Extract form bindings and convert to database schema naming
@@ -23,6 +24,7 @@ export async function submitContactForm(
       email: (formData.get('email') || '').toString().trim(),
       subject: (formData.get('subject') || '').toString().trim(),
       message: (formData.get('message') || '').toString().trim(),
+      consent: (formData.get('consent')) === "on",
       hp: (formData.get('hp') || '').toString(),
     };
 
@@ -36,25 +38,37 @@ export async function submitContactForm(
         return { ok: true, message: "We will contact you soon!" }
       }
 
-      return { ok: false, fieldErrors };
+      // Formdata missing, returning vales so user can correct them
+      return { ok: false, fieldErrors, values };
     }
 
-    // TODO: (future me) verify reCAPTCHA here:
-    // const token = formData.get("g-recaptcha-response")?.toString();
-    // if (!(await verifyCaptcha(token))) return { ok:false, message:"Captcha failed" };
+    // Extract reCAPTCHA
+    const recaptchaToken = (formData.get('recaptchaToken') || '').toString().trim();
+    const recaptcha = await verifyRecaptcha({
+      token: recaptchaToken,
+      expectedAction: 'submit',
+      minScore: 0.5,
+    });
+
+    if (!recaptcha.ok) {
+      // Recaptcha failed, but for now we'll let them through cause the messages are funny
+      await discordNewContact(parsed.data, { isSpam: true, reason: `reCaptcha gave this submission a score of ${recaptcha.score} / 1.0` })
+      return { ok: false, message: "We will contact you soon!" }
+    }
 
     // Pass contact details to db handler
-    const dbResult = await dbPostContact(parsed.data)
-    if (!dbResult) {
-      await discordNewError("Unable to write to database")
+    const { error } = await dbPostContact(parsed.data)
+    if (error) {
+      // await discordNewContact(parsed.data, { reason: error.message })
+      await discordNewError(`Contact form database error: ${JSON.stringify(error)}`)
       return { ok: false, message: "Unable to store your request, an admin has been notified" }
     }
 
     // Form was successfully submitted
-    await discordNewMessage(parsed.data)
-    return { ok: true, message: `We will get in touch as soon as possible ${dbResult.first_name}!`, values };
-  } catch (err) {
-    await discordNewError("An unknown error occured")
-    return { ok: false, message: "An unknown error occured and an admin has been notified" }
+    await discordNewContact(parsed.data)
+    return { ok: true, message: `We will get in touch as soon as possible ${parsed.data.first_name}!`, values };
+  } catch (error) {
+    await discordNewError(`Contact form unknown error: ${typeof error === "string" ? error : JSON.stringify(error)}`)
+    return { ok: false, message: "An error occurred while handling your request, an admin has been notified" }
   }
 }

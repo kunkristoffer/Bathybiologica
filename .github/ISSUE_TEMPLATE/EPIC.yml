@@ -1,0 +1,89 @@
+name: Epic
+description: Create a parent issue that groups related stories around a larger outcome
+title: "[Epic] "
+labels:
+  - epic
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Epic summary
+      description: A short description of the outcome this epic represents
+      placeholder: Build contact form workflow
+    validations:
+      required: true
+
+  - type: textarea
+    id: context-goal
+    attributes:
+      label: Context and goal
+      description: Describe the problem or opportunity, and what should be true when this epic is complete
+      placeholder: |
+        We need a complete contact form workflow so users can submit inquiries reliably
+        and the team can receive, validate, and process them efficiently.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Which parts of the project does this epic affect?
+      multiple: true
+      options:
+        - Frontend
+        - Backend
+        - API
+        - Database
+        - Authentication
+        - Infrastructure
+        - CI/CD
+        - CMS
+        - Content
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: What is included in this epic?
+      placeholder: |
+        - Build the UI for the contact form
+        - Add validation and submission handling
+        - Store submissions and send notifications
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What is explicitly not part of this epic?
+      placeholder: |
+        - User account area
+        - CRM integration
+    validations:
+      required: false
+
+  - type: textarea
+    id: completion-criteria
+    attributes:
+      label: Completion criteria
+      description: What conditions must be met before this epic can be considered done?
+      placeholder: |
+        - [ ] All related stories are completed
+        - [ ] The feature is working as intended
+        - [ ] Relevant documentation is updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Links, mockups, technical notes, screenshots, or anything else relevant
+    validations:
+      required: false

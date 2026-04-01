@@ -2,6 +2,7 @@ export interface DiscordBody {
   username?: string,
   avatar_url?: string,
   content?: string,
+  flags?: 4096 | (number & {})
   embeds?: DiscordEmbeds[]
 }
 
