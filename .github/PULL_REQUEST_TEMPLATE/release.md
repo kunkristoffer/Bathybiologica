@@ -1,24 +1,22 @@
-# Major|Minor|Patch update - version X.X.X
-## Release summary
+**Title naming convention:** `Major|Minor|Patch update - version X.X.X`
 
-Describe what is being released from `development` into `main`.
+## Summary
+Short summary of this release.
 
-## Related pull requests / issues
+## Included work
+List the main issues, pull requests, or areas included in this release.
 
-Reference important PRs or issues included in this release (remember closing keywords).
+## Production impact
+Describe release notes, breaking changes, migrations, config updates, and any rollout concerns.
 
--
--
--
+## Validation
+Describe what has been verified before release.
 
-## Deployment / release notes
-
-Add anything reviewers or deployers should know.
+## Additional notes
+Add rollback guidance, monitoring notes, or other useful context if relevant.
 
 ## Checklist
-
 - [ ] This PR merges `development` into `main`
-- [ ] The changes in `development` are ready for production
-- [ ] Any breaking changes have been documented
-- [ ] Environment variables / config changes are documented
-- [ ] Release notes have been added if needed
+- [ ] I have summarized the included work
+- [ ] I have noted any breaking changes, config changes, or migration steps
+- [ ] I have considered production validation and rollout impact
