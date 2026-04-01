@@ -4,8 +4,7 @@ Short summary of this PR.
 
 ## Related issue
 
-> [!TIP]
-> Use [closing keywords](https://docs.github.com/articles/closing-issues-using-keywords): close(es/d), fix(es/d) & resolve(es/d)
+<!-- Use closing keywords here: close(es/d), fix(es/d) & resolve(es/d) -->
 
 - closes #
 
@@ -26,9 +25,7 @@ Describe what you tested manually or what behavior was verified.
 Add screenshots, logs, or other useful context if relevant.
 
 ## Checklist
-
-> [!NOTE]
-> If a task is not applicable, mark it as completed anyway
+<!-- If a task is not applicable, mark it as completed anyway -->
 
 - [ ] I have added or updated tests where relevant
 - [ ] I have updated relevant documentation
