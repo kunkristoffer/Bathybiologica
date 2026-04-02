@@ -20,6 +20,7 @@ export function MobileMenuLanguageSelect() {
       </span>
       <select
         className='relative p-2 panel'
+        defaultValue={current}
         onChange={(e) => {
           changeLocale(e.currentTarget.value as Locales);
         }}
