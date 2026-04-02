@@ -191,3 +191,8 @@
 .grecaptcha-badge {
   visibility: hidden !important;
 }
+
+/* This class stops global scroll, add to any modals if needed */
+:root:has(.stop-scroll) {
+  overflow: hidden;
+}

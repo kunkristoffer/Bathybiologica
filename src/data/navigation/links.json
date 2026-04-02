@@ -1,26 +1,30 @@
 [
   {
-    "label": "Projects",
-    "href": "/#projects"
+    "href": "/",
+    "label": {
+      "en": "Landing page",
+      "no": "Hoved side"
+    }
   },
   {
-    "label": "Donate",
-    "href": "/#donate"
+    "href": "/about",
+    "label": {
+      "en": "About",
+      "no": "Om oss"
+    }
   },
   {
-    "label": "Volunteer",
-    "href": "/#volunteer"
+    "href": "/history",
+    "label": {
+      "en": "History",
+      "no": "Vår historie"
+    }
   },
   {
-    "label": "Gallery",
-    "href": "/#gallery"
-  },
-  {
-    "label": "History",
-    "href": "/history"
-  },
-  {
-    "label": "About",
-    "href": "/about"
+    "href": "/#contact",
+    "label": {
+      "en": "Contact us",
+      "no": "Kontakt oss"
+    }
   }
 ]
