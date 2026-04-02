@@ -95,8 +95,13 @@
     @apply container mx-auto flex flex-col px-4 py-16 lg:py-24;
   }
 
-  footer > :first-child {
-    @apply container mx-auto flex justify-between p-4;
+  footer {
+    a {
+      @apply text-primary;
+    }
+    a:hover {
+      @apply text-primary-hover underline;
+    }
   }
 
   h1 {
@@ -185,4 +190,9 @@
 /* Hiding the reCAPTCHA badge since we've included links in our user flow */
 .grecaptcha-badge {
   visibility: hidden !important;
+}
+
+/* This class stops global scroll, add to any modals if needed */
+:root:has(.stop-scroll) {
+  overflow: hidden;
 }
