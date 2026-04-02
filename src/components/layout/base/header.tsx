@@ -4,8 +4,6 @@ import Link from 'next/link';
 import { cookies } from 'next/headers';
 import { NavigationDesktop } from '@/components/layout/navigation/desktop';
 import { NavigationMobile } from '@/components/layout/navigation/mobile';
-import { HeaderMenuTheme } from '@/components/ui/menus/HeaderThemeMenu';
-import { HeaderMenuLocale } from '@/components/ui/menus/HeaderLocaleMenu';
 
 export async function Header() {
   const theme = ((await cookies()).get('theme')?.value as ThemeOptions) || 'system';
@@ -24,12 +22,8 @@ export async function Header() {
             Home
           </p>
         </Link>
-        <NavigationDesktop />
-        <span className='flex-1 flex justify-end-safe items-center gap-6'>
-          <HeaderMenuTheme current={theme} />
-          <HeaderMenuLocale />
-          <NavigationMobile />
-        </span>
+        <NavigationDesktop current={theme} />
+        <NavigationMobile current={theme} />
       </div>
     </header>
   );
