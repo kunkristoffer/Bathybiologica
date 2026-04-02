@@ -11,7 +11,7 @@ import { ThemeOptions } from '@/actions/changeTheme';
 import { useLocale } from 'next-intl';
 
 export function NavigationMobile({ current }: { current: ThemeOptions }) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   useClickOutside(containerRef, () => setIsOpen(false));
 
