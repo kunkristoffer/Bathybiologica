@@ -17,18 +17,24 @@ export function CookieConsentCategory({
   defaultOpen = false,
   selectedCookies,
 }: CookieConsentCategoryProps) {
-  const detailsRef = useRef<HTMLDetailsElement>(null);
   const selected = options.reduce((acc, cur) => (cur.isEnabled ? acc + 1 : 0), 0);
+
   return (
-    <details ref={detailsRef} name='cookie-consent' className='flex flex-col gap-2 panel' open={defaultOpen}>
+    <details
+      name='cookie-consent'
+      className={`group flex flex-col gap-2 panel bg-surface hover:bg-surface-hover duration-200`}
+      open={defaultOpen}
+    >
       <summary className='flex flex-col'>
         <span className='flex items-center gap-2 border-b border-panel-border pb-1'>
-          <FormCheckBox name={name} />
-          <h3 className='ml-2'>{label}</h3>
-          {detailsRef.current?.open}
-          {tooltip && <small className='px-2 rounded-full bg-text-muted'>{tooltip}</small>}
+          <label className='flex gap-2 items-center'>
+            <FormCheckBox name={name} />
+            <h3 className='ml-2'>{label}</h3>
+            {tooltip && <small className='px-2 rounded-full bg-disabled'>{tooltip}</small>}
+          </label>
           <small className='ml-auto text-text-muted'>{`${selected} of ${options.length} selected`}</small>
-          <span className=''>{detailsRef.current?.open ? <ListChevronsUpDown /> : <ListChevronsDownUp />}</span>
+          <ListChevronsDownUp className='hidden group-open:block' />
+          <ListChevronsUpDown className='group-open:hidden' />
         </span>
         <small className='italic py-2'>{description}</small>
       </summary>
@@ -36,7 +42,7 @@ export function CookieConsentCategory({
         {options.map((option) => (
           <label
             key={option.label + option.name}
-            className='flex flex-col justify-center p-2 gap-2 border rounded-md hover:bg-surface has-checked:bg-success/33'
+            className='flex flex-col justify-center p-2 gap-2 border rounded-md bg-panel hover:bg-panel-hover has-checked:bg-tertiary has-checked:hover:bg-tertiary-hover'
           >
             <span className='flex gap-2'>
               <p className='capitalize mr-auto'>{option.label}</p>
