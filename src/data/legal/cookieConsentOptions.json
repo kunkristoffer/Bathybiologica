@@ -9,19 +9,22 @@
         "name": "session-cookie",
         "label": "Session Cookie",
         "description": "Maintains your session state across page requests",
-        "tooltip": "session"
+        "tooltip": "session",
+        "isEnabled": false
       },
       {
         "name": "locale",
         "label": "CSRF Token",
         "description": "Helps prevent cross-site request forgery attacks",
-        "tooltip": "session"
+        "tooltip": "session",
+        "isEnabled": false
       },
       {
-        "name": "locale",
+        "name": "Cookie Consent",
         "label": "Cookie Consent",
         "description": "Stores your cookie consent preferences",
-        "tooltip": "1 year"
+        "tooltip": "1 year",
+        "isEnabled": false
       }
     ]
   },
@@ -34,19 +37,22 @@
         "name": "Google Analytics (_ga)",
         "label": "Google Analytics (_ga)",
         "description": "Used to distinguish users and track page views",
-        "tooltip": "2 years"
+        "tooltip": "2 years",
+        "isEnabled": false
       },
       {
         "name": "Google Analytics (_gid)",
         "label": "Google Analytics (_gid)",
         "description": "Used to distinguish users for analytics",
-        "tooltip": "24 hours"
+        "tooltip": "24 hours",
+        "isEnabled": false
       },
       {
         "name": "Vercel Analytics",
         "label": "Vercel Analytics",
         "description": "Session",
-        "tooltip": "Collects anonymous usage data to improve website performance"
+        "tooltip": "Collects anonymous usage data to improve website performance",
+        "isEnabled": false
       }
     ]
   },
@@ -59,19 +65,22 @@
         "name": "Language Preference",
         "label": "Language Preference",
         "description": "Remembers your preferred language setting",
-        "tooltip": "1 year"
+        "tooltip": "1 year",
+        "isEnabled": false
       },
       {
         "name": "Theme Preference",
         "label": "Theme Preference",
         "description": "Stores your dark/light mode preference",
-        "tooltip": "1 year"
+        "tooltip": "1 year",
+        "isEnabled": false
       },
       {
         "name": "Timezone",
         "label": "Timezone",
         "description": "Remembers your timezone for displaying dates correctly",
-        "tooltip": "1 year"
+        "tooltip": "1 year",
+        "isEnabled": false
       }
     ]
   },
@@ -84,13 +93,15 @@
         "name": "Twitter/X Integration",
         "label": "Twitter/X Integration",
         "description": "Enables sharing content to Twitter/X",
-        "tooltip": ""
+        "tooltip": "",
+        "isEnabled": false
       },
       {
         "name": "LinkedIn Integration",
         "label": "LinkedIn Integration",
         "description": "Enables sharing content to LinkedIn",
-        "tooltip": ""
+        "tooltip": "",
+        "isEnabled": false
       }
     ]
   }
