@@ -83,7 +83,7 @@ export function CookieConsentDialog() {
       open
     >
       <form ref={formEl} method='dialog' className='w-full bg-background text-text' onChange={handleFormChange}>
-        <div className='max-h-screen container mx-auto flex flex-col p-4 gap-4'>
+        <div className='max-h-screen container mx-auto flex flex-col p-4 gap-8'>
           <h2 id='cookie-consent-title'>We value your privacy</h2>
           <small className=''>
             We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By

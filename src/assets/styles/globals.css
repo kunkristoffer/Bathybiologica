@@ -7,7 +7,9 @@
   /* Backgrounds */
   --background: light-dark(hsl(200, 85%, 95%), hsl(219, 37%, 17%));
   --surface: light-dark(hsl(from var(--background) h s calc(l - 3)), hsl(from var(--background) h s calc(l + 3)));
+  --surface-hover: light-dark(hsl(from var(--background) h s calc(l - 5)), hsl(from var(--background) h s calc(l + 5)));
   --panel: light-dark(hsl(from var(--background) h s calc(l - 8)), hsl(from var(--background) h s calc(l + 8)));
+  --panel-hover: light-dark(hsl(from var(--background) h s calc(l - 10)), hsl(from var(--background) h s calc(l + 10)));
   --input: light-dark(hsl(200, 10%, 100%), hsl(220, 20%, 85%));
 
   /* Borders */
@@ -30,11 +32,11 @@
   --primary: hsl(200, 100%, 60%);
   --secondary: hsl(200, 95%, 35%);
   --tertiary: hsl(200, 95%, 30%);
-  --primary-active: hsl(from var(--primary) h s calc(l + 20));
+  --primary-active: hsl(from var(--primary) h s calc(l + 5));
   --primary-hover: hsl(from var(--primary) h s calc(l + 10));
-  --secondary-active: hsl(from var(--secondary) h s calc(l + 20));
+  --secondary-active: hsl(from var(--secondary) h s calc(l + 5));
   --secondary-hover: hsl(from var(--secondary) h s calc(l + 10));
-  --tertiary-hover: hsl(from var(--tertiary) h s calc(l + 20));
+  --tertiary-hover: hsl(from var(--tertiary) h s calc(l + 5));
   --tertiary-active: hsl(from var(--tertiary) h s calc(l + 10));
 
   /* Status colors */
@@ -136,7 +138,9 @@
 @theme inline {
   /* Backgrounds */
   --color-background: var(--background);
+  --color-panel-hover: var(--panel-hover);
   --color-panel: var(--panel);
+  --color-surface-hover: var(--surface-hover);
   --color-surface: var(--surface);
   --color-input: var(--input);
 
