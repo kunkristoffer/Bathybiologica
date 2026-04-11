@@ -1,11 +1,16 @@
 'use client';
 
+// Form binding data
 import cookieData from '@/data/legal/cookieConsentOptions.json';
+
+// Global
 import Link from 'next/link';
-import { ChangeEvent, useRef, useState } from 'react';
+import { type ChangeEvent, useRef, useState } from 'react';
+import { setCookieConsent } from '@/actions/legal/cookieConsent';
+
+// Components
 import { CookieConsentCategory } from '@/components/content/cookieConsent/CookieCategory';
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
-import { SelectedCookies } from '@/types/legal/cookieConsent.types';
 
 export function CookieConsentDialog() {
   // Form UI state
@@ -65,9 +70,11 @@ export function CookieConsentDialog() {
     // Load the existing cookie consent if it exists
   }
 
-  function saveCookies() {
+  async function saveCookies() {
     // Save the selected cookies and disable this form
-    setIsVisible(false);
+    //setIsVisible(false);
+
+    await setCookieConsent();
   }
 
   if (!isVisible) return null;
