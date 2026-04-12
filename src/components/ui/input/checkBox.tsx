@@ -1,13 +1,12 @@
 import { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export function FormCheckBox({ name, className, defaultChecked = false, ...rest }: ComponentProps<'input'>) {
+export function FormCheckBox({ name, className, ...rest }: ComponentProps<'input'>) {
   return (
     <label className='flex items-center cursor-pointer relative'>
       <input
         type='checkbox'
         name={name}
-        defaultChecked={defaultChecked}
         className={twMerge(
           'peer h-5 w-5 cursor-pointer appearance-none rounded border border-secondary checked:bg-primary checked:border-primary',
           className
