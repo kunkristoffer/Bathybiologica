@@ -1,4 +1,4 @@
-import { ConsentFormSchema } from "@/data/legal/cookieConsentOptions"
+import { type ConsentFormSchema } from "@/data/legal/cookieConsentOptions"
 
 /** Basic structure of a consent form binding */
 export type ConsentFormBindings = {
