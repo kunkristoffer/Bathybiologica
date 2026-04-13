@@ -15,18 +15,24 @@ export type ConsentFormSchemaBindings = ConsentFormBindings & { options?: Consen
 // Extract values and structs from the constructed consent form
 export type ConsentFormCategoryNames = ConsentFormSchema[number]["name"]
 export type ConsentFormOptionsNames = NonNullable<ConsentFormSchema[number]["options"]>[number]["name"]
+export type ConsentFormOptions = Record<ConsentFormOptionsNames, boolean>
+
 
 // Consent cookie struct
-type ConsentMode = "all" | "essential" | "custom"
+export type ConsentMode = "all" | "essential" | "none" | "custom"
+
 type ConsentCookieBase = {
   version: number
   updatedAt: number
 }
+
 type ConsentCookieCustom = ConsentCookieBase & {
   mode: Extract<ConsentMode, "custom">
-  categories: Record<ConsentFormCategoryNames, boolean>
+  categories: ConsentFormOptions
 }
 type ConsentCookieNonCustom = ConsentCookieBase & {
   mode: Exclude<ConsentMode, "custom">
+  categories?: never
 }
+
 export type ConsentCookie = ConsentCookieCustom | ConsentCookieNonCustom
