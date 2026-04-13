@@ -1,6 +1,7 @@
-import { getCookieConsent } from "@/actions/legal/cookieConsent";
+import type { ConsentFormOptions, ConsentFormOptionsNames, ConsentMode, ConsentCookie } from "@/types/legal/consent.types";
+import { getCookieConsent, setCookieConsent } from "@/actions/legal/cookieConsent";
 
-export async function hasConsent() {
+export async function hasConsentCookie() {
   const cookie = await getCookieConsent()
 
   // Cookie missing or malformed, show cookie consent
@@ -8,19 +9,35 @@ export async function hasConsent() {
     showConsentDialog: true
   }
 
-
-  const cookieDate = new Date(cookie.updatedAt).getTime()
-  const currDate = new Date().getTime()
-  const cookieMaxDays = 60
-
-  // Cookie died of old age, show cookie consent again sadge
-  if (currDate - cookieDate > (1000 * 60 * 60 * 24 * cookieMaxDays)) return {
-    showConsentDialog: true
-  }
-
-  // Cookie exist, expose details
   return {
     showConsentDialog: false,
     cookie
+  }
+}
+
+export async function setConsent(mode: ConsentMode, options?: ConsentFormOptions) {
+  const updatedAt = new Date().getTime()
+  const version = 1
+  let cookie: ConsentCookie;
+
+  if (mode === "custom") {
+    if (!options) {
+      throw new Error("Custom consent requires categories.");
+    }
+
+    cookie = {
+      mode: "custom",
+      updatedAt,
+      version,
+      categories: options,
+    };
+  } else {
+    cookie = { mode, updatedAt, version, };
+  }
+  try {
+    const test = await setCookieConsent(cookie)
+    console.log(test);
+  } catch (err) {
+    console.log(err);
   }
 }
