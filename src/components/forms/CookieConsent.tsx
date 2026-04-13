@@ -5,21 +5,17 @@ import { CONSENT_FORM_SCHEMA } from '@/data/legal/cookieConsentOptions';
 
 // Global
 import Link from 'next/link';
-import { type ChangeEvent, useRef, useState } from 'react';
-import { setCookieConsent } from '@/actions/legal/cookieConsent';
+import { type ChangeEvent, useState } from 'react';
 
 // Components
 import { CookieConsentCategory } from '@/components/content/cookieConsent/CookieCategory';
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
-import { ConsentFormSchemaBindings } from '@/types/legal/consent.types';
+import { ConsentFormOptions, ConsentFormSchemaBindings, ConsentMode } from '@/types/legal/consent.types';
+import { setConsent } from '@/libs/legal/consent';
 
 export function CookieConsentForm() {
   // Is user customizing consent, then show form
   const [isCustomizing, setIsCustomizing] = useState(true);
-
-  // Cookie data
-  const [consentForm, setConsentForm] = useState<ConsentFormSchemaBindings[]>(CONSENT_FORM_SCHEMA);
-  const categoryNames = consentForm.map((category) => category.name);
 
   // Consent form bindings
   const consentFormBindings = CONSENT_FORM_SCHEMA as ConsentFormSchemaBindings[];
@@ -34,11 +30,9 @@ export function CookieConsentForm() {
     }, {})
   );
 
+  // Handles checkbox inputs
   function handleFormChange(e: ChangeEvent<HTMLInputElement>) {
-    // The input element being changed
     const target = e.target;
-
-    // Sanitize input
     if (!(target instanceof HTMLInputElement) || target.type !== 'checkbox') {
       return;
     }
@@ -65,32 +59,15 @@ export function CookieConsentForm() {
     });
   }
 
-  // Use nested object to render form
-  // use flatMap version to store values
-  // Let rendered elemets use flatMap[name] as value
-
-  function toggleCookie() {
-    // Find a specific cookie and enable
-  }
-  function toggleCategory() {
-    // Find and toggle all cookies in a category
-  }
-  function toggleAll() {
-    // Toggle status of all cookies
-  }
-  function toggleEssential() {
-    // find cookies with required tooltip and toggle cookies
-  }
-
-  function loadCookies() {
-    // Load the existing cookie consent if it exists
-  }
-
-  async function saveCookies() {
-    // Save the selected cookies and disable this form
-    //setIsVisible(false);
-
-    await setCookieConsent();
+  async function submit(mode: ConsentMode) {
+    if (mode === 'custom') {
+      const cookieFormFlattened = Object.fromEntries(
+        Object.values(cookieForm).flatMap((test) => Object.entries(test))
+      ) as ConsentFormOptions;
+      await setConsent('custom', cookieFormFlattened);
+    } else {
+      await setConsent(mode);
+    }
   }
   return (
     <form method='dialog' className='w-full bg-background text-text'>
@@ -131,12 +108,12 @@ export function CookieConsentForm() {
               variant='success'
               stretch
               className='col-span-4'
-              onClick={saveCookies}
+              onClick={() => submit('custom')}
             />
           )}
-          <ButtonAction label='None' variant='error' stretch />
-          <ButtonAction label='Essential only' variant='primary' stretch />
-          <ButtonAction label='All' variant='success' stretch />
+          <ButtonAction label='None' variant='error' stretch onClick={() => submit('none')} />
+          <ButtonAction label='Essential only' variant='primary' stretch onClick={() => submit('essential')} />
+          <ButtonAction label='All' variant='success' stretch onClick={() => submit('all')} />
           <ButtonAction
             label={isCustomizing ? 'Close menu' : 'Customize'}
             variant='warning'
