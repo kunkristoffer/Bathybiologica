@@ -41,3 +41,19 @@ export async function setConsent(mode: ConsentMode, options?: ConsentFormOptions
     console.log(err);
   }
 }
+
+export async function hasConsent(option: ConsentFormOptionsNames) {
+  const cookie = await getCookieConsent()
+
+  if (!cookie) return false
+  if (cookie.mode === "all") { return true }
+  if (cookie.mode === "essential") {
+    const allowed: Partial<ConsentFormOptionsNames>[] = ["language", "cookieConsent", "locale"]
+    return allowed.includes(option) ? true : false
+  }
+  if (cookie.mode === "custom" && cookie.categories) {
+    return cookie.categories[option]
+  }
+
+  return false
+}
