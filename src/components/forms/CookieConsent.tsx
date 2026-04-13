@@ -15,7 +15,7 @@ import { setConsent } from '@/libs/legal/consent';
 
 export function CookieConsentForm() {
   // Is user customizing consent, then show form
-  const [isCustomizing, setIsCustomizing] = useState(true);
+  const [isCustomizing, setIsCustomizing] = useState(false);
 
   // Consent form bindings
   const consentFormBindings = CONSENT_FORM_SCHEMA as ConsentFormSchemaBindings[];
