@@ -12,7 +12,7 @@ import { getLocale } from 'next-intl/server';
 import { Header } from '@/components/layout/base/header';
 import { Footer } from '@/components/layout/base/footer';
 import { CookieConsentDialog } from '@/components/ui/modals/CookieConsentDialog';
-import { hasConsent } from '@/libs/legal/consent';
+import { hasConsentCookie } from '@/libs/legal/consent';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -35,7 +35,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   // Load user cookie consent
-  const { showConsentDialog } = await hasConsent();
+  const { showConsentDialog } = await hasConsentCookie();
 
   // Get user prefered language
   const locale = await getLocale();
