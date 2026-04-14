@@ -18,6 +18,7 @@ export interface ConsentCategory extends ConsentOption {
 // Extract values and structs from the constructed consent form
 export type ConsentFormCategories = ConsentForm[number]["name"]
 export type ConsentFormOptions = ConsentForm[number]["options"][number]["name"]
+export type ConsentCategories = Record<ConsentFormCategories, Partial<ConsentOptions>>
 export type ConsentOptions = Record<ConsentFormOptions, boolean>
 
 
