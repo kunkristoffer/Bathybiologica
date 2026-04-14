@@ -1,7 +1,7 @@
 import { type ConsentForm } from "@/data/legal/consent/formBinds"
 
 /** Avaliable consent tags */
-type ConsentTagsID = "external" | "recommended"
+type ConsentTagsID = "essential" | "recommended" | "measurement" | "external"
 
 /** Basic structure of a consent form binding */
 interface ConsentOption {
