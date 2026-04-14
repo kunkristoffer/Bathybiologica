@@ -1,21 +1,24 @@
-import { type ConsentFormSchema } from "@/data/legal/cookieConsentOptions"
+import { type ConsentForm } from "@/data/legal/consent/formBinds"
+
+/** Avaliable consent tags */
+type ConsentTagsID = "external" | "recommended"
 
 /** Basic structure of a consent form binding */
-export type ConsentFormBindings = {
-  name: string
-  label: string
-  description: string
-  tooltip?: string
+interface ConsentOption {
+  name: string,
   isRequired?: boolean
+  tags?: ConsentTagsID[]
 }
 
 /** The final structure of a consent form used in generating form bindings */
-export type ConsentFormSchemaBindings = ConsentFormBindings & { options?: ConsentFormBindings[] }
+export interface ConsentCategory extends ConsentOption {
+  options: ConsentOption[]
+}
 
 // Extract values and structs from the constructed consent form
-export type ConsentFormCategoryNames = ConsentFormSchema[number]["name"]
-export type ConsentFormOptionsNames = NonNullable<ConsentFormSchema[number]["options"]>[number]["name"]
-export type ConsentFormOptions = Record<ConsentFormOptionsNames, boolean>
+export type ConsentFormCategories = ConsentForm[number]["name"]
+export type ConsentFormOptions = ConsentForm[number]["options"][number]["name"]
+export type ConsentOptions = Record<ConsentFormOptions, boolean>
 
 
 // Consent cookie struct

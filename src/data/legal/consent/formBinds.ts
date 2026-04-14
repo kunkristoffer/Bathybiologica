@@ -1,13 +1,4 @@
-type ConsentTagsID = "external" | "recommended"
-
-interface ConsentOption {
-  name: string,
-  isRequired?: boolean
-  tags?: ConsentTagsID[]
-}
-export interface ConsentCategory extends ConsentOption {
-  options: ConsentOption[]
-}
+import { ConsentCategory } from "@/types/legal/consent.types"
 
 export const consentFormData = [
   {
@@ -30,25 +21,23 @@ export const consentFormData = [
     // Analyze how a user uses our site, only used for improving the site performance
     name: 'analytics',
     options: [
-      { name: "adsence", tags: ["external"] }
+      { name: "googleAnalytics", tags: ["external"] }
     ]
   }, {
     // Allow social media integrations
     name: 'social',
     options: [
-      { name: "meta", tags: ["external"] }
+      { name: "metaSocial", tags: ["external"] }
     ]
   }, {
     // Allow 3rd parties to collect metrics to improve SEO
     name: 'campaigns',
     options: [
-      { name: "google", tags: ["external"] },
+      { name: "googleCampaigns", tags: ["external"] },
       { name: "youtube", tags: ["external"] },
-      { name: "meta", tags: ["external"] }
+      { name: "metaCampaigns", tags: ["external"] }
     ]
   }
 ] as const satisfies ConsentCategory[]
 
-type ConsentForm = typeof consentFormData
-type ConsentFormCategories = ConsentForm[number]["name"]
-type ConsentFormOptions = ConsentForm[number]["options"][number]["name"]
+export type ConsentForm = typeof consentFormData
