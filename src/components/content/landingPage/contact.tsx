@@ -11,7 +11,7 @@ export async function LandingContact() {
   const t = await getTranslations('landing.contactUs');
 
   // Check cookie consent
-  const showForm = await hasConsent('googleAnalyticsGA');
+  const showForm = await hasConsent('google');
 
   return (
     <Section sectionId='contact' sectionClassName='' className='md:flex-row gap-12'>
