@@ -18,6 +18,10 @@
     "measurement": "Måling",
     "external": "Ekstern tjeneste"
   },
+  "translations": {
+    "of": "av",
+    "selected": "valgt"
+  },
   "categories": {
     "essential": {
       "title": "Nødvendige",

@@ -18,6 +18,10 @@
     "measurement": "Measurement",
     "external": "External service"
   },
+  "translations": {
+    "of": "of",
+    "selected": "selected"
+  },
   "categories": {
     "essential": {
       "title": "Essential",

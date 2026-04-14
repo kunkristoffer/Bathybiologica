@@ -5,6 +5,7 @@ import type { ConsentFormOptions, ConsentMode, ConsentOptions } from '@/types/le
 import { type ChangeEvent, useState } from 'react';
 import Link from 'next/link';
 import { setConsent } from '@/libs/legal/consent';
+import { useTranslations } from 'next-intl';
 
 // Form binding data
 import { consentFormData } from '@/data/legal/consent/formBinds';
@@ -14,6 +15,9 @@ import { CookieConsentCategory } from '@/components/content/cookieConsent/Cookie
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
 
 export function CookieConsentForm() {
+  // Get translations
+  const t = useTranslations('consent');
+
   // Is user customizing consent, then show form
   const [isCustomizing, setIsCustomizing] = useState(false);
 
@@ -71,21 +75,21 @@ export function CookieConsentForm() {
   return (
     <form method='dialog' className='w-full bg-background text-text'>
       <div className='max-h-screen container mx-auto flex flex-col p-4 gap-8'>
-        <h2 id='cookie-consent-title'>We value your privacy</h2>
+        <h2 id='cookie-consent-title'>{t('title')}</h2>
+        <small className=''>{t('description.p1')}</small>
         <small className=''>
-          We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By
-          clicking "Accept All", you consent to our use of cookies. You can also choose to accept only necessary cookies
-          or customize your preferences.
-        </small>
-        <small className=''>
-          By using this site, you agree to our{' '}
-          <Link href={'privacyHref'} className='underline underline-offset-4 text-primary'>
-            privacy policy
-          </Link>{' '}
-          and{' '}
-          <Link href={'cookieHref'} className='underline underline-offset-4 text-primary'>
-            cookie policy
-          </Link>
+          {t.rich('description.p2', {
+            privacyLink: (chunks) => (
+              <Link href={'/privacy'} className='underline underline-offset-4 text-primary'>
+                {chunks}
+              </Link>
+            ),
+            cookieLink: (chunks) => (
+              <Link href={'/privacy#cookie'} className='underline underline-offset-4 text-primary'>
+                {chunks}
+              </Link>
+            ),
+          })}
         </small>
         {isCustomizing && (
           <div className='flex flex-col gap-4 overflow-auto'>
@@ -103,18 +107,18 @@ export function CookieConsentForm() {
         <span className='grid grid-cols-4 gap-4'>
           {isCustomizing && (
             <ButtonAction
-              label='Save preferences'
+              label={t("actions.saveCustom")}
               variant='success'
               stretch
               className='col-span-4'
               onClick={() => submit('custom')}
             />
           )}
-          <ButtonAction label='None' variant='error' stretch onClick={() => submit('none')} />
-          <ButtonAction label='Essential only' variant='primary' stretch onClick={() => submit('essential')} />
-          <ButtonAction label='All' variant='success' stretch onClick={() => submit('all')} />
+          <ButtonAction label={t("actions.decline")} variant='error' stretch onClick={() => submit('none')} />
+          <ButtonAction label={t("actions.acceptEssential")} variant='primary' stretch onClick={() => submit('essential')} />
+          <ButtonAction label={t("actions.acceptAll")} variant='success' stretch onClick={() => submit('all')} />
           <ButtonAction
-            label={isCustomizing ? 'Close menu' : 'Customize'}
+            label={isCustomizing ? t("actions.minimize") : t("actions.customize")}
             variant='warning'
             aria-expanded={isCustomizing}
             onClick={() => setIsCustomizing((value) => !value)}
