@@ -1,0 +1,77 @@
+{
+  "title": "We value your privacy",
+  "description": {
+    "p1": "We use cookies and similar technologies to make the site work properly, remember your preferences, protect forms against abuse, and understand how the site is used. By clicking \"Accept all\", you consent to the use of all optional cookies and services. You can also choose to accept only essential cookies or customize your preferences.",
+    "p2": "By using this site, you agree to our <privacyLink>privacy policy</privacyLink> and <cookieLink>cookie policy</cookieLink>."
+  },
+  "actions": {
+    "acceptAll": "Accept all",
+    "acceptEssential": "Essential only",
+    "saveCustom": "Save preferences",
+    "customize": "Customize",
+    "minimize": "Hide",
+    "decline": "Decline"
+  },
+  "tags": {
+    "essential": "Essential",
+    "recommended": "Recommended",
+    "measurement": "Measurement",
+    "external": "External service"
+  },
+  "categories": {
+    "essential": {
+      "label": "Essential",
+      "description": "Required for the site to function properly and cannot be turned off."
+    },
+    "functional": {
+      "label": "Functional",
+      "description": "Used to enable helpful site features such as language, theme, and spam protection."
+    },
+    "analytics": {
+      "label": "Analytics",
+      "description": "Used to understand how visitors use the site so we can improve performance and content."
+    },
+    "social": {
+      "label": "Social",
+      "description": "Allows social media integrations and related third-party features."
+    },
+    "campaigns": {
+      "label": "Campaigns",
+      "description": "Allows third-party services to measure traffic, engagement, and campaign performance."
+    }
+  },
+  "options": {
+    "cookieConsent": {
+      "title": "Cookie consent storage",
+      "description": "Stores your cookie preferences so we can respect your choices."
+    },
+    "sessionCookie": {
+      "title": "Session cookie",
+      "description": "Maintains essential session and security-related functionality while using the site."
+    },
+    "recaptcha": {
+      "title": "reCAPTCHA",
+      "description": "Helps protect forms and the site against spam, bots, and abuse."
+    },
+    "locale": {
+      "title": "Language preference",
+      "description": "Remembers your selected language on the site."
+    },
+    "theme": {
+      "title": "Theme preference",
+      "description": "Remembers your preferred visual theme, such as light or dark mode."
+    },
+    "google": {
+      "title": "Google services",
+      "description": "Allows Google services to provide analytics, embedded content, or campaign-related measurement where enabled."
+    },
+    "meta": {
+      "title": "Meta services",
+      "description": "Allows Meta services to support social integrations or campaign-related measurement where enabled."
+    },
+    "youtube": {
+      "title": "YouTube",
+      "description": "Allows YouTube content and related measurement features where enabled."
+    }
+  }
+}

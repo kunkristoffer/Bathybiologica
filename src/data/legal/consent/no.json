@@ -1,0 +1,77 @@
+{
+  "title": "Vi verdsetter personvernet ditt",
+  "description": {
+    "p1": "Vi bruker informasjonskapsler og lignende teknologier for å få nettstedet til å fungere som det skal, huske innstillingene dine, beskytte skjemaer mot misbruk og forstå hvordan nettstedet brukes. Ved å klikke \"Godta alle\" samtykker du til bruk av alle valgfrie informasjonskapsler og tjenester. Du kan også velge å bare godta nødvendige informasjonskapsler eller tilpasse innstillingene dine.",
+    "p2": "Ved å bruke dette nettstedet godtar du vår <privacyLink>personvernerklæring</privacyLink> og vår <cookieLink>erklæring om informasjonskapsler</cookieLink>."
+  },
+  "actions": {
+    "acceptAll": "Godta alle",
+    "acceptEssential": "Kun nødvendige",
+    "saveCustom": "Lagre innstillinger",
+    "customize": "Tilpass",
+    "minimize": "Skjul",
+    "decline": "Avslå"
+  },
+  "tags": {
+    "essential": "Nødvendig",
+    "recommended": "Anbefalt",
+    "measurement": "Måling",
+    "external": "Ekstern tjeneste"
+  },
+  "categories": {
+    "essential": {
+      "label": "Nødvendige",
+      "description": "Kreves for at nettstedet skal fungere som det skal og kan ikke slås av."
+    },
+    "functional": {
+      "label": "Funksjonelle",
+      "description": "Brukes for å aktivere nyttige funksjoner på nettstedet, som språk, tema og beskyttelse mot spam."
+    },
+    "analytics": {
+      "label": "Analyse",
+      "description": "Brukes for å forstå hvordan besøkende bruker nettstedet, slik at vi kan forbedre ytelse og innhold."
+    },
+    "social": {
+      "label": "Sosiale medier",
+      "description": "Tillater integrasjoner mot sosiale medier og tilhørende tredjepartsfunksjoner."
+    },
+    "campaigns": {
+      "label": "Kampanjer",
+      "description": "Tillater tredjepartstjenester å måle trafikk, engasjement og kampanjeresultater."
+    }
+  },
+  "options": {
+    "cookieConsent": {
+      "title": "Lagring av samtykke",
+      "description": "Lagrer valgene dine for informasjonskapsler slik at vi kan respektere innstillingene dine."
+    },
+    "sessionCookie": {
+      "title": "Øktinformasjonskapsel",
+      "description": "Opprettholder nødvendig økt- og sikkerhetsrelatert funksjonalitet mens du bruker nettstedet."
+    },
+    "recaptcha": {
+      "title": "reCAPTCHA",
+      "description": "Hjelper med å beskytte skjemaer og nettstedet mot spam, roboter og misbruk."
+    },
+    "locale": {
+      "title": "Språkvalg",
+      "description": "Husker hvilket språk du har valgt på nettstedet."
+    },
+    "theme": {
+      "title": "Temavalg",
+      "description": "Husker hvilket visuelt tema du foretrekker, for eksempel lys eller mørk modus."
+    },
+    "google": {
+      "title": "Google-tjenester",
+      "description": "Tillater Google-tjenester å levere analyse, innebygd innhold eller kampanjerelatert måling der dette er aktivert."
+    },
+    "meta": {
+      "title": "Meta-tjenester",
+      "description": "Tillater Meta-tjenester å støtte integrasjoner mot sosiale medier eller kampanjerelatert måling der dette er aktivert."
+    },
+    "youtube": {
+      "title": "YouTube",
+      "description": "Tillater YouTube-innhold og tilhørende målefunksjoner der dette er aktivert."
+    }
+  }
+}
