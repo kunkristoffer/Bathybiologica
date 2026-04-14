@@ -1,11 +1,11 @@
 'use client';
 
 // Global
-import type { ConsentFormOptions, ConsentMode, ConsentOptions } from '@/types/legal/consent.types';
+import { type ConsentMode, type ConsentOptions } from '@/types/legal/consent.types';
 import { type ChangeEvent, useState } from 'react';
-import Link from 'next/link';
 import { setConsent } from '@/libs/legal/consent';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 // Form binding data
 import { consentFormData } from '@/data/legal/consent/formBinds';
@@ -107,18 +107,23 @@ export function CookieConsentForm() {
         <span className='grid grid-cols-4 gap-4'>
           {isCustomizing && (
             <ButtonAction
-              label={t("actions.saveCustom")}
+              label={t('actions.saveCustom')}
               variant='success'
               stretch
               className='col-span-4'
               onClick={() => submit('custom')}
             />
           )}
-          <ButtonAction label={t("actions.decline")} variant='error' stretch onClick={() => submit('none')} />
-          <ButtonAction label={t("actions.acceptEssential")} variant='primary' stretch onClick={() => submit('essential')} />
-          <ButtonAction label={t("actions.acceptAll")} variant='success' stretch onClick={() => submit('all')} />
+          <ButtonAction label={t('actions.decline')} variant='error' stretch onClick={() => submit('none')} />
           <ButtonAction
-            label={isCustomizing ? t("actions.minimize") : t("actions.customize")}
+            label={t('actions.acceptEssential')}
+            variant='primary'
+            stretch
+            onClick={() => submit('essential')}
+          />
+          <ButtonAction label={t('actions.acceptAll')} variant='success' stretch onClick={() => submit('all')} />
+          <ButtonAction
+            label={isCustomizing ? t('actions.minimize') : t('actions.customize')}
             variant='warning'
             aria-expanded={isCustomizing}
             onClick={() => setIsCustomizing((value) => !value)}
