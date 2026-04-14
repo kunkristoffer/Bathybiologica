@@ -1,7 +1,7 @@
 'use client';
 
 // Global
-import { type ConsentMode, type ConsentOptions } from '@/types/legal/consent.types';
+import type { ConsentCategory, ConsentMode, ConsentOptions } from '@/types/legal/consent.types';
 import { type ChangeEvent, useState } from 'react';
 import { setConsent } from '@/libs/legal/consent';
 import { useTranslations } from 'next-intl';
@@ -22,11 +22,12 @@ export function CookieConsentForm() {
   const [isCustomizing, setIsCustomizing] = useState(false);
 
   // Consent form bindings
+  const consentFormBindings = consentFormData as ConsentCategory[];
   const [cookieForm, setCookieForm] = useState(
-    consentFormData.reduce<Record<string, Record<string, boolean>>>((categories, category) => {
+    consentFormBindings.reduce<Record<string, Record<string, boolean>>>((categories, category) => {
       categories[category.name] =
         category.options?.reduce<Record<string, boolean>>((options, option) => {
-          options[option.name] = false;
+          options[option.name] = option?.isRequired ?? false;
           return options;
         }, {}) || {};
       return categories;
@@ -93,7 +94,7 @@ export function CookieConsentForm() {
         </small>
         {isCustomizing && (
           <div className='flex flex-col gap-4 overflow-auto'>
-            {consentFormData.map((category, index) => (
+            {consentFormBindings.map((category, index) => (
               <CookieConsentCategory
                 key={category.name}
                 defaultOpen={index === 0}
