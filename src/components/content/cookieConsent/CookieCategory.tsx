@@ -17,6 +17,7 @@ export function CookieConsentCategory({
   name,
   options,
   values,
+  isRequired,
   tags,
   onChange,
   defaultOpen = false,
@@ -39,7 +40,7 @@ export function CookieConsentCategory({
       <summary className='flex flex-col'>
         <span className='flex items-center gap-2 border-b border-panel-border pb-1'>
           <label className='flex gap-2 items-center'>
-            <FormCheckBox name={name} checked={isCategorySelected} onChange={onChange} />
+            <FormCheckBox name={name} checked={isCategorySelected} onChange={onChange} disabled={isRequired} />
             <h3 className='ml-2'>{t(`categories.${name}.title`)}</h3>
             {tags?.map((tag) => (
               <small key={name + tag} className='px-2 rounded-full bg-disabled'>
@@ -57,7 +58,11 @@ export function CookieConsentCategory({
         {options?.map((option) => (
           <label
             key={`${name}-${option.name}`}
-            className='flex flex-col justify-center p-2 gap-2 border rounded-md bg-panel hover:bg-panel-hover has-checked:bg-tertiary has-checked:hover:bg-tertiary-hover'
+            className={`
+              flex flex-col justify-center p-2 gap-2 border rounded-md bg-panel
+              hover:bg-panel-hover has-checked:bg-tertiary has-checked:hover:bg-tertiary-hover
+              has-disabled:bg-disabled!
+            `}
           >
             <span className='flex gap-2 justify-between'>
               <span className='flex gap-2 items-center'>
@@ -74,7 +79,7 @@ export function CookieConsentCategory({
                 checked={values[option.name]}
                 data-parent-category={name}
                 onChange={onChange}
-                required={option.isRequired}
+                disabled={option.isRequired}
               />
             </span>
             <small className=''>{t(`options.${option.name}.description`)}</small>
