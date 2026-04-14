@@ -1,4 +1,4 @@
-import type { ConsentOptions, ConsentFormOptions, ConsentMode, ConsentCookie } from "@/types/legal/consent.types";
+import type { ConsentOptions, ConsentFormOptions, ConsentCookie } from "@/types/legal/consent.types";
 import { deleteCookieConsent, getCookieConsent, setCookieConsent } from "@/actions/legal/cookieConsent";
 
 export async function hasConsentCookie() {
@@ -15,28 +15,22 @@ export async function hasConsentCookie() {
   }
 }
 
-export async function setConsent(mode: ConsentMode, options?: ConsentOptions) {
+export async function setConsent(options: ConsentOptions) {
+  if (!options) {
+    throw new Error("Custom consent requires categories.");
+  }
+
   const updatedAt = new Date().getTime()
   const version = 1
-  let cookie: ConsentCookie;
 
-  if (mode === "custom") {
-    if (!options) {
-      throw new Error("Custom consent requires categories.");
-    }
+  let cookie: ConsentCookie = {
+    updatedAt,
+    version,
+    options,
+  };
 
-    cookie = {
-      mode: "custom",
-      updatedAt,
-      version,
-      categories: options,
-    };
-  } else {
-    cookie = { mode, updatedAt, version, };
-  }
   try {
-    const test = await setCookieConsent(cookie)
-    console.log(test);
+    await setCookieConsent(cookie)
   } catch (err) {
     console.log(err);
   }
@@ -45,17 +39,8 @@ export async function setConsent(mode: ConsentMode, options?: ConsentOptions) {
 export async function hasConsent(option: ConsentFormOptions) {
   const cookie = await getCookieConsent()
 
-  if (!cookie) return false
-  if (cookie.mode === "all") { return true }
-  if (cookie.mode === "essential") {
-    const allowed: Partial<ConsentFormOptions>[] = ["theme", "cookieConsent", "locale"]
-    return allowed.includes(option) ? true : false
-  }
-  if (cookie.mode === "custom" && cookie.categories) {
-    return cookie.categories[option]
-  }
-
-  return false
+  if (!cookie || !cookie.options) return false
+  return cookie.options[option] ?? false
 }
 
 export async function removeConsentCookie() {

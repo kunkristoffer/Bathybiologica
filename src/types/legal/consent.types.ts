@@ -23,20 +23,10 @@ export type ConsentOptions = Record<ConsentFormOptions, boolean>
 
 
 // Consent cookie struct
-export type ConsentMode = "all" | "essential" | "none" | "custom"
-
-type ConsentCookieBase = {
+export type ConsentCookie = {
   version: number
   updatedAt: number
+  options: Partial<ConsentOptions>
 }
 
-type ConsentCookieCustom = ConsentCookieBase & {
-  mode: Extract<ConsentMode, "custom">
-  categories: ConsentOptions
-}
-type ConsentCookieNonCustom = ConsentCookieBase & {
-  mode: Exclude<ConsentMode, "custom">
-  categories?: never
-}
-
-export type ConsentCookie = ConsentCookieCustom | ConsentCookieNonCustom
+export type ConsentMode = "all" | "none" | "custom" | "essential"

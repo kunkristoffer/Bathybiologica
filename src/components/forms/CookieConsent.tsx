@@ -1,7 +1,7 @@
 'use client';
 
 // Global
-import type { ConsentCategory, ConsentMode, ConsentOptions } from '@/types/legal/consent.types';
+import type { ConsentFormOptions, ConsentMode, ConsentCategory, ConsentOptions } from '@/types/legal/consent.types';
 import { type ChangeEvent, useState } from 'react';
 import { setConsent } from '@/libs/legal/consent';
 import { useTranslations } from 'next-intl';
@@ -64,15 +64,39 @@ export function CookieConsentForm() {
   }
 
   async function submit(mode: ConsentMode) {
-    if (mode === 'custom') {
-      const cookieFormFlattened = Object.fromEntries(
-        Object.values(cookieForm).flatMap((test) => Object.entries(test))
-      ) as ConsentOptions;
-      await setConsent('custom', cookieFormFlattened);
-    } else {
-      await setConsent(mode);
+    const cookieFormFlattened = Object.fromEntries(
+      Object.values(cookieForm).flatMap((test) => Object.entries(test))
+    ) as ConsentOptions;
+
+    switch (mode) {
+      case 'all':
+        for (const key in cookieFormFlattened) {
+          cookieFormFlattened[key as ConsentFormOptions] = true;
+        }
+        break;
+      case 'none':
+        for (const key in cookieFormFlattened) {
+          cookieFormFlattened[key as ConsentFormOptions] = false;
+        }
+        break;
+      case 'essential':
+        const essentialCookies = consentFormBindings.flatMap((category) =>
+          category.options.reduce((arr, option) => {
+            if (option.isRequired) {
+              arr.push(option.name as ConsentFormOptions);
+            }
+            return arr;
+          }, [] as ConsentFormOptions[])
+        );
+        for (const key in cookieFormFlattened) {
+          cookieFormFlattened[key as ConsentFormOptions] = essentialCookies.includes(key as ConsentFormOptions);
+        }
+        break;
     }
+
+    await setConsent(cookieFormFlattened);
   }
+
   return (
     <form method='dialog' className='w-full bg-background text-text'>
       <div className='max-h-screen container mx-auto flex flex-col p-4 gap-8'>
