@@ -1,4 +1,4 @@
-import type { ConsentFormOptions, ConsentFormOptionsNames, ConsentMode, ConsentCookie } from "@/types/legal/consent.types";
+import type { ConsentOptions, ConsentFormOptions, ConsentMode, ConsentCookie } from "@/types/legal/consent.types";
 import { deleteCookieConsent, getCookieConsent, setCookieConsent } from "@/actions/legal/cookieConsent";
 
 export async function hasConsentCookie() {
@@ -15,7 +15,7 @@ export async function hasConsentCookie() {
   }
 }
 
-export async function setConsent(mode: ConsentMode, options?: ConsentFormOptions) {
+export async function setConsent(mode: ConsentMode, options?: ConsentOptions) {
   const updatedAt = new Date().getTime()
   const version = 1
   let cookie: ConsentCookie;
@@ -42,13 +42,13 @@ export async function setConsent(mode: ConsentMode, options?: ConsentFormOptions
   }
 }
 
-export async function hasConsent(option: ConsentFormOptionsNames) {
+export async function hasConsent(option: ConsentFormOptions) {
   const cookie = await getCookieConsent()
 
   if (!cookie) return false
   if (cookie.mode === "all") { return true }
   if (cookie.mode === "essential") {
-    const allowed: Partial<ConsentFormOptionsNames>[] = ["language", "cookieConsent", "locale"]
+    const allowed: Partial<ConsentFormOptions>[] = ["theme", "cookieConsent", "locale"]
     return allowed.includes(option) ? true : false
   }
   if (cookie.mode === "custom" && cookie.categories) {

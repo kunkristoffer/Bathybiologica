@@ -31,7 +31,7 @@ type ConsentCookieBase = {
 
 type ConsentCookieCustom = ConsentCookieBase & {
   mode: Extract<ConsentMode, "custom">
-  categories: ConsentFormOptions
+  categories: ConsentOptions
 }
 type ConsentCookieNonCustom = ConsentCookieBase & {
   mode: Exclude<ConsentMode, "custom">

@@ -1,26 +1,25 @@
 'use client';
 
-// Form binding data
-import { CONSENT_FORM_SCHEMA } from '@/data/legal/cookieConsentOptions';
-
 // Global
-import Link from 'next/link';
+import type { ConsentFormOptions, ConsentMode, ConsentOptions } from '@/types/legal/consent.types';
 import { type ChangeEvent, useState } from 'react';
+import Link from 'next/link';
+import { setConsent } from '@/libs/legal/consent';
+
+// Form binding data
+import { consentFormData } from '@/data/legal/consent/formBinds';
 
 // Components
 import { CookieConsentCategory } from '@/components/content/cookieConsent/CookieCategory';
 import { ButtonAction } from '@/components/ui/buttons/buttonAction';
-import { ConsentFormOptions, ConsentFormSchemaBindings, ConsentMode } from '@/types/legal/consent.types';
-import { setConsent } from '@/libs/legal/consent';
 
 export function CookieConsentForm() {
   // Is user customizing consent, then show form
   const [isCustomizing, setIsCustomizing] = useState(false);
 
   // Consent form bindings
-  const consentFormBindings = CONSENT_FORM_SCHEMA as ConsentFormSchemaBindings[];
   const [cookieForm, setCookieForm] = useState(
-    consentFormBindings.reduce<Record<string, Record<string, boolean>>>((categories, category) => {
+    consentFormData.reduce<Record<string, Record<string, boolean>>>((categories, category) => {
       categories[category.name] =
         category.options?.reduce<Record<string, boolean>>((options, option) => {
           options[option.name] = false;
@@ -63,7 +62,7 @@ export function CookieConsentForm() {
     if (mode === 'custom') {
       const cookieFormFlattened = Object.fromEntries(
         Object.values(cookieForm).flatMap((test) => Object.entries(test))
-      ) as ConsentFormOptions;
+      ) as ConsentOptions;
       await setConsent('custom', cookieFormFlattened);
     } else {
       await setConsent(mode);
@@ -90,7 +89,7 @@ export function CookieConsentForm() {
         </small>
         {isCustomizing && (
           <div className='flex flex-col gap-4 overflow-auto'>
-            {consentFormBindings.map((category, index) => (
+            {consentFormData.map((category, index) => (
               <CookieConsentCategory
                 key={category.name}
                 defaultOpen={index === 0}
