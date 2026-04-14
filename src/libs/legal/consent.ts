@@ -1,5 +1,5 @@
 import type { ConsentFormOptions, ConsentFormOptionsNames, ConsentMode, ConsentCookie } from "@/types/legal/consent.types";
-import { getCookieConsent, setCookieConsent } from "@/actions/legal/cookieConsent";
+import { deleteCookieConsent, getCookieConsent, setCookieConsent } from "@/actions/legal/cookieConsent";
 
 export async function hasConsentCookie() {
   const cookie = await getCookieConsent()
@@ -56,4 +56,8 @@ export async function hasConsent(option: ConsentFormOptionsNames) {
   }
 
   return false
+}
+
+export async function removeConsentCookie() {
+  await deleteCookieConsent()
 }

@@ -1,5 +1,8 @@
+'use client';
+
 import { IconLink } from '@/components/ui/buttons/iconLink';
 import { SocialButton } from '@/components/ui/buttons/SocialButton';
+import { removeConsentCookie } from '@/libs/legal/consent';
 import { Mail, ScrollText } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -50,6 +53,13 @@ export function Footer() {
             <p>{t('links.dashboard')}</p>
             <p>{t('links.events')}</p>
             <p>{t('links.inbox')}</p>
+            <button
+              type='button'
+              onClick={() => removeConsentCookie()}
+              className='text-left text-primary hover:text-primary-hover hover:underline'
+            >
+              Remove cookie consent
+            </button>
           </nav>
           <p className='italic text-text-muted'>{t('links.comingSoon')}</p>
         </div>

@@ -37,3 +37,12 @@ export async function getCookieConsent() {
     return null
   }
 }
+
+export async function deleteCookieConsent() {
+  try {
+    const cookieStore = await cookies()
+    cookieStore.delete("consent")
+  } catch (err) {
+    console.error(err)
+  }
+}
