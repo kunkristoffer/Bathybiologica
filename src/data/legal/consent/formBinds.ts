@@ -5,6 +5,7 @@ export const consentFormData = [
     // Required for site to work propperly
     name: 'essential',
     isRequired: true,
+    tags: ["recommended"],
     options: [
       { name: "cookieConsent", isRequired: true, },
       { name: "sessionCookie", isRequired: true, }
@@ -21,21 +22,21 @@ export const consentFormData = [
     // Analyze how a user uses our site, only used for improving the site performance
     name: 'analytics',
     options: [
-      { name: "googleAnalytics", tags: ["external"] }
+      { name: "google", tags: ["external"] }
     ]
   }, {
     // Allow social media integrations
     name: 'social',
     options: [
-      { name: "metaSocial", tags: ["external"] }
+      { name: "meta", tags: ["external"] }
     ]
   }, {
     // Allow 3rd parties to collect metrics to improve SEO
     name: 'campaigns',
     options: [
-      { name: "googleCampaigns", tags: ["external"] },
+      { name: "google", tags: ["external"] },
       { name: "youtube", tags: ["external"] },
-      { name: "metaCampaigns", tags: ["external"] }
+      { name: "meta", tags: ["external"] }
     ]
   }
 ] as const satisfies ConsentCategory[]

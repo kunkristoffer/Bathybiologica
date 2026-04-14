@@ -20,23 +20,23 @@
   },
   "categories": {
     "essential": {
-      "label": "Nødvendige",
+      "title": "Nødvendige",
       "description": "Kreves for at nettstedet skal fungere som det skal og kan ikke slås av."
     },
     "functional": {
-      "label": "Funksjonelle",
+      "title": "Funksjonelle",
       "description": "Brukes for å aktivere nyttige funksjoner på nettstedet, som språk, tema og beskyttelse mot spam."
     },
     "analytics": {
-      "label": "Analyse",
+      "title": "Analyse",
       "description": "Brukes for å forstå hvordan besøkende bruker nettstedet, slik at vi kan forbedre ytelse og innhold."
     },
     "social": {
-      "label": "Sosiale medier",
+      "title": "Sosiale medier",
       "description": "Tillater integrasjoner mot sosiale medier og tilhørende tredjepartsfunksjoner."
     },
     "campaigns": {
-      "label": "Kampanjer",
+      "title": "Kampanjer",
       "description": "Tillater tredjepartstjenester å måle trafikk, engasjement og kampanjeresultater."
     }
   },

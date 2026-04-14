@@ -20,23 +20,23 @@
   },
   "categories": {
     "essential": {
-      "label": "Essential",
+      "title": "Essential",
       "description": "Required for the site to function properly and cannot be turned off."
     },
     "functional": {
-      "label": "Functional",
+      "title": "Functional",
       "description": "Used to enable helpful site features such as language, theme, and spam protection."
     },
     "analytics": {
-      "label": "Analytics",
+      "title": "Analytics",
       "description": "Used to understand how visitors use the site so we can improve performance and content."
     },
     "social": {
-      "label": "Social",
+      "title": "Social",
       "description": "Allows social media integrations and related third-party features."
     },
     "campaigns": {
-      "label": "Campaigns",
+      "title": "Campaigns",
       "description": "Allows third-party services to measure traffic, engagement, and campaign performance."
     }
   },
