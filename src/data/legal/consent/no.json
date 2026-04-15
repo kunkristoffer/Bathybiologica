@@ -30,28 +30,12 @@
     "functional": {
       "title": "Funksjonelle",
       "description": "Brukes for å aktivere nyttige funksjoner på nettstedet, som språk, tema og beskyttelse mot spam."
-    },
-    "analytics": {
-      "title": "Analyse",
-      "description": "Brukes for å forstå hvordan besøkende bruker nettstedet, slik at vi kan forbedre ytelse og innhold."
-    },
-    "social": {
-      "title": "Sosiale medier",
-      "description": "Tillater integrasjoner mot sosiale medier og tilhørende tredjepartsfunksjoner."
-    },
-    "campaigns": {
-      "title": "Kampanjer",
-      "description": "Tillater tredjepartstjenester å måle trafikk, engasjement og kampanjeresultater."
     }
   },
   "options": {
     "cookieConsent": {
       "title": "Lagring av samtykke",
       "description": "Lagrer valgene dine for informasjonskapsler slik at vi kan respektere innstillingene dine."
-    },
-    "sessionCookie": {
-      "title": "Øktinformasjonskapsel",
-      "description": "Opprettholder nødvendig økt- og sikkerhetsrelatert funksjonalitet mens du bruker nettstedet."
     },
     "recaptcha": {
       "title": "reCAPTCHA",
@@ -64,18 +48,6 @@
     "theme": {
       "title": "Temavalg",
       "description": "Husker hvilket visuelt tema du foretrekker, for eksempel lys eller mørk modus."
-    },
-    "google": {
-      "title": "Google-tjenester",
-      "description": "Tillater Google-tjenester å levere analyse, innebygd innhold eller kampanjerelatert måling der dette er aktivert."
-    },
-    "meta": {
-      "title": "Meta-tjenester",
-      "description": "Tillater Meta-tjenester å støtte integrasjoner mot sosiale medier eller kampanjerelatert måling der dette er aktivert."
-    },
-    "youtube": {
-      "title": "YouTube",
-      "description": "Tillater YouTube-innhold og tilhørende målefunksjoner der dette er aktivert."
     }
   }
 }

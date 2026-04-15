@@ -30,28 +30,12 @@
     "functional": {
       "title": "Functional",
       "description": "Used to enable helpful site features such as language, theme, and spam protection."
-    },
-    "analytics": {
-      "title": "Analytics",
-      "description": "Used to understand how visitors use the site so we can improve performance and content."
-    },
-    "social": {
-      "title": "Social",
-      "description": "Allows social media integrations and related third-party features."
-    },
-    "campaigns": {
-      "title": "Campaigns",
-      "description": "Allows third-party services to measure traffic, engagement, and campaign performance."
     }
   },
   "options": {
     "cookieConsent": {
       "title": "Cookie consent storage",
       "description": "Stores your cookie preferences so we can respect your choices."
-    },
-    "sessionCookie": {
-      "title": "Session cookie",
-      "description": "Maintains essential session and security-related functionality while using the site."
     },
     "recaptcha": {
       "title": "reCAPTCHA",
@@ -64,18 +48,6 @@
     "theme": {
       "title": "Theme preference",
       "description": "Remembers your preferred visual theme, such as light or dark mode."
-    },
-    "google": {
-      "title": "Google services",
-      "description": "Allows Google services to provide analytics, embedded content, or campaign-related measurement where enabled."
-    },
-    "meta": {
-      "title": "Meta services",
-      "description": "Allows Meta services to support social integrations or campaign-related measurement where enabled."
-    },
-    "youtube": {
-      "title": "YouTube",
-      "description": "Allows YouTube content and related measurement features where enabled."
     }
   }
 }
