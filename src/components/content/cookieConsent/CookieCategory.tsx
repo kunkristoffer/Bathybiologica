@@ -1,10 +1,11 @@
 'use client';
 
 import { type ConsentCategory } from '@/types/legal/consent.types';
-import { type ChangeEvent } from 'react';
+import { ComponentProps, type ChangeEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { FormCheckBox } from '@/components/ui/input/checkBox';
 import { ListChevronsDownUp, ListChevronsUpDown } from 'lucide-react';
+import { twMerge } from 'tailwind-merge';
 
 interface CookieConsentCategoryProps extends ConsentCategory {
   /** Should this category start out open or collapsed */
@@ -27,34 +28,40 @@ export function CookieConsentCategory({
 
   const t = useTranslations('consent');
 
+  const Tag = ({ tag }: { tag: string }) => <small className='px-2 rounded-full bg-primary'>{tag}</small>;
+  const Tags = ({ tags, className }: { tags: string[]; className?: ComponentProps<'span'>['className'] }) => (
+    <span className={twMerge('flex gap-2 items-center', className)}>
+      {tags.map((tag) => (
+        <Tag key={tag} tag={t(`tags.${tag}`)} />
+      ))}
+    </span>
+  );
+
   return (
     <details
       name='cookie-consent'
       open={defaultOpen}
       className={`
-        group flex flex-col gap-2 panel bg-surface
+        group flex flex-col panel bg-surface p-2
         hover:bg-surface-hover duration-200
         ${isCategorySelected ? 'border-primary' : ''}
       `}
     >
-      <summary className='flex flex-col'>
+      <summary className='flex flex-col gap-2'>
         <span className='flex items-center gap-2 border-b border-panel-border pb-1'>
-          <label className='flex gap-2 items-center'>
+          <label className='flex gap-2 items-center mr-auto'>
             <FormCheckBox name={name} checked={isCategorySelected} onChange={onChange} disabled={isRequired} />
             <h3 className='ml-2'>{t(`categories.${name}.title`)}</h3>
-            {tags?.map((tag) => (
-              <small key={name + tag} className='px-2 rounded-full bg-disabled'>
-                {t(`tags.${tag}`)}
-              </small>
-            ))}
+            {tags?.length && <Tags tags={tags} className='max-sm:hidden' />}
           </label>
-          <small className='ml-auto text-text-muted'>{`${selectedOptionAmount} ${t('translations.of')} ${options?.length} ${t('translations.selected')}`}</small>
+          <small className='text-text-muted'>{`${selectedOptionAmount} ${t('translations.of')} ${options?.length} ${t('translations.selected')}`}</small>
           <ListChevronsDownUp className='hidden group-open:block' />
           <ListChevronsUpDown className='group-open:hidden' />
         </span>
-        <small className='italic py-2'>{t(`categories.${name}.description`)}</small>
+        <small className='italic'>{t(`categories.${name}.description`)}</small>
+        {tags?.length && <Tags tags={tags} className='sm:hidden' />}
       </summary>
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-2 pt-2'>
         {options?.map((option) => (
           <label
             key={`${name}-${option.name}`}
@@ -67,12 +74,7 @@ export function CookieConsentCategory({
             <span className='flex gap-2 justify-between'>
               <span className='flex gap-2 items-center'>
                 <p className='capitalize mr-auto'>{t(`options.${option.name}.title`)}</p>
-                {/* <p className=''>{selectedCookies && selectedCookies[option.name]}</p> */}
-                {option.tags?.map((tag) => (
-                  <small key={name + tag} className='px-2 rounded-full bg-disabled'>
-                    {t(`tags.${tag}`)}
-                  </small>
-                ))}
+                {option.tags?.length && <Tags tags={option.tags} className='max-sm:hidden' />}
               </span>
               <FormCheckBox
                 name={option.name}
@@ -82,7 +84,8 @@ export function CookieConsentCategory({
                 disabled={option.isRequired}
               />
             </span>
-            <small className=''>{t(`options.${option.name}.description`)}</small>
+            <small>{t(`options.${option.name}.description`)}</small>
+            {option.tags?.length && <Tags tags={option.tags} className='sm:hidden' />}
           </label>
         ))}
       </div>
