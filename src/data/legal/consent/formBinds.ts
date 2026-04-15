@@ -5,15 +5,15 @@ export const consentFormData = [
     name: 'essential',
     isRequired: true,
     options: [
-      { name: "cookieConsent", isRequired: true, },
+      { name: "cookieConsent", cookieName: "consent", isRequired: true, },
     ]
   }, {
     name: 'functional',
     tags: ["essential"],
     options: [
-      { name: "reCAPTCHA", tags: ["external"] },
-      { name: "locale" },
-      { name: "theme" },
+      { name: "reCAPTCHA", cookieName: "consent", tags: ["external"] },
+      { name: "locale", cookieName: "locale", },
+      { name: "theme", cookieName: "theme", },
     ]
   }
 ] as const satisfies ConsentCategory[]
