@@ -4,7 +4,6 @@ import { deleteCookieConsent, getCookieConsent, setCookieConsent } from "@/actio
 export async function hasConsentCookie() {
   const cookie = await getCookieConsent()
 
-  // Cookie missing or malformed, show cookie consent
   if (!cookie) return {
     showConsentDialog: true
   }
