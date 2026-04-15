@@ -3,12 +3,15 @@
 import type { ConsentCookie } from '@/types/legal/consent.types'
 import { cookies } from 'next/headers'
 
+const COOKIE_MAX_AGE_DAYS = 60
+
 export async function setCookieConsent(cookie: ConsentCookie) {
   const cookieStore = await cookies()
 
   try {
     cookieStore.set({
       name: 'consent',
+      maxAge: 60 * 60 * 24 * COOKIE_MAX_AGE_DAYS,
       value: JSON.stringify(cookie),
     })
   } catch (error) {
@@ -26,8 +29,7 @@ export async function getCookieConsent() {
       const consentValue = JSON.parse(cookie.value) as ConsentCookie
 
       const currDate = new Date().getTime()
-      const cookieMaxDays = 60
-      if (currDate - consentValue.updatedAt > (1000 * 60 * 60 * 24 * cookieMaxDays)) return null
+      if (currDate - consentValue.updatedAt > (1000 * 60 * 60 * 24 * COOKIE_MAX_AGE_DAYS)) return null
 
       return consentValue
     }
