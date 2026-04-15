@@ -1,4 +1,6 @@
+import { type ConsentCookie } from '@/types/legal/consent.types'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { setCookieConsent, getCookieConsent, deleteCookieConsent, } from '@/actions/legal/cookieConsent'
 
 const mockCookieStore = {
   set: vi.fn(),
@@ -12,13 +14,6 @@ vi.mock('next/headers', () => {
     cookies: vi.fn(async () => mockCookieStore),
   }
 })
-
-import {
-  setCookieConsent,
-  getCookieConsent,
-  deleteCookieConsent,
-} from '@/actions/legal/cookieConsent'
-import { ConsentCookie } from '@/types/legal/consent.types'
 
 describe('cookie consent server actions', () => {
   const now = new Date('2026-04-15T12:00:00.000Z').getTime()
