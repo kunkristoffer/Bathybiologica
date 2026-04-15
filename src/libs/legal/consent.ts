@@ -1,4 +1,4 @@
-import type { ConsentOptions, ConsentFormOptions, ConsentCookie } from "@/types/legal/consent.types";
+import type { ConsentOptions, ConsentFormOptions } from "@/types/legal/consent.types";
 import { deleteCookieConsent, getCookieConsent, setCookieConsent } from "@/actions/legal/cookieConsent";
 
 export async function hasConsentCookie() {
@@ -23,14 +23,8 @@ export async function setConsent(options: ConsentOptions) {
   const updatedAt = new Date().getTime()
   const version = 1
 
-  let cookie: ConsentCookie = {
-    updatedAt,
-    version,
-    options,
-  };
-
   try {
-    await setCookieConsent(cookie)
+    await setCookieConsent({ updatedAt, version, options, })
   } catch (err) {
     console.log(err);
   }
