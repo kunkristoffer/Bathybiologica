@@ -98,8 +98,8 @@ export function CookieConsentForm() {
   }
 
   return (
-    <form method='dialog' className='w-full bg-background text-text'>
-      <div className='max-h-screen container mx-auto flex flex-col p-4 gap-8'>
+    <form method='dialog' className='w-full flex flex-col gap-4 bg-background text-text'>
+      <div className='container mx-auto flex flex-col p-4 gap-8 overflow-y-auto'>
         <h2 id='cookie-consent-title'>{t('title')}</h2>
         <small className=''>{t('description.p1')}</small>
         <small className=''>
@@ -117,7 +117,7 @@ export function CookieConsentForm() {
           })}
         </small>
         {isCustomizing && (
-          <div className='flex flex-col gap-4 overflow-auto'>
+          <div className='flex flex-col gap-4'>
             {consentFormBindings.map((category, index) => (
               <CookieConsentCategory
                 key={category.name}
@@ -129,33 +129,45 @@ export function CookieConsentForm() {
             ))}
           </div>
         )}
-        <span className='grid grid-cols-4 gap-4'>
-          {isCustomizing && (
-            <ButtonAction
-              label={t('actions.saveCustom')}
-              variant='success'
-              stretch
-              className='col-span-4'
-              onClick={() => submit('custom')}
-            />
-          )}
-          <ButtonAction label={t('actions.decline')} variant='error' stretch onClick={() => submit('none')} />
-          <ButtonAction
-            label={t('actions.acceptEssential')}
-            variant='primary'
-            stretch
-            onClick={() => submit('essential')}
-          />
-          <ButtonAction label={t('actions.acceptAll')} variant='success' stretch onClick={() => submit('all')} />
-          <ButtonAction
-            label={isCustomizing ? t('actions.minimize') : t('actions.customize')}
-            variant='warning'
-            aria-expanded={isCustomizing}
-            onClick={() => setIsCustomizing((value) => !value)}
-            stretch
-          />
-        </span>
       </div>
+      <span className='container mx-auto grid grid-cols-4 gap-4 p-4'>
+        <ButtonAction
+          label={t('actions.saveCustom')}
+          variant='success'
+          stretch
+          className={`${isCustomizing ? 'col-span-2' : 'hidden'}`}
+          onClick={() => submit('custom')}
+        />
+        <ButtonAction
+          label={t('actions.decline')}
+          variant='error'
+          stretch
+          onClick={() => submit('none')}
+          className={isCustomizing ? 'hidden' : ''}
+        />
+        <ButtonAction
+          label={t('actions.acceptEssential')}
+          variant='primary'
+          stretch
+          onClick={() => submit('essential')}
+          className={isCustomizing ? 'hidden' : ''}
+        />
+        <ButtonAction
+          label={t('actions.acceptAll')}
+          variant='success'
+          stretch
+          onClick={() => submit('all')}
+          className={isCustomizing ? 'hidden' : ''}
+        />
+        <ButtonAction
+          label={isCustomizing ? t('actions.minimize') : t('actions.customize')}
+          variant='tertiary'
+          aria-expanded={isCustomizing}
+          onClick={() => setIsCustomizing((value) => !value)}
+          stretch
+          className={isCustomizing ? 'col-span-2' : ''}
+        />
+      </span>
     </form>
   );
 }
