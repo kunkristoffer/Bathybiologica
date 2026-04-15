@@ -1,20 +1,30 @@
+'use server';
+
 import { ContactForm } from '@/components/forms/contact';
 import { Section } from '@/components/layout/base/section';
+import { checkConsent } from '@/libs/legal/consent';
 import { RecaptchaProvider } from '@/providers/recaptcha/provider';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export function LandingContact() {
-  const i18n = useTranslations('landing.contactUs');
+export async function LandingContact() {
+  // Get translations
+  const t = await getTranslations('landing.contactUs');
+
+  // Check cookie consent
+  const showForm = await checkConsent('reCAPTCHA');
+
   return (
     <Section sectionId='contact' sectionClassName='' className='md:flex-row gap-12'>
       <div className='flex-1 flex flex-col justify-center gap-4'>
-        <h2>{i18n('title')}</h2>
-        <p>{i18n('p1')}</p>
-        <p>{i18n('p2')}</p>
+        <h2>{t('title')}</h2>
+        <p>{t('p1')}</p>
+        <p>{t('p2')}</p>
       </div>
-      <RecaptchaProvider>
-        <ContactForm className='flex-1' />
-      </RecaptchaProvider>
+      {showForm && (
+        <RecaptchaProvider>
+          <ContactForm className='flex-1' />
+        </RecaptchaProvider>
+      )}
     </Section>
   );
 }

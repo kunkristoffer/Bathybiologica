@@ -6,8 +6,11 @@ export default getRequestConfig(async () => {
   const accept = (await headers()).get("accept-language")?.toLowerCase() || "";
   const locale = cookie === "no" ? "no" : cookie === "en" ? "en" : accept.startsWith("no") ? "no" : "en";
 
+  const content = (await import(`@/data/content/${locale}.json`)).default
+  const consent = (await import(`@/data/legal/consent/${locale}.json`)).default
+
   return {
     locale,
-    messages: (await import(`@/data/content/${locale}.json`)).default,
+    messages: { ...content, consent },
   };
 });

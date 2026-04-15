@@ -1,0 +1,55 @@
+'use server'
+
+import type { ConsentCookie } from '@/types/legal/consent.types'
+import { cookies } from 'next/headers'
+
+const COOKIE_MAX_AGE_DAYS = 60
+
+export async function setCookieConsent(cookie: ConsentCookie) {
+  const cookieStore = await cookies()
+
+  try {
+    cookieStore.set({
+      name: 'consent',
+      maxAge: 60 * 60 * 24 * COOKIE_MAX_AGE_DAYS,
+      value: JSON.stringify(cookie),
+    })
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export async function getCookieConsent() {
+  const cookieStore = await cookies()
+
+  try {
+    const cookie = cookieStore.get('consent')
+
+    if (cookie && cookie.value) {
+      const consentValue = JSON.parse(cookie.value) as ConsentCookie
+
+      const currDate = new Date().getTime()
+      if (currDate - consentValue.updatedAt > (1000 * 60 * 60 * 24 * COOKIE_MAX_AGE_DAYS)) return null
+
+      return consentValue
+    }
+
+    return null
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+}
+
+export async function deleteCookieConsent() {
+  const cookieStore = await cookies()
+
+  try {
+    const cookieNames = cookieStore.getAll()
+    for (const element of cookieNames) {
+      cookieStore.delete(element.name)
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}

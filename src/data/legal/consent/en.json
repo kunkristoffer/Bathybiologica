@@ -1,0 +1,53 @@
+{
+  "title": "We value your privacy",
+  "description": {
+    "p1": "We use cookies and similar technologies to make the site work properly, remember your preferences, protect forms against abuse, and understand how the site is used. By clicking \"Accept all\", you consent to the use of all optional cookies and services. You can also choose to accept only essential cookies or customize your preferences.",
+    "p2": "By using this site, you agree to our <privacyLink>privacy policy</privacyLink> and <cookieLink>cookie policy</cookieLink>."
+  },
+  "actions": {
+    "acceptAll": "Accept all",
+    "acceptEssential": "Essential only",
+    "saveCustom": "Save preferences",
+    "customize": "Customize",
+    "minimize": "Hide",
+    "decline": "Decline"
+  },
+  "tags": {
+    "essential": "Essential",
+    "recommended": "Recommended",
+    "measurement": "Measurement",
+    "external": "External service"
+  },
+  "translations": {
+    "of": "of",
+    "selected": "selected"
+  },
+  "categories": {
+    "essential": {
+      "title": "Essential",
+      "description": "Required for the site to function properly and cannot be turned off."
+    },
+    "functional": {
+      "title": "Functional",
+      "description": "Used to enable helpful site features such as language, theme, and spam protection."
+    }
+  },
+  "options": {
+    "cookieConsent": {
+      "title": "Cookie consent storage",
+      "description": "Stores your cookie preferences so we can respect your choices."
+    },
+    "reCAPTCHA": {
+      "title": "reCAPTCHA",
+      "description": "Helps protect forms and the site against spam, bots, and abuse."
+    },
+    "locale": {
+      "title": "Language preference",
+      "description": "Remembers your selected language on the site."
+    },
+    "theme": {
+      "title": "Theme preference",
+      "description": "Remembers your preferred visual theme, such as light or dark mode."
+    }
+  }
+}

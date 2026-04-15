@@ -1,21 +1,17 @@
-interface FormCheckBoxProps {
-  /** Name of the input for use in formData */
-  name: string;
-  /** Id of the input for use with css or js */
-  id?: string;
-  /** What is the default state */
-  defaultChecked?: boolean;
-}
+import { ComponentProps } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-export function FormCheckBox({ name, id, defaultChecked = false }: FormCheckBoxProps) {
+export function FormCheckBox({ name, className, ...rest }: ComponentProps<'input'>) {
   return (
     <label className='flex items-center cursor-pointer relative'>
       <input
         type='checkbox'
         name={name}
-        defaultChecked={defaultChecked}
-        id={id}
-        className='peer h-5 w-5 cursor-pointer appearance-none rounded border border-secondary checked:bg-primary checked:border-primary'
+        className={twMerge(
+          'peer h-5 w-5 cursor-pointer appearance-none rounded border border-secondary checked:bg-primary checked:border-primary',
+          className
+        )}
+        {...rest}
       />
       <span className='absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <svg

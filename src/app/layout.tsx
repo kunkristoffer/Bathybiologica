@@ -1,26 +1,32 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Header } from "@/components/layout/base/header";
-import { Footer } from "@/components/layout/base/footer";
-import "@/assets/styles/globals.css";
-import { getLocale } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
-import { cookies } from "next/headers";
-import { ThemeOptions } from "@/actions/changeTheme";
+import '@/assets/styles/globals.css';
+import { type Metadata } from 'next';
+import { type ThemeOptions } from '@/actions/changeTheme';
+import { Geist, Geist_Mono } from 'next/font/google';
+
+// functions
+import { cookies } from 'next/headers';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale } from 'next-intl/server';
+
+// Components
+import { Header } from '@/components/layout/base/header';
+import { Footer } from '@/components/layout/base/footer';
+import { CookieConsentDialog } from '@/components/ui/modals/CookieConsentDialog';
+import { hasConsentCookie } from '@/libs/legal/consent';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Bathybiologica",
-  description: "wip",
+  title: 'Bathybiologica',
+  description: 'wip',
 };
 
 export default async function RootLayout({
@@ -28,12 +34,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Load user cookie consent
+  const { showConsentDialog } = await hasConsentCookie();
+
   // Get user prefered language
   const locale = await getLocale();
 
   // Check if user has changed prefered color theme
-  const theme = ((await cookies()).get("theme")?.value as ThemeOptions) || undefined;
-  const themeAttrs = theme ? { "data-theme": theme } : {};
+  const theme = ((await cookies()).get('theme')?.value as ThemeOptions) || undefined;
+  const themeAttrs = theme ? { 'data-theme': theme } : {};
 
   return (
     <html lang={locale} {...themeAttrs}>
@@ -42,6 +51,7 @@ export default async function RootLayout({
           <Header />
           {children}
           <Footer />
+          {showConsentDialog && <CookieConsentDialog />}
         </NextIntlClientProvider>
       </body>
     </html>
