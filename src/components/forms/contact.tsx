@@ -21,7 +21,7 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
   const { ready, executeRecaptcha } = useRecaptcha();
   const [state, serverAction, pending] = useActionState(submitContactForm, INITIAL);
 
-  const i18n = useTranslations('contactUsForm');
+  const t = useTranslations('landing.contactUsForm');
 
   async function formAction(formData: FormData) {
     const token = await executeRecaptcha('submit');
@@ -45,42 +45,42 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
       <span className='flex gap-4'>
         <FormInputText
           name='firstName'
-          label={i18n('firstName')}
+          label={t('firstName')}
           defaultValue={state.values?.first_name}
-          placeholder={i18n('firstNamePlaceholder')}
+          placeholder={t('firstNamePlaceholder')}
           errorMessage={state.fieldErrors?.first_name && state.fieldErrors?.first_name.at(0)}
           required
         />
         <FormInputText
           name='lastName'
-          label={i18n('lastName')}
+          label={t('lastName')}
           defaultValue={state.values?.last_name}
-          placeholder={i18n('lastNamePlaceholder')}
+          placeholder={t('lastNamePlaceholder')}
           errorMessage={state.fieldErrors?.last_name && state.fieldErrors?.last_name.at(0)}
           required
         />
       </span>
       <FormInputText
         name='email'
-        label={i18n('email')}
+        label={t('email')}
         defaultValue={state.values?.email}
-        placeholder={i18n('emailPlaceholder')}
+        placeholder={t('emailPlaceholder')}
         errorMessage={state.fieldErrors?.email && state.fieldErrors?.email.at(0)}
         required
       />
       <FormInputText
         name='subject'
-        label={i18n('subject')}
+        label={t('subject')}
         defaultValue={state.values?.subject}
-        placeholder={i18n('subjectPlaceholder')}
+        placeholder={t('subjectPlaceholder')}
         errorMessage={state.fieldErrors?.subject && state.fieldErrors?.subject.at(0)}
         required
       />
       <FormInputTextArea
         name='message'
-        label={i18n('message')}
+        label={t('message')}
         defaultValue={state.values?.message}
-        placeholder={i18n('messagePlaceholder')}
+        placeholder={t('messagePlaceholder')}
         errorMessage={state.fieldErrors?.message && state.fieldErrors?.message.at(0)}
         required
       />
@@ -95,14 +95,9 @@ export function ContactForm(props: ComponentPropsWithoutRef<'form'>) {
           {state.message}
         </span>
       ) : (
-        <ButtonAction
-          type='submit'
-          label={pending && ready ? i18n('pending') : i18n('submit')}
-          variant='secondary'
-          stretch
-        />
+        <ButtonAction type='submit' label={pending && ready ? t('pending') : t('submit')} variant='secondary' stretch />
       )}
-      <p className='hidden text-center py-2 bg-error text-white rounded-md'>{i18n('status')}</p>
+      <p className='hidden text-center py-2 bg-error text-white rounded-md'>{t('status')}</p>
       <p className='text-center text-xs/relaxed text-text-muted'>
         This form is protected by reCAPTCHA and the Google
         <a className='whitespace-nowrap text-primary hover:underline px-1' href='https://policies.google.com/privacy'>

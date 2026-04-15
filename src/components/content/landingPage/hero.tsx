@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 export function LandingHero() {
-  const i18n = useTranslations('landing.hero');
+  const t = useTranslations('landing.hero');
   return (
     <Section
       sectionClassName='relative'
@@ -19,11 +19,11 @@ export function LandingHero() {
         className='z-0 absolute inset-0 object-cover opacity-50 pointer-events-none'
       />
       <div className='z-10 flex flex-col items-center gap-4 text-shadow-lg'>
-        <h1 className='transition'>{i18n('title')}</h1>
-        <p>{i18n('subtitle')}</p>
+        <h1 className='transition'>{t('title')}</h1>
+        <p>{t('subtitle')}</p>
         <span className='flex gap-2'>
-          <ButtonLink label={i18n('donate')} href='/#donate' variant='secondary' />
-          <ButtonLink label={i18n('volunteer')} href='/#volunteer' style='outline' className='bg-background/50' />
+          <ButtonLink label={t('donate')} href='/#donate' variant='secondary' />
+          <ButtonLink label={t('volunteer')} href='/#volunteer' style='outline' className='bg-background/50' />
         </span>
       </div>
     </Section>
