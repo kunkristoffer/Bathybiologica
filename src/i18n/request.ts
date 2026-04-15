@@ -7,7 +7,7 @@ export default getRequestConfig(async () => {
   const locale = cookie === "no" ? "no" : cookie === "en" ? "en" : accept.startsWith("no") ? "no" : "en";
 
   const content = (await import(`@/data/content/${locale}.json`)).default
-  const consent = (await import(`@/data/legal/consent/${locale}.json`)).default
+  const consent = (await import(`@/locale/legal/consent/${locale}.json`)).default
 
   return {
     locale,
