@@ -30,7 +30,7 @@ export async function setConsent(options: ConsentOptions) {
   }
 }
 
-export async function hasConsent(option: ConsentFormOptions) {
+export async function checkConsent(option: ConsentFormOptions) {
   const cookie = await getCookieConsent()
 
   if (!cookie || !cookie.options) return false

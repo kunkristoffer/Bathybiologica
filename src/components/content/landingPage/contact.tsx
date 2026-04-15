@@ -2,7 +2,7 @@
 
 import { ContactForm } from '@/components/forms/contact';
 import { Section } from '@/components/layout/base/section';
-import { hasConsent } from '@/libs/legal/consent';
+import { checkConsent } from '@/libs/legal/consent';
 import { RecaptchaProvider } from '@/providers/recaptcha/provider';
 import { getTranslations } from 'next-intl/server';
 
@@ -11,7 +11,7 @@ export async function LandingContact() {
   const t = await getTranslations('landing.contactUs');
 
   // Check cookie consent
-  const showForm = await hasConsent('google');
+  const showForm = await checkConsent('google');
 
   return (
     <Section sectionId='contact' sectionClassName='' className='md:flex-row gap-12'>
