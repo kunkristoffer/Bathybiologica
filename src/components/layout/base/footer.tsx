@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 export function Footer() {
-  const t = useTranslations('footer');
+  const t = useTranslations('layout.footer');
   return (
     <footer className='bg-black/50'>
       <div className='container mx-auto px-4 py-8 lg:py-16 grid gap-16 grid-cols-1 lg:grid-cols-2'>
