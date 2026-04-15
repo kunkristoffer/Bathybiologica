@@ -11,7 +11,7 @@ export const consentFormData = [
     name: 'functional',
     tags: ["essential"],
     options: [
-      { name: "reCAPTCHA", cookieName: "consent", tags: ["external"] },
+      { name: "reCAPTCHA", cookieName: "_grecaptcha", tags: ["external"] },
       { name: "locale", cookieName: "locale", },
       { name: "theme", cookieName: "theme", },
     ]

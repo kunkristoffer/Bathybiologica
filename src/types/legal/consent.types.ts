@@ -5,13 +5,14 @@ type ConsentTagsID = "essential" | "recommended" | "measurement" | "external"
 
 /** Basic structure of a consent form binding */
 interface ConsentOption {
-  name: string,
+  name: string
+  cookieName: string
   isRequired?: boolean
   tags?: ConsentTagsID[]
 }
 
 /** The final structure of a consent form used in generating form bindings */
-export interface ConsentCategory extends ConsentOption {
+export interface ConsentCategory extends Omit<ConsentOption, "cookieName"> {
   options: ConsentOption[]
 }
 
