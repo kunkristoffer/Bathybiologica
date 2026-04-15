@@ -45,7 +45,10 @@ export async function deleteCookieConsent() {
   const cookieStore = await cookies()
 
   try {
-    cookieStore.delete("consent")
+    const cookieNames = cookieStore.getAll()
+    for (const element of cookieNames) {
+      cookieStore.delete(element.name)
+    }
   } catch (err) {
     console.error(err)
   }
