@@ -37,7 +37,7 @@
       "title": "Cookie consent storage",
       "description": "Stores your cookie preferences so we can respect your choices."
     },
-    "recaptcha": {
+    "reCAPTCHA": {
       "title": "reCAPTCHA",
       "description": "Helps protect forms and the site against spam, bots, and abuse."
     },

@@ -37,7 +37,7 @@
       "title": "Lagring av samtykke",
       "description": "Lagrer valgene dine for informasjonskapsler slik at vi kan respektere innstillingene dine."
     },
-    "recaptcha": {
+    "reCAPTCHA": {
       "title": "reCAPTCHA",
       "description": "Hjelper med å beskytte skjemaer og nettstedet mot spam, roboter og misbruk."
     },
