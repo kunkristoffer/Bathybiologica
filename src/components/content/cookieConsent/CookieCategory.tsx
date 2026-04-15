@@ -28,15 +28,6 @@ export function CookieConsentCategory({
 
   const t = useTranslations('consent');
 
-  const Tag = ({ tag }: { tag: string }) => <small className='px-2 rounded-full bg-primary'>{tag}</small>;
-  const Tags = ({ tags, className }: { tags: string[]; className?: ComponentProps<'span'>['className'] }) => (
-    <span className={twMerge('flex gap-2 items-center', className)}>
-      {tags.map((tag) => (
-        <Tag key={tag} tag={t(`tags.${tag}`)} />
-      ))}
-    </span>
-  );
-
   return (
     <details
       name='cookie-consent'
@@ -90,5 +81,18 @@ export function CookieConsentCategory({
         ))}
       </div>
     </details>
+  );
+}
+
+function Tags({ tags, className }: { tags: string[]; className?: ComponentProps<'span'>['className'] }) {
+  const t = useTranslations('consent');
+  const Tag = ({ tag }: { tag: string }) => <small className='px-2 rounded-full bg-primary'>{tag}</small>;
+
+  return (
+    <span className={twMerge('flex gap-2 items-center', className)}>
+      {tags.map((tag) => (
+        <Tag key={tag} tag={t(`tags.${tag}`)} />
+      ))}
+    </span>
   );
 }
