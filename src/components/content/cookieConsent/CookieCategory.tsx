@@ -65,7 +65,9 @@ export function CookieConsentCategory({
             <span className='flex gap-2 justify-between'>
               <span className='flex gap-2 items-center'>
                 <p className='capitalize mr-auto'>{t(`options.${option.name}.title`)}</p>
-                {option.tags?.length && <Tags tags={option.tags} className='max-sm:hidden' />}
+                <small title='cookie name' className='px-2 rounded-full bg-disabled border border-panel-border'>
+                  {option.cookieName}
+                </small>
               </span>
               <FormCheckBox
                 name={option.name}
@@ -76,7 +78,7 @@ export function CookieConsentCategory({
               />
             </span>
             <small>{t(`options.${option.name}.description`)}</small>
-            {option.tags?.length && <Tags tags={option.tags} className='sm:hidden' />}
+            {option.tags?.length && <Tags tags={option.tags} />}
           </label>
         ))}
       </div>
@@ -86,7 +88,9 @@ export function CookieConsentCategory({
 
 function Tags({ tags, className }: { tags: string[]; className?: ComponentProps<'span'>['className'] }) {
   const t = useTranslations('consent');
-  const Tag = ({ tag }: { tag: string }) => <small className='px-2 rounded-full bg-primary'>{tag}</small>;
+  const Tag = ({ tag }: { tag: string }) => (
+    <small className='px-2 rounded-full bg-secondary border border-panel-border'>{tag}</small>
+  );
 
   return (
     <span className={twMerge('flex gap-2 items-center', className)}>
