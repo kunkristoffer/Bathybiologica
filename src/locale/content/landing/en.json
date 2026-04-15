@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "title": "From curiosity to conservation",
+    "subtitle": "Continuing their work with support for rigorous, open marine science.",
+    "donate": "Donate",
+    "volunteer": "Volunteer"
+  },
+  "mission": {
+    "title": "Our mission",
+    "p1": "We support field research from fjords to the open ocean, invest in open data and transparent methods, and back the people and tools that make marine science reproducible and useful. By sharing results widely and partnering with communities, educators, and policymakers, we help transform discovery into decisions that restore habitats, safeguard species, and sustain the ocean for future generations.",
+    "p2": "This foundation is run by Per's family and has been created with love, gratitude, and a wish to keep his spirit close. Per had a rare gift for noticing the living details of the sea, and for sharing that sense of wonder with others. We honor his memory by supporting open, rigorous marine science, and by inviting more people to experience the quiet beauty of nature—because once you truly see it, you want to protect it."
+  },
+  "contactUs": {
+    "title": "Contact us",
+    "p1": "Have questions about our work or how you can get involved? ",
+    "p2": "We'd love to hear from you."
+  },
+  "contactUsForm": {
+    "firstName": "First name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Doe",
+    "email": "E-mail",
+    "emailPlaceholder": "john@doe.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What are you wondering about",
+    "message": "Message",
+    "messagePlaceholder": "message...",
+    "submit": "Send message",
+    "pending": "Sending...",
+    "status": "Contact form is under development and does not work, please check back later!",
+    "consent": {
+      "p1": "I consent to the processing of my personal data for the purpose of responding to my inquiry. Read our",
+      "p2": "for more information or if you want to withdraw your consent.",
+      "label": "Privacy Policy"
+    }
+  }
+}
