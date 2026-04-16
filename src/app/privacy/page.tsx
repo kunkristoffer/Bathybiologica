@@ -25,9 +25,7 @@ export default function Privacy() {
   ];
   return (
     <main className='flex-row'>
-      <div className='relative'>
-        <TableOfContentsDynamic links={sections} />
-      </div>
+      <TableOfContentsDynamic links={sections} />
       <div className='flex flex-col gap-4'>
         <Section>
           <Link href='#privacy-notice'>

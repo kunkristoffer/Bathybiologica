@@ -45,7 +45,7 @@ function nestHeadings(elements: HTMLHeadingElement[]): ContentLink[] {
 function LinkSection({ id, label, children }: ContentLink) {
   return (
     <>
-      <a href={`#${id}`} className='pl-2 border-l border-transparent hover:border-text text-nowrap'>
+      <a href={`#${id}`} className='pl-2 border-l border-transparent hover:border-text'>
         {label}
       </a>
       {children?.length && (
@@ -61,13 +61,15 @@ function LinkSection({ id, label, children }: ContentLink) {
 
 export function TableOfContents({ links, className, ...props }: TableOfContentsProps) {
   return (
-    <aside className={twMerge('sticky top-(--header-h) p-2', className)} {...props}>
-      <p>Table of contens</p>
-      <nav className='flex flex-col'>
-        {links.map((link) => (
-          <LinkSection key={link.id} {...link} />
-        ))}
-      </nav>
+    <aside className={twMerge('w-full max-w-64', className)} {...props}>
+      <div className='sticky top-(--header-h) max-h-[calc(100svh-var(--header-h))] p-2 mr-2 overflow-y-auto'>
+        <p>Table of contens</p>
+        <nav className='flex flex-col'>
+          {links.map((link) => (
+            <LinkSection key={link.id} {...link} />
+          ))}
+        </nav>
+      </div>
     </aside>
   );
 }
@@ -88,3 +90,7 @@ export function TableOfContentsDynamic({ links, className, ...props }: TableOfCo
 
   return <TableOfContents links={queryLinks} {...props} />;
 }
+
+// todo
+// Highligh current section in viewport
+// Make list collapsable
