@@ -1,5 +1,6 @@
 'use client';
 
+import { ChevronDown } from 'lucide-react';
 import { ComponentProps, useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -43,19 +44,21 @@ function nestHeadings(elements: HTMLHeadingElement[]): ContentLink[] {
 }
 
 function LinkSection({ id, label, children }: ContentLink) {
+  // How can i collapse this section, then expand when: user clicks on category or if user scrolls target into view?
   return (
-    <>
-      <a href={`#${id}`} className='pl-2 border-l border-transparent hover:border-text'>
-        {label}
+    <div className='group pl-2 border-l-2 border-transparent hover:border-panel-border'>
+      <a href={`#${id}`} className='flex justify-between items-center gap-2 hover:underline'>
+        <p>{label}</p>
+        {children?.length && <ChevronDown className='group-hover:rotate-x-180 duration-200' />}
       </a>
       {children?.length && (
-        <div className='flex flex-col pl-2'>
+        <div className='flex flex-col'>
           {children.map((child) => (
             <LinkSection key={child.id} {...child} />
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
@@ -63,7 +66,7 @@ export function TableOfContents({ links, className, ...props }: TableOfContentsP
   return (
     <aside className={twMerge('w-full max-w-64', className)} {...props}>
       <div className='sticky top-(--header-h) max-h-[calc(100svh-var(--header-h))] p-2 mr-2 overflow-y-auto'>
-        <p>Table of contens</p>
+        <h2>Table of contens</h2>
         <nav className='flex flex-col'>
           {links.map((link) => (
             <LinkSection key={link.id} {...link} />
@@ -94,3 +97,5 @@ export function TableOfContentsDynamic({ links, className, ...props }: TableOfCo
 // todo
 // Highligh current section in viewport
 // Make list collapsable
+// Should i perhaps send a ref to document so that only headings inside is included?
+// For intersection observer: initiate it in the TableOfContentsDynamic and send currently active to TableOfContents, gotta add
