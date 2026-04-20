@@ -55,7 +55,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
         return newSet;
       });
     }
-  }, [activeID]);
+  }, [activeID, headings]);
 
   // Scan page or contaier for headings
   useEffect(() => {
@@ -69,7 +69,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
     if (queryResult.length) {
       setHeadings(nestHeadings(queryResult));
     }
-  }, []);
+  }, [containerID, headingLevels]);
 
   // Attach interaction observer to headings
   useEffect(() => {
