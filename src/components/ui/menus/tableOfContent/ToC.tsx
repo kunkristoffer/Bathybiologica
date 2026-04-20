@@ -46,23 +46,14 @@ export function TableOfContents({ title, containerID, headingLevels, className }
     const collapseOther: boolean = true;
     if (headings.length && activeID) {
       const parentIDs = getParentIDs(headings, activeID);
-      console.log(activeID);
 
       if (!parentIDs.length) return;
 
-      if (collapseOther) {
-        setExpandedIDs(() => {
-          const newSet = new Set(activeID);
-          parentIDs.forEach((id) => newSet.add(id));
-          return newSet;
-        });
-      } else {
-        setExpandedIDs((prev) => {
-          const newSet = new Set(prev);
-          parentIDs.forEach((id) => newSet.add(id));
-          return newSet;
-        });
-      }
+      setExpandedIDs((old) => {
+        const newSet = new Set(collapseOther ? activeID : old);
+        parentIDs.forEach((id) => newSet.add(id));
+        return newSet;
+      });
     }
   }, [activeID]);
 
@@ -156,9 +147,8 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
     return () => {
       observerRef.current?.disconnect();
-      headingElementsRef.current.clear();
     };
-  }, [headings]);
+  }, [headings, containerID]);
 
   return (
     <aside className='min-w-48'>
