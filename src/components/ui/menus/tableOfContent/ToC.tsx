@@ -1,6 +1,6 @@
 'use client';
 
-import { type ComponentProps, useEffect, useRef, useState } from 'react';
+import { type ComponentProps, useCallback, useEffect, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { ToCItem, ToCSection } from './ToCSection';
 import { ArrowDownFromLine, ArrowUpFromLine } from 'lucide-react';
@@ -29,7 +29,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   const headingElementsRef = useRef<Map<string, IntersectionObserverEntry>>(new Map());
 
   // Handles user interactions when clicking on a link item
-  function handleClick(id: string) {
+  const handleClick = useCallback((id: string) => {
     setExpandedIDs((oldSet) => {
       const newSet = new Set(oldSet);
       if (newSet.has(id)) {
@@ -39,7 +39,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
       }
       return newSet;
     });
-  }
+  }, []);
 
   // Handles automatic expanding / collapsing of link sections in ToC
   useEffect(() => {
@@ -59,16 +59,17 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
   // Scan page or contaier for headings
   useEffect(() => {
-    const queryElement = containerID ? document?.getElementById(containerID) : document;
-    const queryResult = Array.from(
-      queryElement?.querySelectorAll<HTMLHeadingElement>(
-        headingLevels ? headingLevels.join(', ') : 'h1, h2, h3, h4, h5, h6'
-      ) ?? []
-    ).filter((heading) => heading.id);
+    const container = containerID ? document?.getElementById(containerID) : document;
+    if (!container) return;
 
-    if (queryResult.length) {
-      setHeadings(nestHeadings(queryResult));
-    }
+    const selector = headingLevels ? headingLevels.join(', ') : 'h1, h2, h3, h4, h5, h6';
+    const elements = Array.from(container.querySelectorAll<HTMLHeadingElement>(selector)).filter(
+      (heading) => heading.id
+    );
+    if (!elements.length) return;
+
+    const nested = nestHeadings(elements);
+    setHeadings(nested);
   }, [containerID, headingLevels]);
 
   // Attach interaction observer to headings
