@@ -1,10 +1,9 @@
 'use client';
 
 import { type ComponentProps, useEffect, useRef, useState } from 'react';
-import { getAllIDs, getParentIDs, nestHeadings } from '@/components/ui/menus/tableOfContent/helpers';
-import { ToCItem, ToCSection } from './ToCSection';
 import { twMerge } from 'tailwind-merge';
-import { ArrowDownFromLine, ArrowUpFromLine, ChevronDown } from 'lucide-react';
+import { ToCItem, ToCSection } from './ToCSection';
+import { ArrowDownFromLine, ArrowUpFromLine } from 'lucide-react';
 
 export interface TableOfContentProps {
   /** optional title
@@ -188,4 +187,58 @@ export function TableOfContents({ title, containerID, headingLevels, className }
       </nav>
     </aside>
   );
+}
+
+export function getAllIDs(items: ToCItem[]): string[] {
+  const ids: string[] = [];
+  for (const item of items) {
+    ids.push(item.id);
+    if (item.children) {
+      ids.push(...getAllIDs(item.children));
+    }
+  }
+  return ids;
+}
+
+export function getParentIDs(items: ToCItem[], targetID: string, parents: string[] = []): string[] {
+  for (const item of items) {
+    if (item.id === targetID) {
+      return parents;
+    }
+    if (item.children && item.children.length > 0) {
+      const found = getParentIDs(item.children, targetID, [...parents, item.id]);
+      if (found.length > 0) {
+        return found;
+      }
+    }
+  }
+  return [];
+}
+
+/** Responsible for taking an array of headings and parsing it into a nested array that we can consume */
+export function nestHeadings(elements: HTMLHeadingElement[]): ToCItem[] {
+  const result: ToCItem[] = [];
+  const stack: { level: number; link: ToCItem }[] = [];
+
+  for (const element of elements) {
+    const level = Number(element.nodeName.charAt(1));
+    const link = { id: element.id, label: element.innerText, level } satisfies ToCItem;
+
+    // Reset stack when this element is a sibling or if heading level decreases
+    while (stack.length > 0 && stack[stack.length - 1].level >= level) {
+      stack.pop();
+    }
+
+    if (stack.length === 0) {
+      result.push(link);
+    } else {
+      const parent = stack[stack.length - 1].link;
+      parent.children ??= [];
+      parent.children.push(link);
+    }
+
+    stack.push({ level, link });
+  }
+
+  return result;
 }
