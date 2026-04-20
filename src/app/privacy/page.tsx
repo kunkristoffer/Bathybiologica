@@ -1,5 +1,5 @@
 import { Section } from '@/components/layout/base/section';
-import { TableOfContentsDynamic } from '@/components/ui/menus/TableOfContents';
+import { TableOfContent } from '@/components/ui/menus/TableOfContentAlt';
 import Link from 'next/link';
 
 export default function Privacy() {
@@ -25,8 +25,8 @@ export default function Privacy() {
   ];
   return (
     <main className='flex-row'>
-      <TableOfContentsDynamic links={sections} />
-      <div className='flex flex-col gap-8'>
+      <TableOfContent />
+      <div id='privacy-container' className='flex flex-col gap-8'>
         <Section>
           <Link href='#privacy-notice'>
             <h2 id='privacy-notice'>Privacy notice</h2>
