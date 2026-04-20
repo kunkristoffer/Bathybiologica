@@ -28,18 +28,20 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   const observerRef = useRef<IntersectionObserver | null>(null);
   const headingElementsRef = useRef<Map<string, IntersectionObserverEntry>>(new Map());
 
-  // Handles user interactions when clicking on a link item
-  const handleClick = useCallback((id: string) => {
-    setExpandedIDs((oldSet) => {
-      const newSet = new Set(oldSet);
-      if (newSet.has(id)) {
-        newSet.delete(id);
-      } else {
-        newSet.add(id);
-      }
-      return newSet;
-    });
-  }, []);
+  // Handle expansion and collapse of link sections
+  const toggleSection = useCallback(
+    (id: string) => {
+      // Does the currently active element have a parent?
+      const parentIDs = getParentIDs(headings, activeID);
+
+      setExpandedIDs(() => {
+        const newSet = new Set(activeID);
+        parentIDs.forEach((id) => newSet.add(id));
+        return newSet;
+      });
+    },
+    [headings]
+  );
 
   // Handles automatic expanding / collapsing of link sections in ToC
   useEffect(() => {
@@ -58,6 +60,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   }, [activeID, headings]);
 
   // Scan page or contaier for headings
+  // Remove this section
   useEffect(() => {
     const container = containerID ? document?.getElementById(containerID) : document;
     if (!container) return;
@@ -74,11 +77,9 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
   // Attach interaction observer to headings
   useEffect(() => {
-    // Define root element used in lookup and quit early if possible. Stops possible ssr issues
-    const container = containerID ? document.querySelector(containerID) : document.body;
-    if (!container || headings.length === 0) return;
+    if (!document || !headings.length) return;
 
-    // Get all IDs used inside container
+    // Create a single array with all heading element IDs, used for lookup and itteration
     const allIDs = getAllIDs(headings);
 
     const callback: IntersectionObserverCallback = (entries) => {
@@ -139,6 +140,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
       rootMargin: `-12px 0px -40% 0px`,
       threshold: [0, 1],
     });
+
     allIDs.forEach((id) => {
       const element = document.getElementById(id);
       if (element) {
@@ -171,7 +173,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
               item={category}
               activeID={activeID}
               expandedIDs={expandedIDs}
-              onClick={handleClick}
+              onClick={toggleSection}
             />
           ))}
         </div>
