@@ -92,6 +92,15 @@ export function TableOfContents({ title, containerID, headingLevels, className }
           }
         });
 
+        // Handle automatic section toggling
+        const parentIDs = getParentIDs(nestedHeadings, topMost);
+        setExpandedIDs(() => {
+          const newSet = new Set([topMost]);
+          parentIDs.forEach((parentId) => newSet.add(parentId));
+          return newSet;
+        });
+
+        // Mark setion as active
         setActiveID(topMost);
       } else {
         // No headings visible, find the closest one above viewport
