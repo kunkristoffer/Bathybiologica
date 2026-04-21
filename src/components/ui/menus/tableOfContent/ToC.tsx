@@ -22,7 +22,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   const [headings, setHeadings] = useState<ToCItem[]>([]);
   const [activeID, setActiveID] = useState('');
   const [expandedIDs, setExpandedIDs] = useState<Set<string>>(new Set());
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(true);
 
   // Use intersection observer to keep track of which headings are in focus
   const observerRef = useRef<IntersectionObserver | null>(null);
