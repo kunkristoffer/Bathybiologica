@@ -66,7 +66,7 @@
 
 @layer base {
   html {
-    scroll-padding-top: var(--header-h);
+    scroll-padding-top: calc(var(--header-h) + 1rem);
     scroll-behavior: smooth;
   }
 
