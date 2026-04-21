@@ -35,7 +35,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
       const parentIDs = getParentIDs(headings, id);
 
       setExpandedIDs(() => {
-        const newSet = new Set(id);
+        const newSet = new Set([id]);
         parentIDs.forEach((parentId) => newSet.add(parentId));
         return newSet;
       });
