@@ -57,6 +57,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
     // Update state with headings result
     const nestedHeadings = nestHeadings(headingElements);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHeadings(nestedHeadings);
 
     // Create a single array with all heading element IDs, used for lookup and itteration
