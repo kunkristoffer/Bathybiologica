@@ -1,5 +1,79 @@
 {
-  "privacyPage": {
-    "title": "Privacy page"
-  }
+  "static": {
+    "what": "Data processed",
+    "why": "Purpose",
+    "how": "How it is handled"
+  },
+  "sections": [
+    {
+      "id": "privacy-page",
+      "title": "Privacy disclosure",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "This privacy disclosure explains how we collect, use and protect personal data when you use our website."
+        },
+        {
+          "type": "paragraph",
+          "text": "This content is intended as a starting point and should be adapted to reflect your real processing activities."
+        }
+      ],
+      "children": [
+        {
+          "id": "data-controller",
+          "title": "Data controller",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "The organization operating this website is responsible for the personal data processing described on this page."
+            }
+          ]
+        },
+        {
+          "id": "what-data-we-collect",
+          "title": "What data we collect",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "The categories of personal data we process depend on how you interact with the website."
+            }
+          ],
+          "children": [
+            {
+              "id": "contact-form-data",
+              "title": "Contact form data",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "When you send us a message through the contact form, we may process your name, email address and message content."
+                },
+                {
+                  "type": "reason",
+                  "what": "Contact details and message content",
+                  "why": "To respond to your inquiry and maintain relevant communication",
+                  "how": "Submitted by you through the website and processed in our communication tools"
+                }
+              ]
+            },
+            {
+              "id": "technical-data",
+              "title": "Technical data",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "We may process technical information such as IP address, browser type, language preferences and device-related metadata."
+                },
+                {
+                  "type": "reason",
+                  "what": "Technical and usage data",
+                  "why": "To secure, maintain and improve the website",
+                  "how": "Collected automatically by the browser, server or infrastructure when visiting the site"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

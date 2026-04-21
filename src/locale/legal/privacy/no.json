@@ -1,5 +1,79 @@
 {
-  "privacyPage": {
-    "title": "Privat side"
-  }
+  "static": {
+    "what": "Opplysninger som behandles",
+    "why": "Formål",
+    "how": "Hvordan det håndteres"
+  },
+  "sections": [
+    {
+      "id": "privacy-page",
+      "title": "Personvernerklæring",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Denne personvernerklæringen forklarer hvordan vi samler inn, bruker og beskytter personopplysninger når du bruker nettsiden vår."
+        },
+        {
+          "type": "paragraph",
+          "text": "Innholdet er ment som et utgangspunkt og bør tilpasses de faktiske behandlingsaktivitetene deres."
+        }
+      ],
+      "children": [
+        {
+          "id": "data-controller",
+          "title": "Behandlingsansvarlig",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Organisasjonen som drifter denne nettsiden er ansvarlig for behandlingen av personopplysninger som er beskrevet her."
+            }
+          ]
+        },
+        {
+          "id": "what-data-we-collect",
+          "title": "Hvilke opplysninger vi samler inn",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Hvilke kategorier personopplysninger vi behandler avhenger av hvordan du bruker nettsiden."
+            }
+          ],
+          "children": [
+            {
+              "id": "contact-form-data",
+              "title": "Opplysninger fra kontaktskjema",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Når du sender oss en melding gjennom kontaktskjemaet, kan vi behandle navn, e-postadresse og innholdet i meldingen."
+                },
+                {
+                  "type": "reason",
+                  "what": "Kontaktopplysninger og meldingsinnhold",
+                  "why": "For å kunne svare på henvendelsen din og følge opp relevant kommunikasjon",
+                  "how": "Sendes inn av deg via nettsiden og behandles i våre kommunikasjonsverktøy"
+                }
+              ]
+            },
+            {
+              "id": "technical-data",
+              "title": "Tekniske opplysninger",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Vi kan behandle teknisk informasjon som IP-adresse, nettlesertype, språkvalg og enhetsrelaterte metadata."
+                },
+                {
+                  "type": "reason",
+                  "what": "Tekniske opplysninger og bruksdata",
+                  "why": "For å sikre, vedlikeholde og forbedre nettsiden",
+                  "how": "Samles inn automatisk av nettleseren, serveren eller infrastrukturen når du besøker nettsiden"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -1,21 +1,25 @@
-import { type PrivacyData } from '@/data/legal/privacy/privacyData';
-
+// Globals
+import { type PrivacySectionNode } from '@/types/legal/privacy.types';
+import { JSX } from 'react';
 import Link from 'next/link';
-import { toCamelCase } from '@/utils/text/transform';
-import { getTranslations } from 'next-intl/server';
+
+// Components
 import { Section } from '@/components/layout/base/section';
 import { PrivacyBlock } from '@/components/content/legal/privacy/PrivacyBlock';
 
-export async function PrivacySection({ id, content, children }: PrivacyData) {
-  const t = await getTranslations(`privacy.${toCamelCase(id)}`);
+export async function PrivacySection({ id, level = 1, title, content, children }: PrivacySectionNode) {
+  const Heading = `h${level}` as keyof JSX.IntrinsicElements;
   return (
     <Section>
       <Link href={id}>
-        <h1 id={id}>{t('title')}</h1>
+        <Heading id={id}>{title}</Heading>
       </Link>
-      {content.map((item, i) => (
-        <PrivacyBlock key={`${id}-${i}`} id={id} content={item} />
-      ))}
+      <div className='flex flex-col gap-2'>
+        {content.map((item, i) => (
+          <PrivacyBlock key={id} {...item} />
+        ))}
+      </div>
+      {children && children.map((child) => <PrivacySection key={child.id} level={level + 1} {...child} />)}
     </Section>
   );
 }
