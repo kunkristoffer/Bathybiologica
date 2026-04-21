@@ -43,28 +43,24 @@ export function TableOfContents({ title, containerID, headingLevels, className }
     [headings]
   );
 
-  // Scan page or contaier for headings
-  // Remove this section
   useEffect(() => {
-    const container = containerID ? document?.getElementById(containerID) : document;
-    if (!container) return;
+    // Define root query container
+    const queryContainer = containerID ? document?.getElementById(containerID) : document;
+    if (!queryContainer) return;
 
-    const selector = headingLevels ? headingLevels.join(', ') : 'h1, h2, h3, h4, h5, h6';
-    const elements = Array.from(container.querySelectorAll<HTMLHeadingElement>(selector)).filter(
+    // Get all headings inside query container, and filter out values without a matching ID ref
+    const querySelector = headingLevels ? headingLevels.join(', ') : 'h1, h2, h3, h4, h5, h6';
+    const headingElements = Array.from(queryContainer.querySelectorAll<HTMLHeadingElement>(querySelector)).filter(
       (heading) => heading.id
     );
-    if (!elements.length) return;
+    if (!headingElements.length) return;
 
-    const nested = nestHeadings(elements);
-    setHeadings(nested);
-  }, [containerID, headingLevels]);
-
-  // Attach interaction observer to headings
-  useEffect(() => {
-    if (!document || !headings.length) return;
+    // Update state with headings result
+    const nestedHeadings = nestHeadings(headingElements);
+    setHeadings(nestedHeadings);
 
     // Create a single array with all heading element IDs, used for lookup and itteration
-    const allIDs = getAllIDs(headings);
+    const allIDs = getAllIDs(nestedHeadings);
 
     const callback: IntersectionObserverCallback = (entries) => {
       // Add all observer entries to our ref so we can itterate over elements for conditional checks
@@ -135,7 +131,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
     return () => {
       observerRef.current?.disconnect();
     };
-  }, [headings, containerID]);
+  }, [containerID]);
 
   return (
     <aside className='min-w-48'>
