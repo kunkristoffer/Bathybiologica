@@ -43,22 +43,6 @@ export function TableOfContents({ title, containerID, headingLevels, className }
     [headings]
   );
 
-  // Handles automatic expanding / collapsing of link sections in ToC
-  useEffect(() => {
-    const collapseOther: boolean = true;
-    if (headings.length && activeID) {
-      const parentIDs = getParentIDs(headings, activeID);
-
-      if (!parentIDs.length) return;
-
-      setExpandedIDs((old) => {
-        const newSet = new Set(collapseOther ? activeID : old);
-        parentIDs.forEach((id) => newSet.add(id));
-        return newSet;
-      });
-    }
-  }, [activeID, headings]);
-
   // Scan page or contaier for headings
   // Remove this section
   useEffect(() => {
