@@ -32,11 +32,11 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   const toggleSection = useCallback(
     (id: string) => {
       // Does the currently active element have a parent?
-      const parentIDs = getParentIDs(headings, activeID);
+      const parentIDs = getParentIDs(headings, id);
 
       setExpandedIDs(() => {
-        const newSet = new Set(activeID);
-        parentIDs.forEach((id) => newSet.add(id));
+        const newSet = new Set(id);
+        parentIDs.forEach((parentId) => newSet.add(parentId));
         return newSet;
       });
     },
