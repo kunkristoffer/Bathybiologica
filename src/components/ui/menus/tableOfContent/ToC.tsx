@@ -140,7 +140,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
     return () => {
       observerRef.current?.disconnect();
     };
-  }, [containerID]);
+  }, [containerID, headingLevels]);
 
   return (
     <aside className='min-w-48'>
