@@ -38,9 +38,9 @@ export function ToCSection({ item, activeID, expandedIDs, onClick }: ToCSectionP
       >
         {item.label}
       </Link>
-      {isExpanded && item.children?.length && (
+      {isExpanded && item.children && (
         <ul className='py-2'>
-          {item.children?.map((child) => (
+          {item.children.map((child) => (
             <ToCSection key={child.id} item={child} activeID={activeID} expandedIDs={expandedIDs} onClick={onClick} />
           ))}
         </ul>
