@@ -14,6 +14,7 @@ type PrivacyBlock = PrivacyParagraph | PrivacyReason
 export interface PrivacySectionNode {
   id: string;
   title: string;
+  index?: number[]
   level?: 1 | 2 | 3 | 4 | 5 | 6 | (number & {})
   content: PrivacyBlock[];
   children?: PrivacySectionNode[];
