@@ -15,7 +15,7 @@ export async function PrivacySection({ id, index = [], level = 1, title, content
         <Heading id={id}>{`${index.join('.')} ${title}`}</Heading>
       </Link>
       <div className='flex flex-col gap-2'>
-        {content.map((item, i) => (
+        {content.map((item) => (
           <PrivacyBlock key={id} {...item} />
         ))}
       </div>
