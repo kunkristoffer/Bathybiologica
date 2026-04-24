@@ -24,7 +24,7 @@ export function PrivacyBlock(data: PrivacySectionNode['content'][number]) {
   }
 
   return (
-    <div className='flex flex-col gap-2'>
+    <div className='flex flex-col gap-2 p-2 border border-panel-border/50 rounded-md'>
       {Object.entries(data)
         .filter((data) => data[0] !== 'type')
         .map(([category, text]) => (
