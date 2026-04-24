@@ -18,10 +18,12 @@ async function Block({ category, text }: { category: Categories; text: string })
   );
 }
 
+async function Paragraph({ text }: { text: string }) {
+  return <p>{text}</p>;
+}
+
 export function PrivacyBlock(data: PrivacySectionNode['content'][number]) {
-  if (data.type === 'paragraph') {
-    return <p>{data.text}</p>;
-  }
+  if (data.type === 'paragraph') return <Paragraph text={data.text} />;
 
   return (
     <div className='flex flex-col gap-2 p-2 border border-panel-border/50 rounded-md'>
