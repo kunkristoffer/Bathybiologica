@@ -1,27 +1,35 @@
+import { type PrivacySectionNode } from '@/types/legal/privacy.types';
 import { getTranslations } from 'next-intl/server';
-import { PrivacySectionNode } from '@/types/legal/privacy.types';
 
-export async function PrivacyBlock(data: PrivacySectionNode['content'][number]) {
+type Categories = 'what' | 'how' | 'why' | (string & {});
+
+async function Block({ category, text }: { category: Categories; text: string }) {
   const t = await getTranslations(`privacy`);
+  return (
+    <span
+      className={`
+      flex flex-col pl-2 border-l-2
+      ${category === 'how' ? 'border-primary' : category === 'what' ? 'border-success' : ' border-warning'}
+    `}
+    >
+      <p className='font-bold'>{t(`static.${category}`)}</p>
+      <small>{text}</small>
+    </span>
+  );
+}
 
+export function PrivacyBlock(data: PrivacySectionNode['content'][number]) {
   if (data.type === 'paragraph') {
     return <p>{data.text}</p>;
   }
 
   return (
     <div className='flex flex-col gap-2'>
-      <span className='flex flex-col pl-2 border-l-2 border-success'>
-        <p className='font-bold'>{t('static.what')}</p>
-        <small>{data.what}</small>
-      </span>
-      <span className='flex flex-col pl-2 border-l-2 border-warning'>
-        <p className='font-bold'>{t('static.why')}</p>
-        <small>{data.why}</small>
-      </span>
-      <span className='flex flex-col pl-2 border-l-2 border-primary'>
-        <p className='font-bold'>{t('static.how')}</p>
-        <small>{data.how}</small>
-      </span>
+      {Object.entries(data)
+        .filter((data) => data[0] !== 'type')
+        .map(([category, text]) => (
+          <Block key={category} category={category} text={text} />
+        ))}
     </div>
   );
 }
