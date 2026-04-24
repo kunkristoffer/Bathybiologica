@@ -9,7 +9,7 @@ export default async function Privacy() {
   return (
     <main className='relative sm:flex-row gap-4 p-4'>
       <TableOfContents headingLevels={['h2', 'h3', 'h4']} />
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-12'>
         {privacy.sections.map((data, i) => (
           <PrivacySection key={data.id} level={i === 0 ? 1 : 2} {...data} />
         ))}
