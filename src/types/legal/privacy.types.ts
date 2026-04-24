@@ -1,15 +1,21 @@
-type PrivacyParagraph = {
+interface PrivacyMeta {
+  type: "meta"
+  text: string
+}
+
+interface PrivacyParagraph {
   type: "paragraph",
   text: string
 }
-type PrivacyReason = {
+
+interface PrivacyReason {
   type: "reason"
   what: string
   why: string
   how: string
 }
 
-type PrivacyBlock = PrivacyParagraph | PrivacyReason
+type PrivacyBlock = PrivacyParagraph | PrivacyReason | PrivacyMeta
 
 export interface PrivacySectionNode {
   id: string;

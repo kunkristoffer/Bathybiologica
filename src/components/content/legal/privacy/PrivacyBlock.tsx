@@ -18,12 +18,12 @@ async function Block({ category, text }: { category: Categories; text: string })
   );
 }
 
-async function Paragraph({ text }: { text: string }) {
-  return <p>{text}</p>;
+async function Paragraph({ type, text }: { type: PrivacySectionNode['content'][number]['type']; text: string }) {
+  return <p className={`${type === 'meta' ? 'italic' : ''}`}>{text}</p>;
 }
 
 export function PrivacyBlock(data: PrivacySectionNode['content'][number]) {
-  if (data.type === 'paragraph') return <Paragraph text={data.text} />;
+  if (data.type !== 'reason') return <Paragraph type={data.type} text={data.text} />;
 
   return (
     <div className='flex flex-col gap-2 p-2 border border-panel-border/50 rounded-md'>

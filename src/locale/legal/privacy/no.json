@@ -10,6 +10,10 @@
       "title": "Personvernerklæring",
       "content": [
         {
+          "type": "meta",
+          "text": "Sist oppdatert 24. April 2026"
+        },
+        {
           "type": "paragraph",
           "text": "Denne personvernerklæringen forklarer hvordan vi behandler personopplysninger når du besøker nettsiden vår, kontakter oss, oppretter en konto, deltar i aktiviteter eller på annen måte bruker tjenestene våre."
         },
