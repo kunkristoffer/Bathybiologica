@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type Variant = 'primary' | 'secondary' | 'tertiary' | 'success' | 'danger' | 'warning' | 'error' | 'disabled';
 type Style = 'solid' | 'outline';
@@ -24,9 +25,6 @@ export function ButtonAction({
   stretch = false,
   ...rest
 }: ButtonLinkProps) {
-  // Base for use with variants
-  const TW_BASE = 'flex justify-center py-2 px-4 rounded-md box-border border-2 transition-all cursor-pointer';
-
   // Variant color maps
   const TW_VARIANTS: Record<Variant, { solid: string; outline: string }> = {
     primary: {
@@ -63,13 +61,21 @@ export function ButtonAction({
     },
   };
 
-  // Construct tailwind classes
-  const twClasses = `${stretch ? 'w-full' : 'w-fit'} ${TW_BASE} ${
-    TW_VARIANTS[disabled ? 'disabled' : variant][fill]
-  } ${className}`;
-
   return (
-    <button type='submit' onClick={onClick} className={twClasses} disabled={disabled} {...rest}>
+    <button
+      type='submit'
+      onClick={onClick}
+      className={twMerge(
+        `
+          flex items-center justify-center py-2 px-4 rounded-md box-border border-2 transition-all cursor-pointer
+          ${stretch ? 'w-full' : 'w-fit'}
+          ${TW_VARIANTS[disabled ? 'disabled' : variant][fill]}
+        `,
+        className
+      )}
+      disabled={disabled}
+      {...rest}
+    >
       {label}
     </button>
   );

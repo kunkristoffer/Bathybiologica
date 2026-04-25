@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ComponentProps } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 type Variant = 'primary' | 'secondary' | 'tertiary' | 'success' | 'danger' | 'warning' | 'error';
 type Style = 'solid' | 'outline';
@@ -27,9 +28,6 @@ export function ButtonLink({
   variant = 'primary',
   fill = false,
 }: ButtonLinkProps) {
-  // Base for use with variants
-  const TW_BASE = 'flex justify-center py-2 px-4 rounded-md box-border border-2 transition-all ';
-
   // Variant color maps
   const TW_VARIANTS: Record<Variant, { solid: string; outline: string }> = {
     primary: {
@@ -62,18 +60,29 @@ export function ButtonLink({
     },
   };
 
-  // Construct tailwind classes
-  const twClasses = `${fill ? 'w-full' : 'w-fit'} ${TW_BASE} ${TW_VARIANTS[variant][style]} ${className}`;
-
   if (/^(\/|#)/.test(href))
     return (
-      <Link href={href} className={twClasses}>
+      <Link
+        href={href}
+        className={twMerge(
+          `flex items-center justify-center py-2 px-4 rounded-md box-border border-2 transition-all
+          ${fill ? 'w-full' : 'w-fit'} ${TW_VARIANTS[variant][style]}`,
+          className
+        )}
+      >
         {label}
       </Link>
     );
 
   return (
-    <a href={href} className={twClasses}>
+    <a
+      href={href}
+      className={twMerge(
+        `flex items-center justify-center py-2 px-4 rounded-md box-border border-2 transition-all
+        ${fill ? 'w-full' : 'w-fit'} ${TW_VARIANTS[variant][style]}`,
+        className
+      )}
+    >
       {label}
     </a>
   );
