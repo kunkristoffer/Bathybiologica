@@ -90,14 +90,18 @@
 
   header > :first-child {
     height: var(--header-h);
-    @apply container mx-auto flex justify-between items-center p-4;
+    @apply container mx-auto flex justify-between items-center p-4 md:px-8;
   }
 
-  main > section > :first-child {
-    @apply container mx-auto flex flex-col px-4 py-16 lg:py-24;
+  main > section > div {
+    @apply container mx-auto flex flex-col px-4 md:px-8 py-16 lg:py-24;
   }
 
   footer {
+    > div {
+      @apply px-4 py-8 md:px-8 lg:py-16 grid gap-16;
+    }
+
     a {
       @apply text-primary;
     }

@@ -7,7 +7,7 @@ export default async function Privacy() {
   const messages = await getMessages();
   const privacy = messages.privacy as PrivacyMessages;
   return (
-    <main className='relative sm:flex-row gap-4 p-4'>
+    <main className='relative sm:flex-row gap-4 p-4 md:px-8'>
       <TableOfContents headingLevels={['h2', 'h3', 'h4']} />
       <div className='flex flex-col gap-12'>
         {privacy.sections.map((data, i) => (
