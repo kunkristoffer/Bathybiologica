@@ -1,0 +1,1093 @@
+{
+  "static": {
+    "what": "Data processed",
+    "why": "Purpose",
+    "how": "How it is handled"
+  },
+  "sections": [
+    {
+      "id": "privacy-page",
+      "title": "Privacy Policy",
+      "content": [
+        {
+          "type": "meta",
+          "text": "Last updated April 24, 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "This privacy policy explains how we process personal data when you visit our website, contact us, sign up for membership or events, or otherwise interact with our organization's services."
+        },
+        {
+          "type": "paragraph",
+          "text": "We strive to process personal data in an open and transparent manner, giving concise and clear information about how we handle your data."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the purposes of this policy, “personal data” refers to any information that relates to an identified or identifiable individual."
+        }
+      ],
+      "children": [
+        {
+          "id": "introduction-and-scope",
+          "title": "Introduction and scope",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "This notice applies to all parts of our website and related services including public pages, any member or event portals, contact forms, and internal communication features."
+            },
+            {
+              "type": "paragraph",
+              "text": "Some specific services may have supplementary notices if additional data processing occurs (for example, when using third-party media like embedded videos or newsletters)."
+            }
+          ]
+        },
+        {
+          "id": "data-controller",
+          "title": "Data controller",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "The organization behind this website is the data controller for the personal data processed under this notice."
+            },
+            {
+              "type": "reason",
+              "what": "Identity and contact information for the organization",
+              "why": "To inform users who is responsible for the processing activities described on this page",
+              "how": "Presented through this notice, our contact page, and official communication channels"
+            }
+          ]
+        },
+        {
+          "id": "personal-data-we-process",
+          "title": "Personal data we process",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "The data we process depends on how you use the website. Some information is provided by you directly (for example when you register or make a request), while other information is collected automatically by the site or service."
+            }
+          ],
+          "children": [
+            {
+              "id": "data-you-provide",
+              "title": "Data you provide",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "You may provide information to us when you fill out forms, register for services or events, subscribe to newsletters, or communicate with us through email or messaging features."
+                }
+              ],
+              "children": [
+                {
+                  "id": "contact-and-correspondence",
+                  "title": "Contact and correspondence",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "When you contact us, we may collect your name, email address, subject line, message content, and any attachments or other information you provide."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Contact details, message content, attachments and follow-up communication",
+                      "why": "To respond to your inquiries, document communication, and continue relevant dialogue where needed",
+                      "how": "Submitted by you through forms, email, or other channels and handled by our authorized staff or volunteers"
+                    }
+                  ]
+                },
+                {
+                  "id": "account-and-profile",
+                  "title": "Account and profile",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If our site supports user accounts, we may process login information, display names, contact details, role or membership status, preferences, and other profile data."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Account credentials, profile information, roles and preferences",
+                      "why": "To create and maintain accounts, authenticate users, assign appropriate permissions, and personalize your experience",
+                      "how": "Collected during registration, profile updates, and normal use of member features"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "membership-and-participation",
+                      "title": "Membership and participation",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "We may process information related to your membership status, group affiliations, volunteer roles, event attendance, or participation in our activities."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Membership status, role affiliation, participation records",
+                          "why": "To manage access to member areas, facilitate collaboration, and keep accurate administrative records",
+                          "how": "Collected through account setup, event signups, and administrative workflows"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "volunteer-and-application-details",
+                      "title": "Volunteer and application details",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If you apply to volunteer or participate in certain programs, we may process the information you provide in that application (such as motivation, availability, experience, and related details)."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Application content, practical availability, stated interests and relevant background information",
+                          "why": "To evaluate applications, communicate about opportunities, and coordinate practical participation",
+                          "how": "Submitted through application forms or follow-up communication, reviewed by authorized coordinators"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "newsletter-and-subscription-details",
+                  "title": "Newsletter and subscription details",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If you subscribe to newsletters or mailing lists, we may process your email address, language preference, consent status, and records of when and how you signed up."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Email address, language preference, consent records",
+                      "why": "To deliver newsletters and confirm that subscription and communication preferences were handled correctly",
+                      "how": "Collected through subscription forms and confirmation flows"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "data-collected-automatically",
+              "title": "Data collected automatically",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Some information is collected automatically when you visit the website or interact with our services, for example through your browser, device, or our security systems."
+                }
+              ],
+              "children": [
+                {
+                  "id": "device-and-browser-data",
+                  "title": "Device and browser data",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We may process technical metadata such as your IP address, browser type and version, language settings, operating system, screen resolution, and timestamps of requests made to the site."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "IP address, browser metadata, language settings and technical request details",
+                      "why": "To render the website correctly for your device, improve compatibility, diagnose faults, and maintain site stability and security",
+                      "how": "Generated automatically by your browser and our servers when you load pages or request resources"
+                    }
+                  ]
+                },
+                {
+                  "id": "security-and-access-logs",
+                  "title": "Security and access logs",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We may process logs related to login attempts, failed requests, abuse prevention, security events, and administrative actions."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Authentication attempts, server logs, moderation records and security events",
+                      "why": "To detect misuse or attacks, investigate issues, protect the service, and document relevant operational activity",
+                      "how": "Collected through our application and infrastructure logging systems and internal security tools"
+                    }
+                  ]
+                },
+                {
+                  "id": "cookie-derived-data",
+                  "title": "Cookie-derived data",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Depending on your consent choices and the services in use, we may process information stored in cookies or similar tracking technologies on your device."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "In line with Norway's updated Ekom law (effective January 2025), any use of cookies and similar technologies requires valid GDPR consent to be lawful."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "essential-cookie-data",
+                      "title": "Essential cookie data",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Essential cookies may store information such as language preferences, interface choices, consent settings, session identifiers, or other settings required for core functionality of the website."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Locale, session state, and core preference settings",
+                          "why": "To keep the website functional and preserve your active choices while using the service",
+                          "how": "Stored in the browser by the application when needed for basic site operations"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "analytics-cookie-data",
+                      "title": "Analytics cookie data",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If optional analytics are enabled, third-party analytics tools may process information about page visits, navigation paths, feature usage, and aggregated behavior signals."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Traffic patterns, page visits and aggregated usage data",
+                          "why": "To understand how our site is used and to improve content, structure and usability over time",
+                          "how": "Collected by analytics scripts or services after you have given consent where required"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "embedded-content-data",
+                      "title": "Embedded content data",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "When our pages include embedded third-party content (such as videos, social media widgets, or maps), those providers may receive technical information (like your IP address) and may set their own cookies depending on your interaction and settings."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "IP address, browser metadata and interaction data related to embedded content",
+                          "why": "To display external content (videos, maps, social feeds, etc.) and enable those services to function properly",
+                          "how": "Transferred directly between your browser and the third-party provider when the content is loaded or played"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "purposes-and-legal-bases",
+          "title": "Purposes and legal bases",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "We process personal data only for specific purposes and only when we have a valid legal basis. The applicable basis depends on the feature or interaction (for example: performance of a service, compliance with a legal obligation, our legitimate interests, or your consent)."
+            }
+          ],
+          "children": [
+            {
+              "id": "communication-and-support",
+              "title": "Communication and support",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "We process communication data (messages, inquiries, and related personal data) in order to answer questions, provide support, coordinate activities, and document important follow-up."
+                }
+              ],
+              "children": [
+                {
+                  "id": "pre-contractual-requests",
+                  "title": "Pre-contractual requests",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If you contact us before engaging in any specific arrangement or participation, we may process your information to evaluate and respond to your request or inquiry."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Initial contact details and request context",
+                      "why": "To determine whether and how we can respond to your question or provide the requested information",
+                      "how": "Handled through our contact channels, internal notes and relevant follow-up communication"
+                    }
+                  ]
+                },
+                {
+                  "id": "ongoing-correspondence",
+                  "title": "Ongoing correspondence",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If communication with us continues over time, we may retain relevant correspondence so that future replies are accurate, consistent, and informed by prior context."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Message history and related notes",
+                      "why": "To provide continuity, avoid repeated explanations, and ensure prior context is not lost",
+                      "how": "Stored in our communication tools or administrative systems with access limited to those handling the matter"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "member-services-and-community-features",
+              "title": "Member services and community features",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Where the website offers user accounts, events, message boards, or direct communication between users, we process personal data to make those services available and secure."
+                }
+              ],
+              "children": [
+                {
+                  "id": "account-access-and-authentication",
+                  "title": "Account access and authentication",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We process authentication data (such as login credentials and session information) to allow you to sign in securely, maintain sessions, and access the appropriate areas of the service."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Authentication tokens, user identifiers, session state and access control data",
+                      "why": "To keep accounts secure and ensure that users only access the features they are permitted to use",
+                      "how": "Processed through the secure authentication flow and session management systems"
+                    }
+                  ]
+                },
+                {
+                  "id": "events-and-participation",
+                  "title": "Events and participation",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "When users register for events or activities, we may process attendance records, logistical preferences, and communication needed to organize participation."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Attendance records, logistics and preference information",
+                      "why": "To plan events, coordinate participation, and send updates before, during and after activities",
+                      "how": "Managed through event tools, registration forms and organizer communication channels"
+                    }
+                  ]
+                },
+                {
+                  "id": "direct-messages-and-forum-content",
+                  "title": "Direct messages and forum content",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If the site includes private messaging or community discussions, we process that content to provide the feature, moderate misuse, and respond to any reports."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Message and post content, moderation records and metadata",
+                      "why": "To enable communication features, maintain community safety, and enforce our rules if needed",
+                      "how": "Stored and processed within our messaging or discussion system and reviewed when necessary for moderation or support"
+                    }
+                  ]
+                },
+                {
+                  "id": "legal-obligations-and-recordkeeping",
+                  "title": "Legal obligations and recordkeeping",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "In some cases, we may process or retain information to comply with legal obligations, respond to official requests, or document decisions and actions in our organization."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Required records, audit trails and legally relevant documentation",
+                      "why": "To comply with law, defend legal claims if needed, and ensure accountable administration",
+                      "how": "Handled through secure internal systems, recordkeeping routines, and controlled access policies"
+                    }
+                  ]
+                },
+                {
+                  "id": "consent-based-processing",
+                  "title": "Consent-based processing",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Some of our processing is based on your consent, particularly for optional services like newsletters, analytics tracking, event media publication, or third-party integrations."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "newsletter-consent",
+                      "title": "Newsletter consent",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "When you sign up for our newsletter, we process your email address and subscription preferences based on your active consent."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Email address, consent status and mailing preferences",
+                          "why": "To send updates only to recipients who have actively chosen to receive them",
+                          "how": "Recorded through signup confirmations and preference management"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "optional-analytics-consent",
+                      "title": "Optional analytics consent",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Any optional analytics tracking (for example, site usage metrics not strictly necessary for the site) is enabled only after you give explicit consent where required."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Consent records and analytics identifiers",
+                          "why": "To ensure that optional measurement tools are only used when you have given permission",
+                          "how": "Managed through cookie consent settings and conditional loading of analytics scripts"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "event-media-consent",
+                      "title": "Event media consent",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If we collect photos or videos at events where individuals are identifiable, we will obtain consent or ensure another lawful basis before publishing that media."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Photographs or video recordings of individuals",
+                          "why": "To document activities, share updates, and illustrate the organization's work in a responsible way",
+                          "how": "Captured at events and reviewed before publication according to our internal guidelines and the chosen legal basis"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sharing-and-processors",
+              "title": "Sharing and processors",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "We do not sell personal data. We may share data with trusted service providers and partners when necessary to operate the website, provide features you request, or protect our systems."
+                }
+              ],
+              "children": [
+                {
+                  "id": "infrastructure-providers",
+                  "title": "Infrastructure providers",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We use third-party hosting, storage, deployment, monitoring, and database services. These providers process data as needed to run and secure the site."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "hosting-and-content-delivery",
+                      "title": "Hosting and content delivery",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Our website content is served through hosting platforms and content delivery networks (CDNs) to ensure availability and performance."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Technical request data and delivery logs",
+                          "why": "To serve pages reliably, optimize availability, and protect against misuse",
+                          "how": "Processed by the hosting environment, CDN edge services, and related infrastructure logs"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "database-and-backups",
+                      "title": "Database and backups",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Data entered through website features may be stored in external database services and backup systems to ensure availability and recovery."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Stored account data, communication records and backup copies",
+                          "why": "To operate the service safely and maintain continuity in the event of technical failure",
+                          "how": "Handled through our production database, secure backups, and data retention routines"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "protective-services",
+                  "title": "Protective services",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We may use security services to reduce spam, prevent abuse, and enhance protection for login and form entry points."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "captcha-and-spam-filtering",
+                      "title": "Captcha and spam filtering",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Our contact forms and entry points may use anti-spam measures (such as CAPTCHAs) to distinguish legitimate submissions from automated abuse."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Technical interaction signals, IP data and abuse-prevention metadata",
+                          "why": "To reduce spam, protect services from automated misuse, and keep communication channels functional",
+                          "how": "Processed through the anti-spam or CAPTCHA service when forms are loaded or submitted"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "security-monitoring",
+                      "title": "Security monitoring",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "We may use security monitoring tools that process limited operational data (like error logs or unusual patterns) to detect incidents and support incident response."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Telemetry, error traces and unusual activity patterns",
+                          "why": "To identify security incidents quickly and protect systems and data",
+                          "how": "Collected through our monitoring infrastructure and logged under internal review"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "optional-third-party-content",
+                  "title": "Optional third-party content",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Some pages may include optional embedded content from external providers. Interacting with such content may result in additional data exchange with those providers."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "video-embeds",
+                      "title": "Video embeds",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If our site contains embedded videos, the video provider may receive information about you and may process interaction data when you play the video."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Technical connection details and media interaction data",
+                          "why": "To deliver video playback and measure engagement for the embedded service",
+                          "how": "Transferred from your browser to the video provider when the embed is loaded or activated"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "maps-and-social-widgets",
+                      "title": "Maps and social widgets",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Embedded maps, social media widgets and similar features may connect to external domains and possibly set cookies or track your interaction."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "IP address, browser metadata and interaction data for embedded features",
+                          "why": "To display the external widget or map and provide its intended functionality",
+                          "how": "Loaded from third-party servers when your browser requests the embedded content"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "international-transfers",
+              "title": "International transfers",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Some of our service providers may process data in countries outside your own. Where this occurs, we take steps to ensure appropriate safeguards are in place as required by law."
+                },
+                {
+                  "type": "reason",
+                  "what": "Data handled by external providers that may operate globally",
+                  "why": "Because some technical and communication services are delivered through international infrastructure",
+                  "how": "Managed through contractual safeguards, documented transfer mechanisms, and provider assessments"
+                }
+              ]
+            },
+            {
+              "id": "retention-and-deletion",
+              "title": "Retention and deletion",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "We keep personal data only as long as necessary for the original purpose of collection, business continuity, legal obligations, or legitimate security needs."
+                }
+              ],
+              "children": [
+                {
+                  "id": "inquiry-retention",
+                  "title": "Inquiry retention",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Records of our correspondence with you may be kept for varying periods depending on the status of the matter (closed, ongoing, or likely to recur)."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "completed-inquiries",
+                      "title": "Completed inquiries",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Simple matters that have been fully resolved and are unlikely to require future reference may be deleted or anonymized after a reasonable period."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Closed correspondence with no expected future relevance",
+                          "why": "To avoid storing personal data longer than needed after the purpose has been fulfilled",
+                          "how": "Handled through internal review and routine deletion or archiving processes"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "unresolved-inquiries",
+                      "title": "Unresolved inquiries",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If an issue remains open, disputed, or still relevant to our operations, we may retain the correspondence for longer until the matter is resolved."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Ongoing case history and follow-up records",
+                          "why": "To preserve context and allow responsible handling of unresolved or recurring matters",
+                          "how": "Retained in our communication and case-management systems until the issue is closed"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "account-retention",
+                  "title": "Account retention",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Account-related information is kept for the lifetime of the account and may be retained for a period after account closure if needed for legal, security, or administrative purposes."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "active-accounts",
+                      "title": "Active accounts",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "For active accounts, core profile data, authentication details, and user preferences are maintained as long as the account is in use."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Core account data, login state, permissions and settings",
+                          "why": "To keep the account functional and maintain continuity of the features you expect",
+                          "how": "Stored in our database and authentication systems during account activity"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "closed-or-inactive-accounts",
+                      "title": "Closed or inactive accounts",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "When an account is closed or left inactive for a long time, some information may be removed or archived, with only limited records retained for system integrity or legal documentation."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Residual account references and audit entries",
+                          "why": "To document that account actions took place and protect against fraud or disputes",
+                          "how": "Retained in reduced form according to our internal retention policies"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "security-log-retention",
+                  "title": "Security log retention",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Security logs are handled according to their purpose. Routine logs may be kept short term, while logs related to incidents may be retained longer."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "routine-operational-logs",
+                      "title": "Routine operational logs",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Standard technical logs (such as server logs and request traces) may be retained for a short period to support troubleshooting, performance monitoring, and service maintenance."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Server logs, request traces and system health metrics",
+                          "why": "To diagnose faults, stabilize the service and review operational performance",
+                          "how": "Stored in monitoring systems with limited retention periods"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "incident-related-logs",
+                      "title": "Incident-related logs",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If a security incident occurs, relevant logs are retained for longer periods to allow investigation, documentation, and remediation."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Relevant incident traces, security events and investigation materials",
+                          "why": "To understand what happened, respond effectively and prevent future incidents",
+                          "how": "Stored in secured systems and accessed only by the incident response team"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "your-rights",
+              "title": "Your rights",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Under applicable laws, you may have rights to access, correct, delete, restrict, or object to processing of your personal data, as well as the right to data portability and to withdraw consent where given."
+                }
+              ],
+              "children": [
+                {
+                  "id": "access-and-insight",
+                  "title": "Access and insight",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "You have the right to ask whether we process personal data about you and, where relevant, to request access to that data."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "copy-of-data",
+                      "title": "Copy of data",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Where allowed by law, you may ask for a copy of the personal data we hold about you, in a format that is understandable and usable."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "explanation-of-processing",
+                      "title": "Explanation of processing",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "You may also request information about the categories of data processed, the purposes of processing, retention periods, and any recipients or processors involved."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "correction-and-update",
+                  "title": "Correction and update",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If any personal data we hold about you is inaccurate or incomplete, you may ask us to correct or update it."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "profile-corrections",
+                      "title": "Profile corrections",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Where applicable, you may be able to update certain profile information directly through your account settings."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "record-corrections",
+                      "title": "Record corrections",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If information is stored in our records or databases, any correction request will be reviewed to ensure accuracy and appropriateness of the change."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "deletion-and-restriction",
+                  "title": "Deletion and restriction",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "In certain situations, you may request deletion of your personal data or ask us to restrict processing while we review your request."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "deletion-requests",
+                      "title": "Deletion requests",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Keep in mind that deletion is not always immediate or total. Some data may need to be retained to comply with legal obligations, ensure security, or document past actions."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "restricted-processing",
+                      "title": "Restricted processing",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If you dispute the accuracy or lawfulness of our processing, you can ask us to restrict further processing of your data while we resolve the issue."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "objection-and-withdrawal",
+                  "title": "Objection and withdrawal",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "You may object to certain processing and withdraw any consent you have given at any time."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "objection-based-on-legitimate-interests",
+                      "title": "Objection based on legitimate interests",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If we process data based on our legitimate interests, we will balance your objection against our reasons for processing. You can still object and we will review it."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "withdrawal-of-consent",
+                      "title": "Withdrawal of consent",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If you withdraw consent, this does not affect processing that has already occurred. However, it may affect future use of the features or communications that relied on that consent."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "complaints-and-supervision",
+                  "title": "Complaints and supervision",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If you believe our processing of your personal data is not lawful, you can contact us directly. You also have the right to lodge a complaint with the relevant supervisory authority."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "contact-us-first",
+                      "title": "Contact us first",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "We encourage you to contact us first so that we have an opportunity to address your concerns directly and resolve any issues if possible."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "complain-to-authority",
+                      "title": "Complain to an authority",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "You may also contact the Norwegian Data Protection Authority (Datatilsynet) or another relevant supervisory authority in your jurisdiction if you believe your rights have not been respected."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "special-situations",
+              "title": "Special situations",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Certain circumstances may require extra considerations, such as when handling data about children, event photography, public contributions, or voluntary surveys."
+                }
+              ],
+              "children": [
+                {
+                  "id": "children-and-young-users",
+                  "title": "Children and young users",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "If our services are available to younger audiences, we aim to minimize any unnecessary collection of personal data from children and encourage parental involvement where appropriate."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "parental-contact",
+                      "title": "Parental contact",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If we become aware that personal data of children has been collected without parental consent (when consent is required), we will halt processing of that data and follow up with appropriate measures (such as obtaining consent or deleting the data)."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "photos-videos-and-events",
+                  "title": "Photos, videos and events",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We may document events and activities with photography or video for internal records or public communication."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "event-documentation",
+                      "title": "Event documentation",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Photos and videos may be collected to document activities, commemorate important milestones, and illustrate our organization's work to members and the public."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Visual recordings of events and activities",
+                          "why": "To capture real events and communicate what the organization does in practice",
+                          "how": "Captured during events, reviewed internally, and handled according to our publication routines"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "publication-on-public-channels",
+                      "title": "Publication on public channels",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If we publish photos or videos on public pages or social media, we review them carefully to ensure that the consent, context, and audience are appropriate."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Selected images or clips intended for public visibility",
+                          "why": "To share updates and activities responsibly while respecting privacy",
+                          "how": "Reviewed before publication and limited to the appropriate channels and context"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "research-and-surveys",
+                  "title": "Research and surveys",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We may use questionnaires, feedback forms, or surveys to learn from our participants, volunteers, or members on a voluntary basis."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "voluntary-participation",
+                      "title": "Voluntary participation",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Unless we clearly state otherwise, participation in surveys and feedback activities is voluntary, and responses are used only for the specific purpose described."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "changes-to-this-notice",
+                  "title": "Changes to this notice",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "We may update this privacy policy from time to time to reflect new services, organizational changes, legal developments, or technical adjustments."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "material-changes",
+                      "title": "Material changes",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "If we make material changes to this notice that significantly affect our data processing practices, we may highlight the updates or provide additional notice through our website or other channels."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "minor-edits",
+                      "title": "Minor edits",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Editorial improvements, clarifications, and structural updates may be made without separate notice if they do not substantially change the content of this policy."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "contact-and-requests",
+              "title": "Contact and requests",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "If you have questions about this policy or wish to exercise your rights, you can contact us using the contact information provided on the website."
+                },
+                {
+                  "type": "reason",
+                  "what": "Personal identification details provided in privacy requests",
+                  "why": "To verify your identity, protect your information and that of others, and ensure your request is handled correctly",
+                  "how": "Processed through our designated contact channels and internal privacy workflows"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

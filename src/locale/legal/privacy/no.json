@@ -1,0 +1,1093 @@
+{
+  "static": {
+    "what": "Behandlede opplysninger",
+    "why": "Formål",
+    "how": "Hvordan det behandles"
+  },
+  "sections": [
+    {
+      "id": "privacy-page",
+      "title": "Personvernregler",
+      "content": [
+        {
+          "type": "meta",
+          "text": "Sist oppdatert 24. april 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "Disse personvernreglene forklarer hvordan vi behandler personopplysninger når du besøker nettstedet vårt, kontakter oss, melder deg på medlemskap eller arrangementer, eller på annen måte samhandler med tjenestene våre."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vi streber etter å behandle personopplysninger på en åpen og gjennomsiktig måte, og gir kortfattede og klare opplysninger om hvordan vi håndterer dataene dine."
+        },
+        {
+          "type": "paragraph",
+          "text": "I henhold til disse reglene refererer «personopplysninger» til all informasjon som er knyttet til en identifisert eller identifiserbar person."
+        }
+      ],
+      "children": [
+        {
+          "id": "introduction-and-scope",
+          "title": "Innledning og omfang",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Denne merknaden gjelder alle deler av nettstedet vårt og tilknyttede tjenester, inkludert offentlige sider, medlems- og arrangementportaler, kontakt-skjemaer og interne kommunikasjonsfunksjoner."
+            },
+            {
+              "type": "paragraph",
+              "text": "Noen spesifikke tjenester kan ha tilleggsmerknader dersom det foregår ytterligere databehandling (for eksempel ved bruk av tredjeparts media som innebygde videoer eller nyhetsbrev)."
+            }
+          ]
+        },
+        {
+          "id": "data-controller",
+          "title": "Registeransvarlig",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Organisasjonen bak dette nettstedet er registeransvarlig for personopplysningene som behandles i henhold til denne merknaden."
+            },
+            {
+              "type": "reason",
+              "what": "Identifikasjon og kontaktinformasjon for organisasjonen",
+              "why": "For å informere brukere om hvem som er ansvarlig for databehandlingsaktivitetene som beskrives på denne siden",
+              "how": "Formidlet gjennom denne merknaden, vår kontaktside og offisielle kommunikasjonskanaler"
+            }
+          ]
+        },
+        {
+          "id": "personal-data-we-process",
+          "title": "Personopplysninger vi behandler",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Opplysningene vi behandler, avhenger av hvordan du bruker nettstedet. Noen informasjon oppgis direkte av deg (for eksempel ved registrering eller forespørsler), mens annen informasjon samles automatisk inn via nettstedet eller tjenesten."
+            }
+          ],
+          "children": [
+            {
+              "id": "data-you-provide",
+              "title": "Opplysninger du oppgir",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Du kan oppgi informasjon til oss når du fyller ut skjemaer, registrerer deg for tjenester eller arrangementer, abonnerer på nyhetsbrev, eller kommuniserer med oss via e-post eller meldingsfunksjoner."
+                }
+              ],
+              "children": [
+                {
+                  "id": "contact-and-correspondence",
+                  "title": "Kontakt og korrespondanse",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Når du kontakter oss, kan vi samle inn fornavn, etternavn, e-postadresse, emnelinje, meldingsinnhold og eventuelle vedlegg eller annen informasjon du oppgir."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Kontaktinformasjon, meldingsinnhold, vedlegg og oppfølging",
+                      "why": "For å svare på henvendelsene, dokumentere kommunikasjonen og føre relevant dialog der det er nødvendig",
+                      "how": "Oppgitt av deg via skjemaer, e-post eller andre kanaler, og håndtert av våre autoriserte ansatte eller frivillige"
+                    }
+                  ]
+                },
+                {
+                  "id": "account-and-profile",
+                  "title": "Konto og profil",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis nettstedet vårt støtter brukerkontoer, kan vi behandle innloggingsinformasjon, visningsnavn, kontaktinformasjon, rolle- eller medlemsstatus, preferanser og annen profildata."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Innloggingsopplysninger, profilinformasjon, roller og preferanser",
+                      "why": "For å opprette og vedlikeholde kontoer, autentisere brukere, tildele relevante tilganger og tilpasse opplevelsen din",
+                      "how": "Samlet inn under registrering, profiloppdateringer og normal bruk av medlemsfunksjoner"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "membership-and-participation",
+                      "title": "Medlemskap og deltakelse",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Vi kan behandle informasjon knyttet til medlemsstatus, gruppetilhørighet, frivillige roller, deltakelse på arrangementer eller deltagelse i våre aktiviteter."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Medlemsstatus, rolletilhørighet og deltakelsesregister",
+                          "why": "For å administrere tilgang til medlemsområder, bidra til samarbeid og føye akurate administrative registre",
+                          "how": "Samlet inn via kontoinnstilling, arrangementpåmelding og administrative arbeidsflyter"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "volunteer-and-application-details",
+                      "title": "Frivillig og søknadsopplysninger",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis du søker om å være frivillig eller delta i bestemte programmer, kan vi behandle informasjonen du oppgir i søknaden (for eksempel motivasjon, tilgjengelighet, erfaring og relaterte detaljer)."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Søknadsinnhold, praktisk tilgjengelighet, oppgitte interesser og relevant bakgrunnsinformasjon",
+                          "why": "For å vurdere søknader, kommunisere om muligheter og koordinere praktisk deltakelse",
+                          "how": "Innsendt via søknadsskjemaer eller oppfølging, gjennomgått av autoriserte koordinatorer"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "newsletter-and-subscription-details",
+                  "title": "Nyhetsbrev og abonnementsopplysninger",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis du abonnerer på nyhetsbrev eller e-postlister, kan vi behandle e-postadressen din, språkpreferanse, samtykkestatus og registre over når og hvordan du meldte deg på."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "E-postadresse, språkpreferanse og samtykkeregistre",
+                      "why": "For å sende nyhetsbrev og bekrefte at abonnements- og kommunikasjonspreferanser er håndtert korrekt",
+                      "how": "Samlet inn via påmeldingsskjemaer og bekreftelsesprosesser"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "data-collected-automatically",
+              "title": "Automatisk innsamlet data",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Noen opplysninger samles automatisk inn når du besøker nettstedet eller samhandler med tjenestene våre, for eksempel via nettleseren, enheten eller våre sikkerhetssystemer."
+                }
+              ],
+              "children": [
+                {
+                  "id": "device-and-browser-data",
+                  "title": "Enhets- og nettleserdata",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi kan behandle teknisk metadata som IP-adresse, nettlesertype og versjon, språkinnstillinger, operativsystem, skjermoppløsning og tidsstempler for forespørsler sendt til nettstedet."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "IP-adresse, nettlesermetadata, språkinnstillinger og tekniske forespørselsdetaljer",
+                      "why": "For å vise nettstedet korrekt på enheten din, forbedre kompatibilitet, feilsøke og opprettholde stabilitet og sikkerhet",
+                      "how": "Genereres automatisk av nettleseren og våre servere når du laster sider eller ber om ressurser"
+                    }
+                  ]
+                },
+                {
+                  "id": "security-and-access-logs",
+                  "title": "Sikkerhets- og tilgangsdager",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi kan behandle logger knyttet til innloggingsforsøk, mislykkede forespørsler, forebygging av misbruk, sikkerhetshendelser og administrative handlinger."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Autentiseringsforsøk, serverlogger, modereringsregistre og sikkerhetshendelser",
+                      "why": "For å oppdage misbruk eller angrep, undersøke problemer, beskytte tjenesten og dokumentere relevant driftsaktivitet",
+                      "how": "Samlet inn via våre applikasjons- og infrastrukturloggingsystemer og interne verktøy for sikkerhet"
+                    }
+                  ]
+                },
+                {
+                  "id": "cookie-derived-data",
+                  "title": "Data basert på informasjonskapsler (cookies)",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Avhengig av samtykkevalgene dine og brukte tjenester, kan vi behandle informasjon lagret i informasjonskapsler eller lignende sporingsteknologier på enheten din."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "I tråd med Norges oppdaterte e-loven (gjelder fra januar 2025) kreves gyldig GDPR-samtykke for lovlig bruk av informasjonskapsler og lignende teknologier."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "essential-cookie-data",
+                      "title": "Essensielle informasjonskapsler",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Essensielle informasjonskapsler kan lagre informasjon som språkpreferanser, grensesnittvalg, samtykkeinnstillinger, øktidentifikatorer eller andre innstillinger som kreves for kjernefunksjonaliteten til nettstedet."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Språk, øktstatus og grunnleggende preferanseinnstillinger",
+                          "why": "For å holde nettstedet funksjonelt og bevare aktive valg mens du bruker tjenesten",
+                          "how": "Lagret i nettleseren av applikasjonen når det er nødvendig for grunnleggende drift"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "analytics-cookie-data",
+                      "title": "Analyseinformasjonskapsler",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis valgfrie analyser er aktivert, kan tredjepartsanalyseverktøy behandle informasjon om sidesøk, navigasjonsstier, funksjonsbruk og aggregerte atferdssignaler."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Trafikkmønstre, sidesøk og aggregerte bruksdata",
+                          "why": "For å forstå hvordan nettstedet vårt brukes og forbedre innhold, struktur og brukervennlighet over tid",
+                          "how": "Samlet inn av analyse-skript eller tjenester etter at du har gitt samtykke der det kreves"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "embedded-content-data",
+                      "title": "Innebygd tredjepartsinnhold",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Når sidene våre inneholder innebygd innhold fra eksterne tilbydere (for eksempel videoer, sosiale medie-widgeter eller kart), kan disse leverandørene motta teknisk informasjon (som IP-adressen din) og sette sine egne informasjonskapsler avhengig av interaksjon og innstillinger."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "IP-adresse, nettlesermetadata og interaksjonsdata relatert til innebygd innhold",
+                          "why": "For å vise eksternt innhold (videoer, kart, sosiale strømmer osv.) og gjøre disse tjenestene funksjonelle",
+                          "how": "Overført direkte mellom nettleseren din og tredjepartleverandøren når innholdet lastes eller avspilles"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "purposes-and-legal-bases",
+          "title": "Formål og rettsgrunnlag",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Vi behandler personopplysninger kun for spesifikke formål og kun når vi har et gyldig rettsgrunnlag. Det gjeldende grunnlaget avhenger av funksjonen eller interaksjonen (for eksempel: ytelse av en tjeneste, overholdelse av juridisk forpliktelse, våre legitimte interesser eller ditt samtykke)."
+            }
+          ],
+          "children": [
+            {
+              "id": "communication-and-support",
+              "title": "Kommunikasjon og støtte",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Vi behandler kommunikasjonsdata (meldinger, henvendelser og relaterte personopplysninger) for å besvare spørsmål, gi støtte, koordinere aktiviteter og dokumentere viktig oppfølging."
+                }
+              ],
+              "children": [
+                {
+                  "id": "pre-contractual-requests",
+                  "title": "Førkontraktuelle forespørsler",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis du kontakter oss før inngåelse av en spesifikk avtale eller deltakelse, kan vi behandle informasjonen din for å vurdere og svare på forespørselen eller henvendelsen."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Opprinnelig kontaktinformasjon og forespørselskontekst",
+                      "why": "For å fastslå om og hvordan vi kan svare på spørsmålet ditt eller gi den etterspurte informasjonen",
+                      "how": "Håndtert via våre kontaktkanaler, interne notater og relevant oppfølgingskommunikasjon"
+                    }
+                  ]
+                },
+                {
+                  "id": "ongoing-correspondence",
+                  "title": "Pågående korrespondanse",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis kommunikasjonen med oss fortsetter over tid, kan vi lagre relevant korrespondanse for at fremtidige svar skal være nøyaktige, konsistente og informert av tidligere kontekst."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Meldingshistorikk og relaterte notater",
+                      "why": "For å gi kontinuitet, unngå gjentatte forklaringer og sikre at tidligere kontekst ikke går tapt",
+                      "how": "Lagret i kommunikasjonsverktøy eller administrative systemer med tilgang begrenset til de som håndter saken"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "member-services-and-community-features",
+              "title": "Medlemstjenester og fellesskapsfunksjoner",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Når nettstedet tilbyr brukerkontoer, arrangementer, meldingskortsider eller direkte kommunikasjon mellom brukere, behandler vi personopplysninger for å gjøre disse tjenestene tilgjengelige og sikre."
+                }
+              ],
+              "children": [
+                {
+                  "id": "account-access-and-authentication",
+                  "title": "Kontotilgang og autentisering",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi behandler autentiseringsdata (som innloggingsopplysninger og øktinformasjon) for å gi deg sikker innlogging, opprettholde økter og få tilgang til aktuelle deler av tjenesten."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Autentiseringstokener, brukeridentifikatorer, øktstatus og tilgangskontrolldata",
+                      "why": "For å holde kontoer sikre og sikre at brukere kun får tilgang til funksjonene de er autorisert til å bruke",
+                      "how": "Behandlet gjennom sikre autentiseringsflyter og øktstyringssystemer"
+                    }
+                  ]
+                },
+                {
+                  "id": "events-and-participation",
+                  "title": "Arrangementer og deltakelse",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Når brukere melder seg på arrangementer eller aktiviteter, kan vi behandle deltakelsesregistre, logistiske preferanser og kommunikasjon som trengs for å organisere deltakelsen."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Deltakelsesregistre, logistikk og preferanseinformasjon",
+                      "why": "For å planlegge arrangementer, koordinere deltakelse og sende oppdateringer før, under og etter aktiviteter",
+                      "how": "Håndtert gjennom verktøy for arrangementer, påmeldingsskjemaer og koordinatorers kommunikasjonskanaler"
+                    }
+                  ]
+                },
+                {
+                  "id": "direct-messages-and-forum-content",
+                  "title": "Direktemeldinger og foruminnhold",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis nettstedet inkluderer privat meldingstjeneste eller fellesskapsdiskusjoner, behandler vi dette innholdet for å levere funksjonen, moderere misbruk og svare på eventuelle rapporter."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Meldings- og innlegginnhold, modereringsregistre og metadata",
+                      "why": "For å muliggjøre kommunikasjonsfunksjoner, opprettholde fellesskapssikkerhet og håndheve våre regler dersom nødvendig",
+                      "how": "Lagret og behandlet i vårt meldings- eller diskusjonssystem og gjennomgått når det er nødvendig for moderering eller støtte"
+                    }
+                  ]
+                },
+                {
+                  "id": "legal-obligations-and-recordkeeping",
+                  "title": "Juridiske forpliktelser og arkivering",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "I enkelte tilfeller kan vi behandle eller lagre informasjon for å overholde juridiske forpliktelser, svare på offisielle forespørsler eller dokumentere beslutninger og handlinger i organisasjonen vår."
+                    },
+                    {
+                      "type": "reason",
+                      "what": "Påbudte registre, revisjonsspor og juridisk relevant dokumentasjon",
+                      "why": "For å overholde lovgivningen, forsvare juridiske krav dersom nødvendig og sikre ansvarlig forvaltning",
+                      "how": "Håndtert gjennom sikre interne systemer, arkiveringsrutiner og kontrollerte tilgangspolicyer"
+                    }
+                  ]
+                },
+                {
+                  "id": "consent-based-processing",
+                  "title": "Samtykkebasert databehandling",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Noen av våre behandlingsaktiviteter er basert på ditt samtykke, spesielt for valgfrie tjenester som nyhetsbrev, analyseoppsporing, publisering av arrangementmedia eller tredjepartsintegreringer."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "newsletter-consent",
+                      "title": "Nyhetsbrevsamtykke",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Når du melder deg på nyhetsbrevet vårt, behandler vi e-postadressen din og abonnementspreferanser basert på ditt aktive samtykke."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "E-postadresse, samtykkestatus og distribusjonspreferanser",
+                          "why": "For å sende oppdateringer kun til mottakere som aktivt har valgt å motta dem",
+                          "how": "Registrert gjennom påmeldingsbekreftelser og preferansehåndtering"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "optional-analytics-consent",
+                      "title": "Samtykke for valgfrie analyser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Valgfri analyseoppsporing (for eksempel sidesøksmetrikk som ikke er strengt nødvendig for nettstedet) aktiveres kun etter at du har gitt uttrykkelig samtykke der det kreves."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Samtykkeregistre og analyseidentifikatorer",
+                          "why": "For å sikre at valgfrie måleverktøy kun brukes når du har gitt tillatelse",
+                          "how": "Håndtert gjennom informasjonskapselsamtykkeinnstillinger og vilkårsbestemt lasting av analyse-skript"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "event-media-consent",
+                      "title": "Samtykke for arrangementmedia",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis vi tar opp bilder eller video ved arrangementer der personer er identifiserbare, vil vi innhente samtykke eller sikre et annet gyldig rettsgrunnlag før publisering av materialet."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Fotografier eller videoopptak av personer",
+                          "why": "For å dokumentere aktiviteter, dele oppdateringer og illustrere organisasjonens arbeid på en ansvarlig måte",
+                          "how": "Lagt opp ved arrangementer og gjennomgått før publisering i henhold til våre interne retningslinjer og det valgte rettsgrunnlaget"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sharing-and-processors",
+              "title": "Deling og behandlere",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Vi selger ikke personopplysninger. Vi kan dele data med betroede tjenesteutbydere og partnere når det er nødvendig for å drive nettstedet, tilby funksjoner du ber om, eller beskytte systemene våre."
+                }
+              ],
+              "children": [
+                {
+                  "id": "infrastructure-providers",
+                  "title": "Infrastrukturutbydere",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi bruker tredjeparts tjenester for vertsstabling, lagring, distribusjon, overvåking og databaser. Disse utbyderne behandler data etter behov for å drive og sikre nettstedet."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "hosting-and-content-delivery",
+                      "title": "Vertstabling og innholdslevering",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Nettstedets innhold leveres gjennom vertsplattformer og innholdsleveringsnettverk (CDN) for å sikre tilgjengelighet og ytelse."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Tekniske forespørselsdata og leveringslogger",
+                          "why": "For å levere sider pålitelig, optimalisere tilgjengelighet og beskytte mot misbruk",
+                          "how": "Behandlet av vertsmiljøet, CDN-kantjenester og relaterte infrastrukturlogger"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "database-and-backups",
+                      "title": "Database og sikkerhetskopier",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Data som oppgis gjennom nettstedets funksjoner kan lagres i eksterne database-tjenester og sikkerhetskopisystemer for å sikre tilgjengelighet og gjenoppretting."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Lagrede kontodata, kommunikasjonsregistre og sikkerhetskopier",
+                          "why": "For å drive tjenesten trygt og opprettholde kontinuitet ved tekniske feil",
+                          "how": "Håndtert gjennom vår produksjonsdatabase, sikre sikkerhetskopier og rutiner for datalagring"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "protective-services",
+                  "title": "Beskyttelsestjenester",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi kan bruke sikkerhetstjenester for å redusere spam, forebygge misbruk og forbedre beskyttelsen av innloggings- og skjema-innganger."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "captcha-and-spam-filtering",
+                      "title": "CAPTCHA og spamfiltering",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Våre kontaktskjemaer og innganger kan bruke anti-spam-tiltak (som CAPTCHA) for å skille legitime innsendinger fra automatisert misbruk."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Tekniske interaksjonssignaler, IP-data og misbruksforebyggende metadata",
+                          "why": "For å redusere spam, beskytte tjenester mot automatisert misbruk og holde kommunikasjonskanaler funksjonelle",
+                          "how": "Behandlet gjennom anti-spam- eller CAPTCHA-tjenesten når skjemaer lastes eller sendes inn"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "security-monitoring",
+                      "title": "Sikkerhetsovervåking",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Vi kan bruke verktøy for sikkerhetsovervåking som behandler begrenset driftsdata (som feillogger eller uvanlige mønstre) for å oppdage hendelser og støtte hendelseshåndtering."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Telemetri, feilspor og uvanlige aktivitetsmønstre",
+                          "why": "For å raskt identifisere sikkerhetshendelser og beskytte systemer og data",
+                          "how": "Samlet inn gjennom vår overvåkningsinfrastruktur og loggført under intern gjennomgang"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "optional-third-party-content",
+                  "title": "Valgfritt tredjepartsinnhold",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Noen sider kan inkludere valgfritt innebygd innhold fra eksterne utbydere. Interaksjon med slikt innhold kan føre til ytterligere datautveksling med disse utbyderne."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "video-embeds",
+                      "title": "Innebygde videoer",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis nettstedet vårt inneholder innebygde videoer, kan videoutbyderen motta informasjon om deg og behandle interaksjonsdata når du avspiller videoen."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Tekniske tilkoblingsdetaljer og medieinteraksjonsdata",
+                          "why": "For å levere videoavspilling og måle engasjement for den innebygde tjenesten",
+                          "how": "Overført fra nettleseren din til videoutbyderen når innbyggingen lastes eller aktiveres"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "maps-and-social-widgets",
+                      "title": "Kart og sosiale widgeter",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Innebygde kart, sosiale medie-widgeter og lignende funksjoner kan koble seg til eksterne domener og eventuelt sette informasjonskapsler eller spore interaksjonen din."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "IP-adresse, nettlesermetadata og interaksjonsdata for innebygde funksjoner",
+                          "why": "For å vise den eksterne widgeten eller kartet og levere dets tiltenkte funksjonalitet",
+                          "how": "Lastet fra tredjepartsservere når nettleseren din ber om det innebygde innholdet"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "international-transfers",
+              "title": "Internasjonale overføringer",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Noen av tjenesteutbyderne våre kan behandle data i land utenfor ditt eget. Når dette skjer, iverksetter vi tiltak for å sikre at passende beskyttelsesmekanismer er på plass i tråd med loven."
+                },
+                {
+                  "type": "reason",
+                  "what": "Data håndtert av eksterne utbydere som kan operere globalt",
+                  "why": "Fordi enkelte tekniske og kommunikasjonstjenester leveres gjennom internasjonal infrastruktur",
+                  "how": "Håndtert gjennom avtalemessige beskyttelsestiltak, dokumenterte overføringsmekanismer og utbydervurderinger"
+                }
+              ]
+            },
+            {
+              "id": "retention-and-deletion",
+              "title": "Lagring og sletting",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Vi beholder personopplysninger kun så lenge det er nødvendig for det opprinnelige formålet med innsamlingen, forretningskontinuitet, juridiske forpliktelser eller legitime sikkerhetsbehov."
+                }
+              ],
+              "children": [
+                {
+                  "id": "inquiry-retention",
+                  "title": "Lagring av henvendelser",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Registre over vår korrespondanse med deg kan beholdes i ulike perioder avhengig av sakens status (avsluttet, pågående eller sannsynlig å gjenta seg)."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "completed-inquiries",
+                      "title": "Avsluttede henvendelser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Enkle saker som er fullstendig løst og lite sannsynlig vil kreve fremtidig referanse, kan slettes eller anonymiseres etter en forsvarlig periode."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Avsluttet korrespondanse uten forventet fremtidig relevans",
+                          "why": "For å unngå å lagre personopplysninger lenger enn nødvendig etter at formålet er oppnådd",
+                          "how": "Håndtert gjennom intern gjennomgang og rutinemessige slettings- eller arkiveringsprosesser"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "unresolved-inquiries",
+                      "title": "Uløste henvendelser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis en sak forblir åpen, omstridt eller fortsatt relevant for driften vår, kan vi beholde korrespondansen lenger inntil saken er løst."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Pågående sakshistorikk og oppfølgingsregistre",
+                          "why": "For å bevare kontekst og muliggjøre ansvarlig håndtering av uløste eller gjengjeldende saker",
+                          "how": "Beholdt i våre kommunikasjons- og saksbehandlingsystemer inntil saken er lukket"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "account-retention",
+                  "title": "Kontolagring",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Opplysninger knyttet til kontoen beholdes så lenge kontoen er aktiv, og kan lagres i en periode etter at kontoen er lukket dersom det er nødvendig for juridiske, sikkerhetsmessige eller administrative formål."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "active-accounts",
+                      "title": "Aktive kontoer",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "For aktive kontoer opprettholdes kjerneprofildata, autentiseringsopplysninger og brukerpreferanser så lenge kontoen er i bruk."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Kontodata, innloggingsstatus, tilganger og innstillinger",
+                          "why": "For å holde kontoen funksjonell og opprettholde kontinuitet i funksjonene du forventer",
+                          "how": "Lagret i vår database og autentiseringssystemer under aktiv bruk av kontoen"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "closed-or-inactive-accounts",
+                      "title": "Lukkede eller inaktive kontoer",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Når en konto lukkes eller er inaktiv i lang tid, kan enkelte opplysninger fjernes eller arkiveres, med kun begrensede registre beholdt for systemintegritet eller juridisk dokumentasjon."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Restreferanser til kontoer og revisjonsoppføringer",
+                          "why": "For å dokumentere at det er utført handlinger på kontoen og beskytte mot svindel eller tvister",
+                          "how": "Beholdt i redusert form i henhold til våre interne lagringsrutiner"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "security-log-retention",
+                  "title": "Lagring av sikkerhetslogger",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Sikkerhetslogger håndteres i henhold til deres formål. Rutinemessige logger kan beholdes kortvarig, mens logger knyttet til hendelser kan lagres lenger."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "routine-operational-logs",
+                      "title": "Rutinemessige driftslogger",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Standard tekniske logger (som serverlogger og forespørselsspor) kan beholdes i en kort periode for å støtte feilsøking, ytelsesovervåking og tjenestevedlikehold."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Serverlogger, forespørselsspor og metrikk for systemhelse",
+                          "why": "For å diagnostisere feil, stabilisere tjenesten og gjennomgå driftsytelsen",
+                          "how": "Lagret i overvåkingssystemer med begrensede lagringsperioder"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "incident-related-logs",
+                      "title": "Logger knyttet til hendelser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis det oppstår en sikkerhetshendelse, beholdes relevante logger i lengre perioder for å muliggjøre etterforskning, dokumentasjon og avhjelpning."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Relevante hendelsesspor, sikkerhetshendelser og etterforskningsmateriale",
+                          "why": "For å forstå hva som hendte, svare effektivt og forebygge fremtidige hendelser",
+                          "how": "Lagret i sikrede systemer og kun tilgjengelig for teamet for hendelseshåndtering"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "your-rights",
+              "title": "Dine rettigheter",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Under gjeldende lovgivning har du rett til å få innsyn, korrigere, slette, begrense eller gjøre innsigelse mot behandlingen av dine personopplysninger, i tillegg til rett til dataportabilitet og til å tilbakekalle samtykke der det er gitt."
+                }
+              ],
+              "children": [
+                {
+                  "id": "access-and-insight",
+                  "title": "Innsyn og oversikt",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Du har rett til å spørre om vi behandler personopplysninger om deg, og der det er relevant, be om innsyn i disse opplysningene."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "copy-of-data",
+                      "title": "Kopi av data",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Der det er tillatt i henhold til loven, kan du be om en kopi av personopplysningene vi har registrert om deg, i et format som er forståelig og brukbart."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "explanation-of-processing",
+                      "title": "Forklaring av behandlingen",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Du kan også be om opplysninger om hvilke kategorier data som behandles, formålet med behandlingen, lagringsperioder, og eventuelle mottakere eller databehandlere som er involvert."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "correction-and-update",
+                  "title": "Korrigering og oppdatering",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis noen av personopplysningene vi har registrert om deg, er unøyaktige eller ufullstendige, kan du be oss om å korrigere eller oppdatere dem."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "profile-corrections",
+                      "title": "Profilkorrigeringer",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Der det er mulig, kan du oppdatere visse profilopplysninger direkte gjennom kontoinnstillingene dine."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "record-corrections",
+                      "title": "Registretterelser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis informasjon er lagret i våre registre eller databaser, vil alle korrigingsforespørsler vurderes for å sikre nøyaktighet og hensiktsmessighet i endringen."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "deletion-and-restriction",
+                  "title": "Sletting og begrensning",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "I visse situasjoner kan du be om sletting av dine personopplysninger, eller be oss om å begrense behandlingen mens vi vurderer forespørselen din."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "deletion-requests",
+                      "title": "Slettingsforespørsler",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Husk at sletting ikke alltid er umiddelbar eller total. Noen data kan måtte beholdes for å overholde juridiske forpliktelser, sikre sikkerheten eller dokumentere tidligere handlinger."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "restricted-processing",
+                      "title": "Begrenset behandling",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis du tviler på nøyaktigheten eller lovligheten av vår behandling, kan du be oss om å begrense videre behandling av dataene dine mens vi løser saken."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "objection-and-withdrawal",
+                  "title": "Innsigelse og tilbakekallelse",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Du kan gjøre innsigelse mot visse behandlinger og når som helst tilbakekalle samtykke du har gitt."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "objection-based-on-legitimate-interests",
+                      "title": "Innsigelse basert på berettigede interesser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis vi behandler data basert på våre berettigede interesser, vil vi veie din innsigelse opp mot våre grunner for behandlingen. Du kan fortsatt gjøre innsigelse, og vi vil vurdere den."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "withdrawal-of-consent",
+                      "title": "Tilbakekallelse av samtykke",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis du trekker tilbake samtykket, har det ingen konsekvenser for behandlingen som allerede har funnet sted. Det kan derimot påvirke fremtidig bruk av funksjoner eller kommunikasjon som var avhengig av samtykket."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "complaints-and-supervision",
+                  "title": "Klager og tilsyn",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis du mener at behandlingen av dine personopplysninger ikke er lovlig, kan du kontakte oss direkte. Du har også rett til å klage til den relevante tilsynsmyndigheten."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "contact-us-first",
+                      "title": "Kontakt oss først",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Vi oppfordrer deg til å kontakte oss først, slik at vi får mulighet til å ta opp dine bekymringer direkte og løse eventuelle saker dersom mulig."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "complain-to-authority",
+                      "title": "Klage til tilsynsmyndighet",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Du kan også kontakte Den norske tilsynsmyndigheten for databeskyttelse (Datatilsynet) eller en annen relevant tilsynsmyndighet i din jurisdiksjon dersom du mener at rettighetene dine ikke er blitt respektert."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "special-situations",
+              "title": "Spesielle situasjoner",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Noen omstendigheter kan kreve ekstra hensyn, for eksempel ved behandling av data om barn, arrangementsfotografering, offentlige bidrag eller frivillige undersøkelser."
+                }
+              ],
+              "children": [
+                {
+                  "id": "children-and-young-users",
+                  "title": "Barn og unge brukere",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Hvis tjenestene våre er tilgjengelige for yngre målgrupper, streber vi etter å minimere unødig innsamling av personopplysninger fra barn og oppfordre til foreldreinvolvering der det er hensiktsmessig."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "parental-contact",
+                      "title": "Kontakt med foreldre",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis vi blir oppmerksomme på at personopplysninger om barn er samlet inn uten foreldres samtykke (når samtykke kreves), vil vi stanse behandlingen av disse opplysningene og følge opp med passende tiltak (som å innhente samtykke eller slette dataene)."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "photos-videos-and-events",
+                  "title": "Fotografier, videoer og arrangementer",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi kan dokumentere arrangementer og aktiviteter med fotografi eller video for interne registre eller offentlig kommunikasjon."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "event-documentation",
+                      "title": "Arrangementsdokumentasjon",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Fotografier og videoer kan samles inn for å dokumentere aktiviteter, hedre viktige milepæler og illustrere organisasjonens arbeid overfor medlemmer og det offentlige."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Visuelle opptak av arrangementer og aktiviteter",
+                          "why": "For å fange virkelige hendelser og formidle hva organisasjonen gjør i praksis",
+                          "how": "Lagt opp under arrangementer, gjennomgått internt og håndtert i henhold til våre publiseringsrutiner"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "publication-on-public-channels",
+                      "title": "Publisering på offentlige kanaler",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis vi publiserer fotografier eller videoer på offentlige sider eller sosiale medier, gjennomgår vi dem nøye for å sikre at samtykket, konteksten og mottakerkretsen er hensiktsmessig."
+                        },
+                        {
+                          "type": "reason",
+                          "what": "Utvalgte bilder eller klipp ment for offentlig synlighet",
+                          "why": "For å dele oppdateringer og aktiviteter på en ansvarlig måte samtidig som personvernet respekteres",
+                          "how": "Gjennomgått før publisering og begrenset til de aktuelle kanalene og konteksten"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "research-and-surveys",
+                  "title": "Forskning og undersøkelser",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi kan bruke spørreskjemaer, tilbakemeldingsskjemaer eller undersøkelser for å lære av våre deltakere, frivillige eller medlemmer på frivillig basis."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "voluntary-participation",
+                      "title": "Frivillig deltakelse",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Med mindre vi tydelig oppgir noe annet, er deltakelse i undersøkelser og tilbakemeldingsaktiviteter frivillig, og svar brukes kun til det spesifiserte formålet beskrevet."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "changes-to-this-notice",
+                  "title": "Endringer i denne merknaden",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Vi kan oppdatere disse personvernreglene fra tid til annen for å reflektere nye tjenester, organisatoriske endringer, juridiske utviklinger eller tekniske justeringer."
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": "material-changes",
+                      "title": "Vesentlige endringer",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Hvis vi foretar vesentlige endringer i denne merknaden som påvirker våre rutiner for databehandling betydelig, kan vi fremheve oppdateringene eller gi ytterligere merknad gjennom nettstedet vårt eller andre kanaler."
+                        }
+                      ]
+                    },
+                    {
+                      "id": "minor-edits",
+                      "title": "Mindre rettelser",
+                      "content": [
+                        {
+                          "type": "paragraph",
+                          "text": "Redaksjonelle forbedringer, avklaringer og strukturelle oppdateringer kan foretas uten separat merknad så lenge de ikke endrer innholdet i denne politikken vesentlig."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "contact-and-requests",
+              "title": "Kontakt og forespørsler",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "text": "Hvis du har spørsmål om disse personvernreglene eller ønsker å utøve dine rettigheter, kan du kontakte oss ved hjelp av kontaktinformasjonen som er oppgitt på nettstedet."
+                },
+                {
+                  "type": "reason",
+                  "what": "Personidentifikasjonsopplysninger oppgitt i personvernforespørsler",
+                  "why": "For å verifisere identiteten din, beskytte dine opplysninger og andres, og sikre at forespørselen din håndteres korrekt",
+                  "how": "Behandlet gjennom våre angitte kontaktkanaler og interne personvernprosesser"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
