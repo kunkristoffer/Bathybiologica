@@ -33,7 +33,7 @@ export function Footer() {
           <p className='italic text-text-muted'>{t('newsletter.comingSoon')}</p>
         </div>
       </div>
-      <div className='container mx-auto px-4 py-8 lg:py-16 grid gap-16 grid-cols-2 lg:grid-cols-4'>
+      <div className='container mx-auto grid gap-16 grid-cols-2 lg:grid-cols-4'>
         <div className='flex flex-col gap-4'>
           <h2>{t('mission.title')}</h2>
           <small>{t('mission.text')}</small>
