@@ -1,4 +1,5 @@
 // lib/privacySchema.ts
+import { CountResult, PrivacyMessages, PrivacySectionNode } from "@/types/legal/privacy.types";
 import { z } from "zod";
 
 export const PrivacyMetaSchema = z.object({
@@ -41,3 +42,45 @@ export const PrivacyMessagesSchema = z.object({
   }),
   sections: z.array(PrivacySectionNodeSchema),
 });
+
+export function countPrivacyStats(data: PrivacyMessages): CountResult {
+  const result: CountResult = {
+    sections: 0,
+    paragraphs: 0,
+    reasons: 0,
+    meta: 0,
+    totalBlocks: 0,
+  }
+
+  function traverse(node: PrivacySectionNode) {
+    result.sections++
+
+    for (const block of node.content) {
+      result.totalBlocks++
+
+      switch (block.type) {
+        case "paragraph":
+          result.paragraphs++
+          break
+        case "reason":
+          result.reasons++
+          break
+        case "meta":
+          result.meta++
+          break
+      }
+    }
+
+    if (node.children) {
+      for (const child of node.children) {
+        traverse(child)
+      }
+    }
+  }
+
+  for (const section of data.sections) {
+    traverse(section)
+  }
+
+  return result
+}

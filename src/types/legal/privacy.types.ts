@@ -34,3 +34,11 @@ export interface PrivacyMessages {
   };
   sections: PrivacySectionNode[];
 }
+
+export type CountResult = {
+  sections: number
+  paragraphs: number
+  reasons: number
+  meta: number
+  totalBlocks: number
+}

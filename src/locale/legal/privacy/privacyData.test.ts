@@ -1,5 +1,6 @@
+import type { CountResult, PrivacyMessages, PrivacySectionNode } from "@/types/legal/privacy.types";
+import { countPrivacyStats, PrivacyMessagesSchema } from "./privacyDataSchema";
 import { describe, it, expect } from "vitest";
-import { PrivacyMessagesSchema } from "./privacyDataSchema";
 
 import NO from "./no.json";
 import EN from "./en.json";
@@ -23,4 +24,9 @@ describe("Legal > Privacy JSON data", () => {
 
     expect(result.success).toBe(true);
   });
+  it("Matching data", () => {
+    const countNo = countPrivacyStats(NO as PrivacyMessages)
+    const countEn = countPrivacyStats(EN as PrivacyMessages)
+    expect(countNo).toStrictEqual(countEn);
+  })
 });
