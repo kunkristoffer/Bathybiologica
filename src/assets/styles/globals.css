@@ -90,7 +90,7 @@
 
   header > :first-child {
     height: var(--header-h);
-    @apply container mx-auto flex justify-between items-center p-4;
+    @apply container mx-auto flex justify-between items-center p-4 md:px-8;
   }
 
   main > section > :first-child {
@@ -98,6 +98,8 @@
   }
 
   footer {
+    @apply px-4 py-8 md:px-8 lg:py-16 grid gap-16;
+
     a {
       @apply text-primary;
     }

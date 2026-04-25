@@ -11,7 +11,7 @@ export function Footer() {
   const t = useTranslations('layout.footer');
   return (
     <footer className='bg-black/50'>
-      <div className='container mx-auto px-4 py-8 lg:py-16 grid gap-16 grid-cols-1 lg:grid-cols-2'>
+      <div className='container mx-auto grid-cols-1 lg:grid-cols-2'>
         <div className='flex flex-col gap-4'>
           <h2>{t('followUs.title')}</h2>
           <div className='flex gap-4'>
