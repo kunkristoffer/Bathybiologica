@@ -25,7 +25,7 @@ export const PrivacyBlockSchema = z.union([
   PrivacyReasonSchema,
 ]);
 
-export const PrivacySectionNodeSchema: z.ZodType<any> = z.object({
+export const PrivacySectionNodeSchema: z.ZodType<unknown> = z.object({
   id: z.string(),
   title: z.string(),
   index: z.array(z.number()).optional(),

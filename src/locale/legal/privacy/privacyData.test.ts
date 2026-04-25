@@ -1,4 +1,4 @@
-import type { CountResult, PrivacyMessages, PrivacySectionNode } from "@/types/legal/privacy.types";
+import { type PrivacyMessages } from "@/types/legal/privacy.types";
 import { countPrivacyStats, PrivacyMessagesSchema } from "./privacyDataSchema";
 import { describe, it, expect } from "vitest";
 
