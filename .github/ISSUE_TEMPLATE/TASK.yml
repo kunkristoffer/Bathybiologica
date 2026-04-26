@@ -63,3 +63,22 @@ body:
       placeholder: Reuse the existing contact schema and align with current action state handling.
     validations:
       required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Validate before closing the task
+      options:
+        - label: This task is clearly scoped and achievable independently
+          required: true
+        - label: The task is linked to a Story or has sufficient standalone context
+          required: true
+        - label: Done criteria are met and verified
+          required: false
+        - label: Necessary edge cases are handled (if applicable)
+          required: false
+        - label: No unintended side effects were introduced
+          required: false
+        - label: Relevant documentation or comments are updated (if needed)
+          required: false

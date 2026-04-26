@@ -114,7 +114,13 @@ body:
     attributes:
       label: Confirmation
       options:
-        - label: I have searched for existing issues before creating this report
+        - label: I have searched for existing issues
           required: true
-        - label: I have tested this on the latest relevant branch/build
+        - label: I can reproduce this issue consistently
+          required: true
+        - label: I have provided clear reproduction steps
+          required: true
+        - label: I have tested on the latest relevant branch/build (if applicable)
+          required: false
+        - label: Logs, screenshots, or additional context are included where useful
           required: false
