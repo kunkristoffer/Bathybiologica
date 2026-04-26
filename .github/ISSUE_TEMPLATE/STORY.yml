@@ -86,7 +86,7 @@ body:
       options:
         - label: I have checked that this feature is not a duplicate of existing work or an unfiled enhancement.
           required: true
-        - label: The issue is correctly linked to the parent Epic/Project and relevant roadmap labels and any required blocking issues or prerequisite tickets are linked/identified.
+        - label: The story is correctly linked to the parent epic and relevant roadmap labels and any required blocking issues or prerequisite tickets are linked/identified.
           required: false
         - label: All necessary user types (Public, Authenticated User, Admin) are covered in the scope description if applicable.
           required: false
@@ -94,4 +94,3 @@ body:
           required: false
         - label: Any required technical dependencies (e.g., new APIs or database fields) have been identified.
           required: false
-

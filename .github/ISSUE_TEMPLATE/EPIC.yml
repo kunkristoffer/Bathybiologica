@@ -1,6 +1,6 @@
 name: Epic
 description: Create a parent issue that groups related stories around a larger outcome
-title: "[Epic] "
+title: '[Epic] '
 labels:
   - epic
 body:
@@ -87,3 +87,22 @@ body:
       description: Links, mockups, technical notes, screenshots, or anything else relevant
     validations:
       required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Epic readiness checklist
+      description: Ensure this epic is well-defined and ready for breakdown into stories
+      options:
+        - label: The outcome of this epic is clearly defined (not just a list of tasks)
+          required: true
+        - label: Success criteria are measurable or observable
+          required: true
+        - label: Scope is clearly defined with boundaries (in/out of scope)
+          required: true
+        - label: The epic is split into logical, independent stories
+          required: false
+        - label: Dependencies (technical, organizational, or external) are identified and risks or unknowns are documented
+          required: false
+        - label: Impacted areas (frontend, backend, CMS, etc.) are accurate
+          required: true
