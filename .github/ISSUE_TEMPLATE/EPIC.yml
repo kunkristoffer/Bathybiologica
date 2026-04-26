@@ -100,8 +100,8 @@ body:
           required: true
         - label: Scope is clearly defined with boundaries (in/out of scope)
           required: true
-        - label: The epic is split into logical, independent stories
-          required: false
+        - label: The Epic contains enough context be split into logical, independent stories without additional clarification
+          required: true
         - label: Dependencies (technical, organizational, or external) are identified and risks or unknowns are documented
           required: false
         - label: Impacted areas (frontend, backend, CMS, etc.) are accurate
