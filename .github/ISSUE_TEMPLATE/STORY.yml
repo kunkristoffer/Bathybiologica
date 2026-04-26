@@ -1,6 +1,6 @@
 name: Story
 description: Create a focused, deliverable piece of work within an epic
-title: "[Story] "
+title: '[Story] '
 body:
   - type: input
     id: summary
@@ -84,9 +84,14 @@ body:
       label: Checklist
       description: Final checks before closing the story
       options:
-        - label: I have linked this story to the relevant epic in the sidebar
+        - label: I have checked that this feature is not a duplicate of existing work or an unfiled enhancement.
+          required: true
+        - label: The issue is correctly linked to the parent Epic/Project and relevant roadmap labels and any required blocking issues or prerequisite tickets are linked/identified.
           required: false
-        - label: I have added or updated relevant documentation
+        - label: All necessary user types (Public, Authenticated User, Admin) are covered in the scope description if applicable.
           required: false
-        - label: I have considered tests for this change
+        - label: The scope of this story is clearly contained within the parent Epic's goals (and not expanding them).
           required: false
+        - label: Any required technical dependencies (e.g., new APIs or database fields) have been identified.
+          required: false
+
