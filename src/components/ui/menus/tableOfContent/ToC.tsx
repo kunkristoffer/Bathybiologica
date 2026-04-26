@@ -19,6 +19,11 @@ export interface TableOfContentProps {
 }
 
 export function TableOfContents({ title, containerID, headingLevels, className }: TableOfContentProps) {
+  // Component visibilty
+  const [isVisible, setIsVisible] = useState(true);
+  const containerRef = useRef<IntersectionObserver | null>(null);
+
+  // Heading states
   const [headings, setHeadings] = useState<ToCItem[]>([]);
   const [activeID, setActiveID] = useState('');
   const [expandedIDs, setExpandedIDs] = useState<Set<string>>(new Set());
@@ -123,6 +128,8 @@ export function TableOfContents({ title, containerID, headingLevels, className }
           setActiveID(closestAbove);
         }
       }
+
+      //console.log(visibleHeadingsIDs.length, ...visibleHeadingsIDs);
     };
 
     // Instanciate observer and observe all header elements inside specified container
@@ -138,13 +145,29 @@ export function TableOfContents({ title, containerID, headingLevels, className }
       }
     });
 
+    // Hide ToC when outside query container
+    const containerObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        rootMargin: '-100% 0px 0px 0px',
+        threshold: 0,
+      }
+    );
+
+    if (containerID) {
+      containerObserver.observe(queryContainer as Element);
+    }
+
     return () => {
-      observerRef.current?.disconnect();
+      (observerRef.current?.disconnect(), containerRef.current?.disconnect());
     };
   }, [containerID, headingLevels]);
 
   return (
-    <aside className='min-w-48'>
+    <aside className={`min-w-48 ${isVisible ? '' : 'hidden'}`}>
       <nav
         className={twMerge(
           `z-10 fixed sm:sticky top-[calc(var(--header-h)+1rem)] max-h-[calc(100svh-var(--header-h)-2rem)]
