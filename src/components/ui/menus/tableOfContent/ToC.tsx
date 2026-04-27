@@ -82,15 +82,13 @@ export function TableOfContents({ title, containerID, headingLevels, className }
         const containerObserver = headingElementsRef.current.get(containerID)!;
         const { top, height } = containerObserver.target.getBoundingClientRect();
         const diff = (height - Math.abs(top)) / window.innerHeight;
-        setIsVisible(diff >= 1);
-
-        console.log(containerObserver.intersectionRatio);
+        setIsVisible(diff > 1);
       }
 
       // Get the top headings that are visible
       const visibleHeadingsIDs: string[] = [];
       headingElementsRef.current.forEach((entry, id) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target.id !== containerID) {
           visibleHeadingsIDs.push(id);
         }
       });
@@ -141,13 +139,11 @@ export function TableOfContents({ title, containerID, headingLevels, className }
           setActiveID(closestAbove);
         }
       }
-
-      //console.log(visibleHeadingsIDs.length, ...visibleHeadingsIDs);
     };
 
     // Instanciate observer and observe all header elements inside specified container
     observerRef.current = new IntersectionObserver(callback, {
-      rootMargin: `-12px 0px -40% 0px`,
+      rootMargin: `-80px 0px -40% 0px`,
       threshold: [0, 1],
     });
 
