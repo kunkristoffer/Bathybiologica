@@ -161,12 +161,12 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
   return (
     <aside
-      className={`min-w-48 ${isVisible ? 'opacity-100' : 'max-sm:opacity-0 max-sm:pointer-events-none'} transition duration-100`}
+      className={`w-screen min-w-48 max-w-xs ${isVisible ? 'opacity-100' : 'max-sm:opacity-0 max-sm:pointer-events-none'} transition duration-100`}
     >
       <nav
         className={twMerge(
           `z-10 fixed sm:sticky top-[calc(var(--header-h)+1rem)] max-h-[calc(100svh-var(--header-h)-2rem)]
-          flex flex-col gap-4 panel bg-surface max-sm:inset-4 max-sm:top-auto`,
+          flex flex-col gap-4 panel bg-surface max-sm:inset-2 max-sm:top-auto p-4`,
           className
         )}
       >
@@ -174,7 +174,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
           <h2 className='text-center'>{title || 'Table of Content'}</h2>
           <span className='sm:hidden'>{!isCollapsed ? <ArrowDownFromLine /> : <ArrowUpFromLine />}</span>
         </span>
-        <div className={`flex flex-col overflow-y-auto text-sm ${isCollapsed ? 'max-sm:hidden' : ''}`}>
+        <ul className={`flex flex-col pr-2 overflow-y-auto text-sm ${isCollapsed ? 'max-sm:hidden' : ''}`}>
           {headings.map((category) => (
             <ToCSection
               key={category.id}
@@ -184,7 +184,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
               onClick={toggleSection}
             />
           ))}
-        </div>
+        </ul>
       </nav>
     </aside>
   );
