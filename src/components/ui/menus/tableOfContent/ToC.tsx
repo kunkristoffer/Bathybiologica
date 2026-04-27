@@ -164,7 +164,9 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   }, [containerID, headingLevels]);
 
   return (
-    <aside className={`min-w-48 ${isVisible ? '' : 'hidden'}`}>
+    <aside
+      className={`min-w-48 ${isVisible ? 'opacity-100' : 'max-sm:opacity-0 max-sm:pointer-events-none'} transition duration-100`}
+    >
       <nav
         className={twMerge(
           `z-10 fixed sm:sticky top-[calc(var(--header-h)+1rem)] max-h-[calc(100svh-var(--header-h)-2rem)]
