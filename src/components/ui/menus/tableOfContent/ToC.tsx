@@ -19,6 +19,10 @@ export interface TableOfContentProps {
 }
 
 export function TableOfContents({ title, containerID, headingLevels, className }: TableOfContentProps) {
+  // Component visibilty
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Heading states
   const [headings, setHeadings] = useState<ToCItem[]>([]);
   const [activeID, setActiveID] = useState('');
   const [expandedIDs, setExpandedIDs] = useState<Set<string>>(new Set());
@@ -62,6 +66,10 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
     // Create a single array with all heading element IDs, used for lookup and itteration
     const allIDs = getAllIDs(nestedHeadings);
+    // Add root query container if supplied
+    if (containerID) {
+      allIDs.push(containerID);
+    }
 
     const callback: IntersectionObserverCallback = (entries) => {
       // Add all observer entries to our ref so we can itterate over elements for conditional checks
@@ -69,10 +77,18 @@ export function TableOfContents({ title, containerID, headingLevels, className }
         headingElementsRef.current.set(entry.target.id, entry);
       });
 
+      // Check if query container is inside view, toggles component state
+      if (containerID && headingElementsRef.current.has(containerID)) {
+        const containerObserver = headingElementsRef.current.get(containerID)!;
+        const { top, height } = containerObserver.target.getBoundingClientRect();
+        const diff = (height - Math.abs(top)) / window.innerHeight;
+        setIsVisible(diff > 1);
+      }
+
       // Get the top headings that are visible
       const visibleHeadingsIDs: string[] = [];
       headingElementsRef.current.forEach((entry, id) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target.id !== containerID) {
           visibleHeadingsIDs.push(id);
         }
       });
@@ -127,7 +143,7 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
     // Instanciate observer and observe all header elements inside specified container
     observerRef.current = new IntersectionObserver(callback, {
-      rootMargin: `-12px 0px -40% 0px`,
+      rootMargin: `-80px 0px -40% 0px`,
       threshold: [0, 1],
     });
 
@@ -144,7 +160,9 @@ export function TableOfContents({ title, containerID, headingLevels, className }
   }, [containerID, headingLevels]);
 
   return (
-    <aside className='min-w-48'>
+    <aside
+      className={`min-w-48 ${isVisible ? 'opacity-100' : 'max-sm:opacity-0 max-sm:pointer-events-none'} transition duration-100`}
+    >
       <nav
         className={twMerge(
           `z-10 fixed sm:sticky top-[calc(var(--header-h)+1rem)] max-h-[calc(100svh-var(--header-h)-2rem)]
