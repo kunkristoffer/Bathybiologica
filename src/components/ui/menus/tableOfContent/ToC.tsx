@@ -21,7 +21,6 @@ export interface TableOfContentProps {
 export function TableOfContents({ title, containerID, headingLevels, className }: TableOfContentProps) {
   // Component visibilty
   const [isVisible, setIsVisible] = useState(true);
-  const containerRef = useRef<IntersectionObserver | null>(null);
 
   // Heading states
   const [headings, setHeadings] = useState<ToCItem[]>([]);
@@ -67,12 +66,26 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
     // Create a single array with all heading element IDs, used for lookup and itteration
     const allIDs = getAllIDs(nestedHeadings);
+    // Add root query container if supplied
+    if (containerID) {
+      allIDs.push(containerID);
+    }
 
     const callback: IntersectionObserverCallback = (entries) => {
       // Add all observer entries to our ref so we can itterate over elements for conditional checks
       entries.forEach((entry) => {
         headingElementsRef.current.set(entry.target.id, entry);
       });
+
+      // Check if query container is inside view, toggles component state
+      if (containerID && headingElementsRef.current.has(containerID)) {
+        const containerObserver = headingElementsRef.current.get(containerID)!;
+        const { top, height } = containerObserver.target.getBoundingClientRect();
+        const diff = (height - Math.abs(top)) / window.innerHeight;
+        setIsVisible(diff >= 1);
+
+        console.log(containerObserver.intersectionRatio);
+      }
 
       // Get the top headings that are visible
       const visibleHeadingsIDs: string[] = [];
@@ -145,24 +158,8 @@ export function TableOfContents({ title, containerID, headingLevels, className }
       }
     });
 
-    // Hide ToC when outside query container
-    const containerObserver = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        rootMargin: '-100% 0px 0px 0px',
-        threshold: 0,
-      }
-    );
-
-    if (containerID) {
-      containerObserver.observe(queryContainer as Element);
-    }
-
     return () => {
-      (observerRef.current?.disconnect(), containerRef.current?.disconnect());
+      observerRef.current?.disconnect();
     };
   }, [containerID, headingLevels]);
 
