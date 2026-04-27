@@ -6,6 +6,7 @@
 
   /* Backgrounds */
   --background: light-dark(hsl(200, 85%, 95%), hsl(219, 37%, 17%));
+  --background-dark: hsl(220, 30%, 10%);
   --surface: light-dark(hsl(from var(--background) h s calc(l - 3)), hsl(from var(--background) h s calc(l + 3)));
   --surface-hover: light-dark(hsl(from var(--background) h s calc(l - 5)), hsl(from var(--background) h s calc(l + 5)));
   --panel: light-dark(hsl(from var(--background) h s calc(l - 8)), hsl(from var(--background) h s calc(l + 8)));
@@ -23,10 +24,14 @@
 
   /* Text */
   --text: light-dark(hsl(270, 5%, 20%), hsl(0, 0%, 100%));
-  --text-input: light-dark(hsl(270, 5%, 20%), hsl(270, 5%, 10%));
   --text-muted: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
   --text-panel: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
   --text-surface: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
+  --text-input: light-dark(hsl(270, 5%, 20%), hsl(270, 5%, 10%));
+  --text-input-muted: light-dark(
+    hsl(from var(--text-input) h s calc(l + 20)),
+    hsl(from var(--text-input) h s calc(l + 30))
+  );
 
   /* Action colors */
   --primary: hsl(200, 100%, 60%);
@@ -98,8 +103,10 @@
   }
 
   footer {
+    @apply flex flex-col gap-16 pt-16;
+
     > div {
-      @apply px-4 py-8 md:px-8 lg:py-16 grid gap-16;
+      @apply px-4 md:px-8 grid gap-16;
     }
 
     a {
@@ -142,6 +149,7 @@
 @theme inline {
   /* Backgrounds */
   --color-background: var(--background);
+  --color-background-dark: var(--background-dark);
   --color-panel-hover: var(--panel-hover);
   --color-panel: var(--panel);
   --color-surface-hover: var(--surface-hover);
@@ -178,6 +186,7 @@
   --color-text: var(--text);
   --color-text-input: var(--text-input);
   --color-text-muted: var(--text-muted);
+  --color-text-input-muted: var(--text-input-muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 

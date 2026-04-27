@@ -10,7 +10,7 @@ import Link from 'next/link';
 export function Footer() {
   const t = useTranslations('layout.footer');
   return (
-    <footer className='bg-black/50'>
+    <footer className='bg-background-dark text-input'>
       <div className='container mx-auto grid-cols-1 lg:grid-cols-2'>
         <div className='flex flex-col gap-4'>
           <h2>{t('followUs.title')}</h2>
@@ -30,7 +30,7 @@ export function Footer() {
             />
             <ScrollText className='m-2' />
           </span>
-          <p className='italic text-text-muted'>{t('newsletter.comingSoon')}</p>
+          <p className='italic text-text-input-muted'>{t('newsletter.comingSoon')}</p>
         </div>
       </div>
       <div className='container mx-auto grid gap-16 grid-cols-2 lg:grid-cols-4'>
@@ -61,7 +61,7 @@ export function Footer() {
               Remove cookie consent
             </button>
           </nav>
-          <p className='italic text-text-muted'>{t('links.comingSoon')}</p>
+          <p className='italic text-text-input-muted'>{t('links.comingSoon')}</p>
         </div>
         <div className='flex flex-col gap-4'>
           <h2>{t('contact.title')}</h2>
