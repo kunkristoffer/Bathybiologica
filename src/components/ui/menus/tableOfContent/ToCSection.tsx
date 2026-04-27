@@ -29,17 +29,17 @@ export function ToCSection({ item, activeID, expandedIDs, onClick }: ToCSectionP
 
   return (
     <li
-      className={`pl-2 py-0.5 border-l-2 ${isExpanded ? (isActive ? 'border-primary' : 'border-tertiary') : 'border-panel-border/10'}`}
+      className={`w-fit pl-2 py-0.5 border-l-2 ${isExpanded ? (isActive ? 'border-primary' : 'border-tertiary') : 'border-panel-border/10'}`}
     >
       <Link
         href={`#${item.id}`}
-        className={`${isActive ? 'text-primary font-bold ' : ''} hover:underline`}
+        className={`sm:text-xs md:text-sm break-normal ${isActive ? 'text-primary' : ''} hover:underline`}
         onClick={() => onClick(item.id)}
       >
         {item.label}
       </Link>
-      {isExpanded && item.children && (
-        <ul className='py-2'>
+      {item.children && (
+        <ul className={isExpanded ? `py-2` : 'h-0 overflow-clip'}>
           {item.children.map((child) => (
             <ToCSection key={child.id} item={child} activeID={activeID} expandedIDs={expandedIDs} onClick={onClick} />
           ))}
