@@ -161,12 +161,12 @@ export function TableOfContents({ title, containerID, headingLevels, className }
 
   return (
     <aside
-      className={`w-screen min-w-48 max-w-xs ${isVisible ? 'opacity-100' : 'max-sm:opacity-0 max-sm:pointer-events-none'} transition duration-100`}
+      className={` ${isVisible ? 'opacity-100' : 'max-sm:opacity-0 max-sm:pointer-events-none'} transition duration-100`}
     >
       <nav
         className={twMerge(
           `z-10 fixed sm:sticky top-[calc(var(--header-h)+1rem)] max-h-[calc(100svh-var(--header-h)-2rem)]
-          flex flex-col gap-4 panel bg-surface max-sm:inset-2 max-sm:top-auto p-4`,
+          flex flex-col gap-4 panel bg-surface max-sm:inset-2 max-sm:top-auto p-2`,
           className
         )}
       >
