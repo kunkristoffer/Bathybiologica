@@ -50,6 +50,13 @@ export async function AboutMission() {
           <IconTitleTextCard key={card.id} {...card} />
         ))}
       </div>
+      <span className=''>
+        <p className='italic text-center'>
+          "The ocean is not just a resource to be studied, it is a world to be understood, respected, and shared with
+          all who seek its wonders."
+        </p>
+        <p className='text-xs text-center'>The guiding philosophy of Bathybiologica</p>
+      </span>
     </section>
   );
 }
