@@ -1,12 +1,34 @@
-import { Section } from '@/components/layout/base/section';
+import { AboutHero } from '@/components/content/about/Hero';
 
 export default function About() {
   return (
-    <main>
-      <Section>
-        <h1>About</h1>
-        <p>This section is under development, check back later</p>
-      </Section>
+    <main className=''>
+      <AboutHero />
+      <section>
+        <h2>mission</h2>
+        <p>mission statement og details</p>
+        <p>cards and text</p>
+      </section>
+      <section>
+        <h2>in memory</h2>
+        <p>minneseksjon og hvorfor vi heter bathy...</p>
+        <p>text + bilde</p>
+      </section>
+      <section>
+        <h2>what we want to achieve</h2>
+        <p>vår visjon</p>
+        <p>bilde + cards?</p>
+      </section>
+      <section>
+        <h2>how we do it</h2>
+        <p>vår metodikk</p>
+        <p>cards?</p>
+      </section>
+      <section>
+        <h2>looking ahead</h2>
+        <p>Hva er visionen vår framover</p>
+        <p>bulletpoints?</p>
+      </section>
     </main>
   );
 }
