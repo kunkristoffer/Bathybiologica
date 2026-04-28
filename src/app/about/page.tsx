@@ -1,4 +1,5 @@
 import { AboutHero } from '@/components/content/about/Hero';
+import { AboutMemory } from '@/components/content/about/Memory';
 import { AboutMission } from '@/components/content/about/Misson';
 
 export default function About() {
@@ -6,11 +7,7 @@ export default function About() {
     <main className='gap-16'>
       <AboutHero />
       <AboutMission />
-      <section>
-        <h2>in memory</h2>
-        <p>minneseksjon og hvorfor vi heter bathy...</p>
-        <p>text + bilde</p>
-      </section>
+      <AboutMemory />
       <section>
         <h2>what we want to achieve</h2>
         <p>vår visjon</p>
