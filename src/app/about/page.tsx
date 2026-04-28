@@ -1,14 +1,11 @@
 import { AboutHero } from '@/components/content/about/Hero';
+import { AboutMission } from '@/components/content/about/Misson';
 
 export default function About() {
   return (
-    <main className=''>
+    <main className='gap-16'>
       <AboutHero />
-      <section>
-        <h2>mission</h2>
-        <p>mission statement og details</p>
-        <p>cards and text</p>
-      </section>
+      <AboutMission />
       <section>
         <h2>in memory</h2>
         <p>minneseksjon og hvorfor vi heter bathy...</p>
