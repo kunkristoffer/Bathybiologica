@@ -43,7 +43,7 @@ export function AboutVision() {
           what comes next, ensuring that Dr. X's legacy continues to grow and inspire future generations of ocean
           explorers.
         </p>
-        <div className='relative h-full overflow-hidden'>
+        <div className='relative h-full rounded-md shadow-panel overflow-hidden'>
           <Image src={water} alt='placeholder' fill className='object-cover object-center' />
         </div>
       </div>
