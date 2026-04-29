@@ -3,6 +3,7 @@ import { AboutHero } from '@/components/content/about/Hero';
 import { AboutHow } from '@/components/content/about/How';
 import { AboutMemory } from '@/components/content/about/Memory';
 import { AboutMission } from '@/components/content/about/Misson';
+import { AboutVision } from '@/components/content/about/Vision';
 
 export default function About() {
   return (
@@ -12,11 +13,7 @@ export default function About() {
       <AboutMemory />
       <AboutGoals />
       <AboutHow />
-      <section>
-        <h2>looking ahead</h2>
-        <p>Hva er visionen vår framover</p>
-        <p>bulletpoints?</p>
-      </section>
+      <AboutVision />
     </main>
   );
 }
