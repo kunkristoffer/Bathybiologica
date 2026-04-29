@@ -1,4 +1,6 @@
+import { Section } from '@/components/layout/base/section';
 import { CardData, IconTitleTextCard } from '@/components/ui/cards/IconTitleText';
+import { Tagline } from '@/components/ui/tags/Tagline';
 import { Anchor, Book, Fish, PersonStanding } from 'lucide-react';
 
 export async function AboutMission() {
@@ -32,24 +34,27 @@ export async function AboutMission() {
   ];
 
   return (
-    <section className='container mx-auto'>
-      <h2>Bridging Research and Community</h2>
-      <p>
-        Bathybiologica exists to democratize marine research in Norwegian waters, making it accessible to scientists and
-        citizens alike while preserving the knowledge and passion that drives ocean exploration.
-      </p>
+    <Section className='flex flex-col gap-16'>
+      <div className='flex flex-col items-center gap-6'>
+        <Tagline text='Our Mission' />
+        <h2>Bridging Research and Community</h2>
+        <p>
+          Bathybiologica exists to democratize marine research in Norwegian waters, making it accessible to scientists
+          and citizens alike while preserving the knowledge and passion that drives ocean exploration.
+        </p>
+      </div>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
         {cardData.map((card) => (
           <IconTitleTextCard key={card.id} {...card} />
         ))}
       </div>
       <span className=''>
-        <p className='italic text-center'>
+        <p className='text-2xl italic text-center'>
           "The ocean is not just a resource to be studied, it is a world to be understood, respected, and shared with
           all who seek its wonders."
         </p>
         <p className='text-xs text-center'>The guiding philosophy of Bathybiologica</p>
       </span>
-    </section>
+    </Section>
   );
 }
