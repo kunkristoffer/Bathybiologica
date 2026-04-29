@@ -1,3 +1,4 @@
+import { AboutGoals } from '@/components/content/about/Goals';
 import { AboutHero } from '@/components/content/about/Hero';
 import { AboutMemory } from '@/components/content/about/Memory';
 import { AboutMission } from '@/components/content/about/Misson';
@@ -8,11 +9,7 @@ export default function About() {
       <AboutHero />
       <AboutMission />
       <AboutMemory />
-      <section>
-        <h2>what we want to achieve</h2>
-        <p>vår visjon</p>
-        <p>bilde + cards?</p>
-      </section>
+      <AboutGoals />
       <section>
         <h2>how we do it</h2>
         <p>vår metodikk</p>
