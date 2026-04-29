@@ -43,12 +43,12 @@ export function AboutVision() {
           <Tagline text='Looking Ahead' icon={Sparkles} />
           <h2>Our Vision for the Future</h2>
           <p>
-            Once we achieve our initial goals—establishing research stations, building community partnerships, and
-            creating robust citizen science programs—we will turn our attention to these ambitious next steps.
+            Once we achieve our initial goals, establishing research stations, building community partnerships, and
+            creating robust citizen science programs, we will turn our attention to these ambitious next steps.
           </p>
           <p>
             These are not distant dreams but planned evolutions of our mission. Each success builds the foundation for
-            what comes next, ensuring that Dr. X's legacy continues to grow and inspire future generations of ocean
+            what comes next, ensuring that Per's legacy continues to grow and inspire future generations of ocean
             explorers.
           </p>
           <div className='relative h-full rounded-md shadow-panel overflow-hidden'>
