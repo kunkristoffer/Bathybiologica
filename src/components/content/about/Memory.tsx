@@ -1,8 +1,12 @@
+import { Section } from '@/components/layout/base/section';
+import { Tagline } from '@/components/ui/tags/Tagline';
+import { Heart } from 'lucide-react';
 import Link from 'next/link';
 
 export function AboutMemory() {
   return (
-    <section>
+    <Section className='flex flex-col gap-16'>
+      <Tagline text='In Loving Memory' icon={Heart} />
       <div className='grid gap-16 grid-cols-1 md:grid-cols-2'>
         <div className='flex flex-col gap-4'>
           <h2>Why We Carry the Name Bathybiologica</h2>
@@ -36,6 +40,6 @@ export function AboutMemory() {
       <Link href='/history' className='block container mx-auto text-center text-primary hover:underline'>
         Read the complete story of Dr. Per R. Flood and our foundation
       </Link>
-    </section>
+    </Section>
   );
 }
