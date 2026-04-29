@@ -55,7 +55,7 @@ export function AboutVision() {
             <Image src={water} alt='placeholder' fill className='object-cover object-center' />
           </div>
         </div>
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-16'>
           <div>
             {timelineData.map((item, i) => (
               <TimelineCard key={item.id} number={i + 1} {...item} />
