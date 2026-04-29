@@ -30,37 +30,46 @@ export function AboutVision() {
     },
   ];
   return (
-    <Section className='grid grid-cols-1 md:grid-cols-2 gap-16'>
-      <div className='flex flex-col gap-4'>
-        <Tagline text='Looking Ahead' icon={Sparkles} />
-        <h2>Our Vision for the Future</h2>
-        <p>
-          Once we achieve our initial goals—establishing research stations, building community partnerships, and
-          creating robust citizen science programs—we will turn our attention to these ambitious next steps.
-        </p>
-        <p>
-          These are not distant dreams but planned evolutions of our mission. Each success builds the foundation for
-          what comes next, ensuring that Dr. X's legacy continues to grow and inspire future generations of ocean
-          explorers.
-        </p>
-        <div className='relative h-full rounded-md shadow-panel overflow-hidden'>
-          <Image src={water} alt='placeholder' fill className='object-cover object-center' />
-        </div>
-      </div>
-      <div className='flex flex-col gap-4'>
-        <div>
-          {timelineData.map((item, i) => (
-            <TimelineCard key={item.id} number={i + 1} {...item} />
-          ))}
-        </div>
-        <div className='panel flex flex-col items-center gap-4'>
+    <section className='relative'>
+      <span
+        className='
+          -z-10 absolute inset-0
+          object-cover bg-center bg-fixed opacity-10
+        '
+        style={{ backgroundImage: 'url(hero-water.jpg)' }}
+      ></span>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
+        <div className='flex flex-col gap-4'>
+          <Tagline text='Looking Ahead' icon={Sparkles} />
+          <h2>Our Vision for the Future</h2>
           <p>
-            This is just the beginning. As we grow, our vision expands. Join us in shaping the future of marine research
-            in Norway.
+            Once we achieve our initial goals—establishing research stations, building community partnerships, and
+            creating robust citizen science programs—we will turn our attention to these ambitious next steps.
           </p>
-          <ButtonLink href='#' label='Become part of our journey' style='outline' />
+          <p>
+            These are not distant dreams but planned evolutions of our mission. Each success builds the foundation for
+            what comes next, ensuring that Dr. X's legacy continues to grow and inspire future generations of ocean
+            explorers.
+          </p>
+          <div className='relative h-full rounded-md shadow-panel overflow-hidden'>
+            <Image src={water} alt='placeholder' fill className='object-cover object-center' />
+          </div>
+        </div>
+        <div className='flex flex-col gap-4'>
+          <div>
+            {timelineData.map((item, i) => (
+              <TimelineCard key={item.id} number={i + 1} {...item} />
+            ))}
+          </div>
+          <div className='panel flex flex-col items-center gap-4'>
+            <p>
+              This is just the beginning. As we grow, our vision expands. Join us in shaping the future of marine
+              research in Norway.
+            </p>
+            <ButtonLink href='#' label='Become part of our journey' style='outline' />
+          </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

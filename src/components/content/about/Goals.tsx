@@ -32,7 +32,14 @@ export function AboutGoals() {
     },
   ];
   return (
-    <section>
+    <section className='relative'>
+      <span
+        className='
+          -z-10 absolute inset-0
+          object-cover bg-center bg-fixed opacity-10
+        '
+        style={{ backgroundImage: 'url(placeholder-manet.png)' }}
+      ></span>
       <div className='grid gap-16 grid-cols-1 md:grid-cols-2'>
         <div className='relative'>
           <Image
