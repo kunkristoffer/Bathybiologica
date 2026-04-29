@@ -1,7 +1,6 @@
 import { Section } from '@/components/layout/base/section';
 import { ButtonLink } from '@/components/ui/buttons/buttonLink';
-import { IconButton } from '@/components/ui/buttons/IconButton';
-import { CardData, IconTitleTextCard } from '@/components/ui/cards/IconTitleText';
+import { type CardData, IconTitleTextCard } from '@/components/ui/cards/IconTitleText';
 import { Tagline } from '@/components/ui/tags/Tagline';
 import { Building2, Handshake, Microscope, Users } from 'lucide-react';
 
@@ -40,6 +39,7 @@ export function AboutHow() {
       icon: Microscope,
     },
   ];
+
   return (
     <Section className='flex flex-col items-center gap-16'>
       <Tagline text='How We Do It' />
