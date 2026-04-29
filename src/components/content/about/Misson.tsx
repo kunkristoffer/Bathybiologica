@@ -1,12 +1,5 @@
-import { IconTitleTextCard } from '@/components/ui/cards/IconTitleText';
-import { Anchor, Book, Fish, LucideIcon, PersonStanding, Sun } from 'lucide-react';
-
-interface CardData {
-  id: string;
-  title: string;
-  text: string[];
-  icon: LucideIcon;
-}
+import { CardData, IconTitleTextCard } from '@/components/ui/cards/IconTitleText';
+import { Anchor, Book, Fish, PersonStanding } from 'lucide-react';
 
 export async function AboutMission() {
   const cardData: CardData[] = [
