@@ -1,7 +1,9 @@
 import { Section } from '@/components/layout/base/section';
 import { Tagline } from '@/components/ui/tags/Tagline';
 import { Heart } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import per from '@/assets/images/per-profile.jpg';
 
 export function AboutMemory() {
   return (
@@ -26,11 +28,17 @@ export function AboutMemory() {
           </p>
         </div>
         <div className='flex flex-col items-center justify-center gap-4 panel'>
-          <span className='size-24 bg-primary rounded-full border-2'></span>
+          <Image
+            src={per}
+            className='bg-primary rounded-full border-2 drop-shadow-2xl'
+            alt='A picture of Per R. Flood in a suit smiling'
+            height={200}
+            width={200}
+          />
           <span>Dr. Per Robert Flood</span>
-          <span>Marine biologist & a loving father</span>
-          <span className='italic'>
-            Every dive reveals something new. Every sample tells a story. Our job is to listen.
+          <span className='text-xs'>Marine biologist, doctor in medicine and a loving father</span>
+          <span className='italic text-center'>
+            "Every dive reveals something new. Every sample tells a story. Our job is to listen."
           </span>
           <span className='text-xs'>
             Founder of the original Bathybiologica company, whose work laid the foundation for everything we do today.
