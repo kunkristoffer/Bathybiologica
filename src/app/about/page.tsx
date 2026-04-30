@@ -5,6 +5,7 @@ import { AboutHow } from '@/components/content/about/How';
 import { AboutMemory } from '@/components/content/about/Memory';
 import { AboutMission } from '@/components/content/about/Misson';
 import { AboutProgress } from '@/components/content/about/Progress';
+import { AboutTeam } from '@/components/content/about/Team';
 import { AboutTransparency } from '@/components/content/about/Transparency';
 import { AboutVision } from '@/components/content/about/Vision';
 import { AboutWhy } from '@/components/content/about/Why';
@@ -20,7 +21,7 @@ export default function About() {
       <AboutHow />
       <AboutProgress />
       <AboutVision />
-      {/* Founders */}
+      <AboutTeam />
       <AboutGetInvolved />
       <AboutTransparency />
     </main>
