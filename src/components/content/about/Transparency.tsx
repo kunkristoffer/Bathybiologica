@@ -1,5 +1,5 @@
 import { Section } from '@/components/layout/base/section';
-import { CardData, IconTitleTextCard } from '@/components/ui/cards/IconTitleText';
+import { CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
 import { Tagline } from '@/components/ui/tags/Tagline';
 import { CircleDot, Globe, LibraryBig } from 'lucide-react';
 

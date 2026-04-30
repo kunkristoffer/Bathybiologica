@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import manet from '@/assets/images/placeholder-manet.png';
-import { IconTitleTextCard, type CardData } from '@/components/ui/cards/IconTitleText';
+import { IconTitleTextCard, type CardData } from '@/components/ui/cards/about/IconTitleText';
 import { CircleDot, Globe, LibraryBig, Sun } from 'lucide-react';
 import { Tagline } from '@/components/ui/tags/Tagline';
 

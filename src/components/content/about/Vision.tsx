@@ -3,7 +3,7 @@ import { Tagline } from '@/components/ui/tags/Tagline';
 import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import water from '@/assets/images/placeholder-water.jpg';
-import { TimelineCard, TimelineItem } from '@/components/ui/cards/TimelineCard';
+import { TimelineCard, TimelineItem } from '@/components/ui/cards/about/TimelineCard';
 import { ButtonLink } from '@/components/ui/buttons/buttonLink';
 
 export function AboutVision() {
