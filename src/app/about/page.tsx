@@ -1,3 +1,4 @@
+import { AboutGetInvolved } from '@/components/content/about/GetInvolved';
 import { AboutGoals } from '@/components/content/about/Goals';
 import { AboutHero } from '@/components/content/about/Hero';
 import { AboutHow } from '@/components/content/about/How';
@@ -18,7 +19,7 @@ export default function About() {
       <AboutHow />
       <AboutProgress />
       <AboutVision />
-      {/* get involved */}
+      <AboutGetInvolved />
       {/* transparency */}
     </main>
   );
