@@ -33,7 +33,7 @@ export function AboutWhy() {
   return (
     <Section className='flex flex-col gap-16'>
       <Tagline text='Why it matters' />
-      <h1>Why are we doing this</h1>
+      <h1>When Opportunities in Science Is Out of Reach</h1>
       <div className='grid gap-8 md:grid-cols-3'>
         {cardData.map((item) => (
           <IconTitleTextCard key={item.id} {...item} />

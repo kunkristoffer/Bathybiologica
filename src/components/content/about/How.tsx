@@ -42,8 +42,8 @@ export function AboutHow() {
 
   return (
     <Section className='flex flex-col items-center gap-16'>
-      <Tagline text='How We Do It' />
-      <h2>Our Approach to Change</h2>
+      <Tagline text='Our Approach' />
+      <h2>Creating Spaces for Science to Happen</h2>
       <p>
         We believe that sustainable change comes from working with existing communities and resources, not replacing
         them.

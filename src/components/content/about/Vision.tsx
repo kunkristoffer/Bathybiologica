@@ -40,7 +40,7 @@ export function AboutVision() {
       ></span>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
         <div className='flex flex-col gap-4'>
-          <Tagline text='Looking Ahead' icon={Sparkles} />
+          <Tagline text="What's Next" icon={Sparkles} />
           <h2>Our Vision for the Future</h2>
           <p>
             Once we achieve our initial goals, establishing research stations, building community partnerships, and
