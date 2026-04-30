@@ -25,7 +25,7 @@ export function AboutTransparency() {
     },
   ];
   return (
-    <Section className='flex flex-col gap-16'>
+    <Section id='transparency' className='flex flex-col gap-16'>
       <Tagline text='Transparency' />
       <h2>We are committed to openness, accountability, and scientific integrity in everything we do.</h2>
       <div className='panel grid gap-8 grid-cols-1 md:grid-cols-3'>

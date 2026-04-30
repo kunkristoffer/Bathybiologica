@@ -29,7 +29,7 @@ export function AboutTeam() {
     },
   ];
   return (
-    <Section className='flex flex-col gap-16'>
+    <Section id='team' className='flex flex-col gap-16'>
       <Tagline text='Who We Are' />
       <h1>A Team Driven by Curiosity and Purpose</h1>
       <p>The people behind Bathybiologica's mission to democratize marine research across Norway.</p>

@@ -7,7 +7,7 @@ import per from '@/assets/images/per-profile.jpg';
 
 export function AboutMemory() {
   return (
-    <Section className='flex flex-col gap-16'>
+    <Section id='memory' className='flex flex-col gap-16'>
       <Tagline text='In Loving Memory' icon={Heart} />
       <div className='grid gap-16 grid-cols-1 md:grid-cols-2'>
         <div className='flex flex-col gap-4'>

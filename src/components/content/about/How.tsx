@@ -41,7 +41,7 @@ export function AboutHow() {
   ];
 
   return (
-    <Section className='flex flex-col items-center gap-16'>
+    <Section id='how' className='flex flex-col items-center gap-16'>
       <Tagline text='Our Approach' />
       <h2>Creating Spaces for Science to Happen</h2>
       <p>

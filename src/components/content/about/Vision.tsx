@@ -30,7 +30,7 @@ export function AboutVision() {
     },
   ];
   return (
-    <section className='relative'>
+    <section id='vision' className='relative'>
       <span
         className='
           -z-10 absolute inset-0

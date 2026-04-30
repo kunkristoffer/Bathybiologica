@@ -34,7 +34,7 @@ export async function AboutMission() {
   ];
 
   return (
-    <Section className='flex flex-col gap-16'>
+    <Section id='mission' className='flex flex-col gap-16'>
       <div className='flex flex-col items-center gap-6'>
         <Tagline text='Our Mission' />
         <h2>Bridging Research and Community</h2>

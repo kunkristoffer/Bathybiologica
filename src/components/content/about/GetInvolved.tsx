@@ -38,7 +38,7 @@ export function AboutGetInvolved() {
   ];
 
   return (
-    <Section className='flex flex-col gap-16'>
+    <Section id='get-involved' className='flex flex-col gap-16'>
       <Tagline text='Get involved' />
       <h2>Join the movement for accessible marine science</h2>
       <p>All contributions directly advance open, accessible marine science in Norway.</p>

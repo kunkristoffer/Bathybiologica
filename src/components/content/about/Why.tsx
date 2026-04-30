@@ -31,7 +31,7 @@ export function AboutWhy() {
     },
   ];
   return (
-    <Section className='flex flex-col gap-16'>
+    <Section id='why' className='flex flex-col gap-16'>
       <Tagline text='Why it matters' />
       <h1>When Opportunities in Science Is Out of Reach</h1>
       <div className='grid gap-8 md:grid-cols-3'>

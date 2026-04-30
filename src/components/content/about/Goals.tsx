@@ -32,7 +32,7 @@ export function AboutGoals() {
     },
   ];
   return (
-    <section className='relative'>
+    <section id='goals' className='relative'>
       <span
         className='
           -z-10 absolute inset-0
