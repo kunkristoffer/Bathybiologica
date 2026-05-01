@@ -12,7 +12,7 @@ import { AboutWhy } from '@/components/content/about/Why';
 
 export default function About() {
   return (
-    <main className='gap-16'>
+    <main className=''>
       <AboutHero />
       <AboutWhy />
       <AboutMission />
