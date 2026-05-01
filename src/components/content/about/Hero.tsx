@@ -1,4 +1,4 @@
-import { VideoBackground } from '@/components/ui/parallaxing/VideoBackground';
+import { VideoBackground } from '@/components/layout/base/VideoBackground';
 import Link from 'next/link';
 
 export async function AboutHero() {
