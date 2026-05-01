@@ -58,15 +58,17 @@ export async function AboutHero() {
         style={{ backgroundImage: 'url(hero-water.jpg)' }}
       ></div>
       <div className='group container m-auto p-16 flex flex-col justify-center items-center gap-12'>
-        <h1 className='text-8xl'>Bathybiologica</h1>
+        <h1 className='text-4xl md:text-8xl'>Bathybiologica</h1>
         <p>
           Preserving the legacy of marine science while nurturing the next generation of ocean explorers in Norwegian
           waters
         </p>
         <span
-          className='invisible opacity-0
-       group-hover:visible
-       group-hover:opacity-100 flex gap-x-16 gap-y-4 p-4 flex-wrap justify-center panel bg-background/80 duration-200'
+          className='
+            invisible opacity-0 group-hover:visible group-hover:opacity-100
+            flex gap-x-16 gap-y-4 p-4 flex-wrap justify-center
+            panel bg-background/80 duration-200
+          '
         >
           {links.map((link) => (
             <Link
