@@ -16,7 +16,7 @@ type GetInvolvedCardProps = GetInvolvedData & ComponentProps<'div'>;
 
 export function AboutGetInvolvedCard({ title, text, tag, cta }: GetInvolvedCardProps) {
   return (
-    <div className='flex flex-col gap-8'>
+    <div className='flex flex-col gap-8 panel bg-transparent'>
       <span className='text-primary'>{tag}</span>
       <h3>{title}</h3>
       <p className='flex-1'>{text}</p>
