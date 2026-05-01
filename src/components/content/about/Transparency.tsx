@@ -30,7 +30,7 @@ export function AboutTransparency() {
       <h2>We are committed to openness, accountability, and scientific integrity in everything we do.</h2>
       <div className='panel grid gap-8 grid-cols-1 md:grid-cols-3'>
         {cardData.map((item) => (
-          <IconTitleTextCard key={item.id} {...item} />
+          <IconTitleTextCard key={item.id} {...item} className='border-0 shadow-none' />
         ))}
         <span className='md:col-span-3'>
           <p>
