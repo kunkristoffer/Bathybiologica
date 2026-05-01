@@ -39,8 +39,8 @@ export function AboutVision() {
         style={{ backgroundImage: 'url(hero-water.jpg)' }}
       ></span>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
+        <Tagline text="What's Next" icon={Sparkles} className='md:col-span-2' />
         <div className='flex flex-col gap-4'>
-          <Tagline text="What's Next" icon={Sparkles} />
           <h2>Our Vision for the Future</h2>
           <p>
             Once we achieve our initial goals, establishing research stations, building community partnerships, and
