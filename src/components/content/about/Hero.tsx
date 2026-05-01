@@ -51,7 +51,7 @@ export async function AboutHero() {
         bg-linear-to-b from-transparent to-background
       '
     >
-      <VideoBackground>
+      <VideoBackground isParallax>
         <source src='/about-us-hero.webm' type='video/webm' />
         <source src='/gossamerworm-placeholder.mp4' type='video/mp4' />
       </VideoBackground>
