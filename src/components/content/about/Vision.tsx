@@ -30,12 +30,9 @@ export function AboutVision() {
     },
   ];
   return (
-    <section id='vision' className='relative'>
+    <section id='vision' className='relative bg-background'>
       <span
-        className='
-          -z-10 absolute inset-0
-          object-cover bg-center bg-fixed opacity-10
-        '
+        className='absolute inset-0 object-cover bg-center bg-fixed opacity-10'
         style={{ backgroundImage: 'url(hero-water.jpg)' }}
       ></span>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-16'>
