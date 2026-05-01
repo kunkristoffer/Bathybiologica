@@ -30,7 +30,7 @@ export function AboutProgress() {
   return (
     <Section id='progress' className='flex flex-col gap-16'>
       <Tagline text='Where We Are Today' />
-      <div className='flex gap-8'>
+      <div className='grid gap-8 grid-cols-1 md:grid-cols-3'>
         {progressData.map((item) => (
           <AboutProgressCard key={item.id} {...item} />
         ))}
