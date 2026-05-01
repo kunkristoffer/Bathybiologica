@@ -1,3 +1,4 @@
+import { VideoBackground } from '@/components/ui/parallaxing/VideoBackground';
 import Link from 'next/link';
 
 export async function AboutHero() {
@@ -46,17 +47,14 @@ export async function AboutHero() {
   return (
     <div
       className='
-      relative flex h-[calc(100svh-var(--header-h))] overflow-clip
-      bg-linear-to-b from-transparent to-background
-    '
+        relative flex h-[calc(100svh-var(--header-h))] overflow-hidden
+        bg-linear-to-b from-transparent to-background
+      '
     >
-      <div
-        className='
-          -z-10 absolute inset-0
-          object-cover bg-center bg-fixed
-        '
-        style={{ backgroundImage: 'url(hero-water.jpg)' }}
-      ></div>
+      <VideoBackground>
+        <source src='/about-us-hero.webm' type='video/webm' />
+        <source src='/gossamerworm-placeholder.mp4' type='video/mp4' />
+      </VideoBackground>
       <div className='group container m-auto p-16 flex flex-col justify-center items-center gap-12'>
         <h1 className='text-4xl md:text-8xl'>Bathybiologica</h1>
         <p>
