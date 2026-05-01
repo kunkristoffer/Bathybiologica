@@ -48,7 +48,7 @@ export async function AboutHero() {
     <div
       className='
         relative flex h-[calc(100svh-var(--header-h))] overflow-hidden
-        bg-linear-to-b from-transparent to-background
+        bg-linear-to-b from-transparent from-50% to-background text-white
       '
     >
       <VideoBackground isParallax>

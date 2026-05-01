@@ -24,6 +24,7 @@
 
   /* Text */
   --text: light-dark(hsl(270, 5%, 20%), hsl(0, 0%, 100%));
+  --text-inverted: light-dark(hsl(0, 0%, 100%), hsl(270, 5%, 20%));
   --text-muted: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
   --text-panel: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
   --text-surface: light-dark(hsl(from var(--text) h s calc(l + 20)), hsl(from var(--text) h s calc(l - 20)));
@@ -184,6 +185,7 @@
 
   /* Typography */
   --color-text: var(--text);
+  --color-text-inverted: var(--text-inverted);
   --color-text-input: var(--text-input);
   --color-text-muted: var(--text-muted);
   --color-text-input-muted: var(--text-input-muted);
