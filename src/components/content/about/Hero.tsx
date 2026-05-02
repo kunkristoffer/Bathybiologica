@@ -56,8 +56,8 @@ export async function AboutHero() {
         <source src='/gossamerworm-placeholder.mp4' type='video/mp4' />
       </VideoBackground>
       <div className='group container m-auto p-16 flex flex-col justify-center items-center gap-12'>
-        <h1 className='text-4xl md:text-8xl'>Bathybiologica</h1>
-        <p>
+        <h1 className='text-4xl md:text-8xl text-shadow-lg/25 text-shadow-tertiary'>Bathybiologica</h1>
+        <p className='text-shadow-lg/25 text-shadow-tertiary'>
           Preserving the legacy of marine science while nurturing the next generation of ocean explorers in Norwegian
           waters
         </p>
