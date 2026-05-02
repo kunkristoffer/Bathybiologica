@@ -61,7 +61,7 @@ export function VideoBackground({
     <>
       <div
         ref={containerRef}
-        className={`-z-10 absolute inset-0 object-cover bg-center bg-fixed`}
+        className={`-z-10 absolute inset-0 bg-cover bg-center bg-fixed`}
         style={{ backgroundImage: `url(${background})` }}
         {...containerProps}
       ></div>
