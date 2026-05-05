@@ -1,6 +1,6 @@
 import { AboutGetInvolved } from '@/components/content/about/GetInvolved';
 import { AboutGoals } from '@/components/content/about/Goals';
-import { AboutHero } from '@/components/content/about/Hero';
+import { AboutHero } from '@/components/content/about/Hero1';
 import { AboutHow } from '@/components/content/about/How';
 import { AboutMemory } from '@/components/content/about/Memory';
 import { AboutMission } from '@/components/content/about/Misson';
@@ -12,7 +12,7 @@ import { AboutWhy } from '@/components/content/about/Why';
 
 export default function About() {
   return (
-    <main className=''>
+    <main>
       <AboutHero />
       <AboutWhy />
       <AboutMission />
