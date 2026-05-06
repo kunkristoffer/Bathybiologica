@@ -1,10 +1,11 @@
-import { type GetInvolvedData, AboutGetInvolvedCard } from '@/components/ui/cards/about/GetInvolvedCard';
+import Link from 'next/link';
 import { Section } from '@/components/layout/base/sections/Base';
-import { ButtonLink } from '@/components/ui/buttons/buttonLink';
 import { Tagline } from '@/components/ui/tags/Tagline';
+import { ButtonLink } from '@/components/ui/buttons/buttonLink';
+import { AboutCard } from '@/components/ui/cards/AboutCard';
 
 export function AboutGetInvolved() {
-  const cardData: GetInvolvedData[] = [
+  const cardData = [
     {
       id: 'access-stations-collaborate',
       title: 'Access Stations & Collaborate',
@@ -43,8 +44,13 @@ export function AboutGetInvolved() {
       <h2>Join the movement for accessible marine science</h2>
       <p>All contributions directly advance open, accessible marine science in Norway.</p>
       <div className='grid gap-8 grid-cols-1 md:grid-cols-3'>
-        {cardData.map((item) => (
-          <AboutGetInvolvedCard key={item.id} {...item} />
+        {cardData.map((card) => (
+          <AboutCard key={card.id} title={card.title} tag={card.tag} iconPos='top' className='gap-8 bg-transparent'>
+            <p className='pb-4'>{card.text}</p>
+            <Link href={card.cta.href} className='mt-auto text-primary hover:underline'>
+              {card.cta.label}
+            </Link>
+          </AboutCard>
         ))}
       </div>
       <div className='panel flex gap-16'>
