@@ -2,6 +2,7 @@ import { Circle, Moon, Sun } from 'lucide-react';
 import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
 import { Tagline } from '@/components/ui/tags/Tagline';
 import { Section } from '@/components/layout/base/sections/Base';
+import { AboutCard } from '@/components/ui/cards/AboutCard';
 
 export function AboutWhy() {
   const cardData: CardData[] = [
@@ -35,8 +36,10 @@ export function AboutWhy() {
       <Tagline text='Why it matters' />
       <h1>When Opportunities in Science Is Out of Reach</h1>
       <div className='grid gap-8 md:grid-cols-3'>
-        {cardData.map((item) => (
-          <IconTitleTextCard key={item.id} {...item} />
+        {cardData.map((card) => (
+          <AboutCard key={card.id} title={card.title} icon={card.icon} iconPos='top' className='bg-transparent'>
+            <p>{card.text}</p>
+          </AboutCard>
         ))}
       </div>
       <p>

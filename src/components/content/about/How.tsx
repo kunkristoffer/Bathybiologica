@@ -1,11 +1,11 @@
 import { Building2, Handshake, Microscope, Users } from 'lucide-react';
-import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
 import { ButtonLink } from '@/components/ui/buttons/buttonLink';
 import { Tagline } from '@/components/ui/tags/Tagline';
 import { Section } from '@/components/layout/base/sections/Base';
+import { AboutCard } from '@/components/ui/cards/AboutCard';
 
 export function AboutHow() {
-  const cardData: CardData[] = [
+  const cardData = [
     {
       id: 'Research Station Network',
       title: 'Research Station Network',
@@ -48,9 +48,11 @@ export function AboutHow() {
         We believe that sustainable change comes from working with existing communities and resources, not replacing
         them.
       </p>
-      <div className='grid gap-4 grid-cols-1 md:grid-cols-2'>
+      <div className='grid gap-4 grid-cols-1 md:grid-cols-2 auto-rows-fr'>
         {cardData.map((card) => (
-          <IconTitleTextCard key={card.id} iconPos='left' {...card} />
+          <AboutCard key={card.id} title={card.title} icon={card.icon} iconPos='left' className='bg-transparent'>
+            <p>{card.text}</p>
+          </AboutCard>
         ))}
       </div>
       <ButtonLink href='#' label='Get Involved with Our Work' />

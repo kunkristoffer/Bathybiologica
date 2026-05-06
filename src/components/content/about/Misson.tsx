@@ -1,10 +1,10 @@
 import { Anchor, Book, Fish, PersonStanding } from 'lucide-react';
-import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import { Section } from '@/components/layout/base/sections/Base';
+import { AboutCard } from '@/components/ui/cards/AboutCard';
+import { Tagline } from '@/components/ui/tags/Tagline';
 
 export async function AboutMission() {
-  const cardData: CardData[] = [
+  const cardData = [
     {
       id: 'biodiversity-awareness',
       title: 'Biodiversity Awareness',
@@ -43,7 +43,9 @@ export async function AboutMission() {
       </p>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
         {cardData.map((card) => (
-          <IconTitleTextCard key={card.id} {...card} />
+          <AboutCard key={card.id} title={card.title} icon={card.icon} iconPos='top'>
+            <p>{card.text}</p>
+          </AboutCard>
         ))}
       </div>
       <span className=''>

@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import manet from '@/assets/images/placeholder-manet.png';
-import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
 import { CircleDot, Globe, LibraryBig, Sun } from 'lucide-react';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import { SectionParallax } from '@/components/layout/base/sections/Parallax';
+import { Tagline } from '@/components/ui/tags/Tagline';
+import { AboutCard } from '@/components/ui/cards/AboutCard';
 
 export function AboutGoals() {
-  const cardData: CardData[] = [
+  const cardData = [
     {
       id: 'lower-barriers-to-research',
       title: 'Lower Barriers to Research',
@@ -59,7 +59,9 @@ export function AboutGoals() {
         </p>
         <div className='flex flex-col gap-4'>
           {cardData.map((card) => (
-            <IconTitleTextCard key={card.id} iconPos='left' {...card} />
+            <AboutCard key={card.id} title={card.title} icon={card.icon} iconPos='left'>
+              <p>{card.text}</p>
+            </AboutCard>
           ))}
         </div>
       </div>
