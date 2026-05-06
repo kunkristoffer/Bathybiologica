@@ -1,6 +1,6 @@
 import { AboutGetInvolved } from '@/components/content/about/GetInvolved';
 import { AboutGoals } from '@/components/content/about/Goals';
-import { AboutHero } from '@/components/content/about/Hero';
+import { AboutHero } from '@/components/content/about/HeroTextSwap';
 import { AboutHow } from '@/components/content/about/How';
 import { AboutMemory } from '@/components/content/about/Memory';
 import { AboutMission } from '@/components/content/about/Misson';
