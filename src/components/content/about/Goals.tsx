@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import manet from '@/assets/images/placeholder-manet.png';
-import { IconTitleTextCard, type CardData } from '@/components/ui/cards/about/IconTitleText';
+import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
 import { CircleDot, Globe, LibraryBig, Sun } from 'lucide-react';
 import { Tagline } from '@/components/ui/tags/Tagline';
+import { SectionParallax } from '@/components/layout/base/sections/Parallax';
 
 export function AboutGoals() {
   const cardData: CardData[] = [
@@ -32,38 +33,36 @@ export function AboutGoals() {
     },
   ];
   return (
-    <section id='goals' className='relative bg-background'>
-      <span
-        className='absolute inset-0 object-cover bg-center bg-fixed opacity-10'
-        style={{ backgroundImage: 'url(placeholder-manet.png)' }}
-      ></span>
-      <div className='grid gap-16 grid-cols-1 md:grid-cols-2'>
-        <div className='relative'>
-          <Image
-            src={manet}
-            alt='placeholder manet'
-            placeholder='blur'
-            fill
-            className='object-cover aspect-square rounded-md shadow-panel'
-          />
-          <span className='absolute inset-2 top-auto text-text-muted italic text-center'>
-            Cold water marine life thrive in the unique conditions of Norwegian fjords
-          </span>
-        </div>
+    <SectionParallax
+      id='goals'
+      image='placeholder-manet.png'
+      containerClassName='grid gap-16 grid-cols-1 md:grid-cols-2'
+    >
+      <div className='relative'>
+        <Image
+          src={manet}
+          alt='placeholder manet'
+          placeholder='blur'
+          fill
+          className='object-cover aspect-square rounded-md shadow-panel'
+        />
+        <span className='absolute inset-2 top-auto text-text-muted italic text-center'>
+          Cold water marine life thrive in the unique conditions of Norwegian fjords
+        </span>
+      </div>
+      <div className='flex flex-col gap-4'>
+        <Tagline text='What We Want to Achieve' icon={Sun} />
+        <h2>Our Vision for Norwegian Waters</h2>
+        <p>
+          Every goal we set is designed to bring us closer to a future where marine research is accessible, knowledge is
+          shared, and our oceans are understood and protected.
+        </p>
         <div className='flex flex-col gap-4'>
-          <Tagline text='What We Want to Achieve' icon={Sun} />
-          <h2>Our Vision for Norwegian Waters</h2>
-          <p>
-            Every goal we set is designed to bring us closer to a future where marine research is accessible, knowledge
-            is shared, and our oceans are understood and protected.
-          </p>
-          <div className='flex flex-col gap-4'>
-            {cardData.map((card) => (
-              <IconTitleTextCard key={card.id} iconPos='left' {...card} />
-            ))}
-          </div>
+          {cardData.map((card) => (
+            <IconTitleTextCard key={card.id} iconPos='left' {...card} />
+          ))}
         </div>
       </div>
-    </section>
+    </SectionParallax>
   );
 }

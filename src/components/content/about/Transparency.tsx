@@ -1,7 +1,7 @@
-import { Section } from '@/components/layout/base/section';
-import { CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import { CircleDot, Globe, LibraryBig } from 'lucide-react';
+import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
+import { Section } from '@/components/layout/base/sections/Base';
+import { Tagline } from '@/components/ui/tags/Tagline';
 
 export function AboutTransparency() {
   const cardData: CardData[] = [
@@ -25,7 +25,7 @@ export function AboutTransparency() {
     },
   ];
   return (
-    <Section id='transparency' className='flex flex-col gap-16'>
+    <Section id='transparency'>
       <Tagline text='Transparency' />
       <h2>We are committed to openness, accountability, and scientific integrity in everything we do.</h2>
       <div className='panel grid gap-8 grid-cols-1 md:grid-cols-3'>
@@ -33,7 +33,7 @@ export function AboutTransparency() {
           <IconTitleTextCard key={item.id} {...item} className='border-0 shadow-none' />
         ))}
         <span className='md:col-span-3'>
-          <p>
+          <p className='text-center'>
             Our commitment to transparency ensures that supporters, researchers, and communities can trust that their
             contributions are making a real difference in marine conservation and scientific accessibility.
           </p>

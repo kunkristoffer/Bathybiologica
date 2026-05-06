@@ -1,8 +1,8 @@
-import { Section } from '@/components/layout/base/section';
-import { ButtonLink } from '@/components/ui/buttons/buttonLink';
-import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import { Building2, Handshake, Microscope, Users } from 'lucide-react';
+import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
+import { ButtonLink } from '@/components/ui/buttons/buttonLink';
+import { Tagline } from '@/components/ui/tags/Tagline';
+import { Section } from '@/components/layout/base/sections/Base';
 
 export function AboutHow() {
   const cardData: CardData[] = [
@@ -41,7 +41,7 @@ export function AboutHow() {
   ];
 
   return (
-    <Section id='how' className='flex flex-col items-center gap-16'>
+    <Section id='how'>
       <Tagline text='Our Approach' />
       <h2>Creating Spaces for Science to Happen</h2>
       <p>

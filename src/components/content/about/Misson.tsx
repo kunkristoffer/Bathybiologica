@@ -1,7 +1,7 @@
-import { Section } from '@/components/layout/base/section';
-import { CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import { Anchor, Book, Fish, PersonStanding } from 'lucide-react';
+import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
+import { Tagline } from '@/components/ui/tags/Tagline';
+import { Section } from '@/components/layout/base/sections/Base';
 
 export async function AboutMission() {
   const cardData: CardData[] = [
@@ -34,15 +34,13 @@ export async function AboutMission() {
   ];
 
   return (
-    <Section id='mission' className='flex flex-col gap-16'>
-      <div className='flex flex-col items-center gap-6'>
-        <Tagline text='Our Mission' />
-        <h2>Bridging Research and Community</h2>
-        <p>
-          Bathybiologica exists to democratize marine research in Norwegian waters, making it accessible to scientists
-          and citizens alike while preserving the knowledge and passion that drives ocean exploration.
-        </p>
-      </div>
+    <Section id='mission'>
+      <Tagline text='Our Mission' />
+      <h2>Bridging Research and Community</h2>
+      <p>
+        Bathybiologica exists to democratize marine research in Norwegian waters, making it accessible to scientists and
+        citizens alike while preserving the knowledge and passion that drives ocean exploration.
+      </p>
       <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
         {cardData.map((card) => (
           <IconTitleTextCard key={card.id} {...card} />

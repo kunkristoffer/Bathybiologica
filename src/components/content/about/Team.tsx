@@ -1,8 +1,8 @@
-import { Section } from '@/components/layout/base/section';
-import { AboutTeamMemberCard, TeamMember } from '@/components/ui/cards/about/TeamMemberCard';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import Image from 'next/image';
 import Link from 'next/link';
+import { type TeamMember, AboutTeamMemberCard } from '@/components/ui/cards/about/TeamMemberCard';
+import { Tagline } from '@/components/ui/tags/Tagline';
+import { Section } from '@/components/layout/base/sections/Base';
 
 export function AboutTeam() {
   const teamMembers: TeamMember[] = [
@@ -29,7 +29,7 @@ export function AboutTeam() {
     },
   ];
   return (
-    <Section id='team' className='flex flex-col gap-16'>
+    <Section id='team'>
       <Tagline text='Who We Are' />
       <h1>A Team Driven by Curiosity and Purpose</h1>
       <p>The people behind Bathybiologica's mission to democratize marine research across Norway.</p>

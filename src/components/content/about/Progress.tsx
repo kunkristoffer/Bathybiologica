@@ -1,9 +1,9 @@
-import { Section } from '@/components/layout/base/section';
-import { AboutProgressCard, AboutProgressData } from '@/components/ui/cards/about/ProgressCard';
-import { Tagline } from '@/components/ui/tags/Tagline';
-import Image from 'next/image';
 import water from '@/assets/images/placeholder-water.jpg';
-import { Activity, Dot, HeartPulse } from 'lucide-react';
+import Image from 'next/image';
+import { HeartPulse } from 'lucide-react';
+import { AboutProgressCard, type AboutProgressData } from '@/components/ui/cards/about/ProgressCard';
+import { Section } from '@/components/layout/base/sections/Base';
+import { Tagline } from '@/components/ui/tags/Tagline';
 
 export function AboutProgress() {
   const progressData: AboutProgressData[] = [
@@ -28,7 +28,7 @@ export function AboutProgress() {
   ];
 
   return (
-    <Section id='progress' className='flex flex-col gap-16'>
+    <Section id='progress'>
       <Tagline text='Where We Are Today' />
       <div className='grid gap-8 grid-cols-1 md:grid-cols-3'>
         {progressData.map((item) => (
@@ -37,7 +37,7 @@ export function AboutProgress() {
       </div>
       <div className='grid gap-16 grid-cols-1 md:grid-cols-2'>
         <div className='flex flex-col gap-8'>
-          <h3>Launching from Herdlafjorden, Norway's west coast</h3>
+          <h2>Launching from Herdlafjorden, Norway's west coast</h2>
           <p>
             Our first fully equipped science station is now operational and ready for fieldwork. We're actively pursuing
             partnerships with regional universities and research institutes.

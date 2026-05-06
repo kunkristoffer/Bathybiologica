@@ -1,13 +1,13 @@
-import { Section } from '@/components/layout/base/section';
-import { Tagline } from '@/components/ui/tags/Tagline';
-import { Heart } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
 import per from '@/assets/images/per-profile.jpg';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Heart } from 'lucide-react';
+import { Section } from '@/components/layout/base/sections/Base';
+import { Tagline } from '@/components/ui/tags/Tagline';
 
 export function AboutMemory() {
   return (
-    <Section id='memory' className='flex flex-col gap-16'>
+    <Section id='memory'>
       <Tagline text='In Loving Memory' icon={Heart} />
       <div className='grid gap-16 grid-cols-1 md:grid-cols-2'>
         <div className='flex flex-col gap-4'>

@@ -1,7 +1,7 @@
-import { Section } from '@/components/layout/base/section';
-import { CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
-import { Tagline } from '@/components/ui/tags/Tagline';
 import { Circle, Moon, Sun } from 'lucide-react';
+import { type CardData, IconTitleTextCard } from '@/components/ui/cards/about/IconTitleText';
+import { Tagline } from '@/components/ui/tags/Tagline';
+import { Section } from '@/components/layout/base/sections/Base';
 
 export function AboutWhy() {
   const cardData: CardData[] = [
@@ -31,7 +31,7 @@ export function AboutWhy() {
     },
   ];
   return (
-    <Section id='why' className='flex flex-col gap-16'>
+    <Section id='why'>
       <Tagline text='Why it matters' />
       <h1>When Opportunities in Science Is Out of Reach</h1>
       <div className='grid gap-8 md:grid-cols-3'>

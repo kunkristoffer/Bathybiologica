@@ -1,6 +1,6 @@
-import { Section } from '@/components/layout/base/section';
+import { type GetInvolvedData, AboutGetInvolvedCard } from '@/components/ui/cards/about/GetInvolvedCard';
+import { Section } from '@/components/layout/base/sections/Base';
 import { ButtonLink } from '@/components/ui/buttons/buttonLink';
-import { AboutGetInvolvedCard, GetInvolvedData } from '@/components/ui/cards/about/GetInvolvedCard';
 import { Tagline } from '@/components/ui/tags/Tagline';
 
 export function AboutGetInvolved() {
@@ -38,7 +38,7 @@ export function AboutGetInvolved() {
   ];
 
   return (
-    <Section id='get-involved' className='flex flex-col gap-16'>
+    <Section id='get-involved'>
       <Tagline text='Get involved' />
       <h2>Join the movement for accessible marine science</h2>
       <p>All contributions directly advance open, accessible marine science in Norway.</p>
