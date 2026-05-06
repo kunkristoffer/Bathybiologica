@@ -16,7 +16,12 @@ export function Section({ id, children, className, containerClassName, sectionCh
   return (
     <section id={id} className={twMerge('bg-background', className)} {...rest}>
       {sectionChildren}
-      <div className={twMerge('container mx-auto flex flex-col px-4 md:px-8 py-16 lg:py-24', containerClassName)}>
+      <div
+        className={twMerge(
+          'container mx-auto flex flex-col gap-8 md:gap-16 px-4 md:px-8 py-16 lg:py-24',
+          containerClassName
+        )}
+      >
         {children}
       </div>
     </section>
