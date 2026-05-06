@@ -10,12 +10,12 @@ interface CardProps extends ComponentProps<'div'> {
   iconPos?: 'top' | 'left' | 'inline';
 }
 
-export function IconTitleCard({ title, icon: Icon, iconPos = 'inline', className, children, ...rest }: CardProps) {
+export function AboutCard({ title, icon: Icon, iconPos = 'inline', className, children, ...rest }: CardProps) {
   return (
     <div
       className={twMerge(
         `
-          grid gap-4 panel
+          grid gap-4 panel h-full
           ${iconPos === 'top' ? `grid-cols-1 [grid-template-areas:'icon''title''content']` : `grid-cols-[auto_1fr]`}
           ${iconPos === 'inline' ? `[grid-template-areas:'icon_title''content_content']` : ''}
           ${iconPos === 'left' ? `[grid-template-areas:'icon_title''icon_content']` : ''}
@@ -28,7 +28,7 @@ export function IconTitleCard({ title, icon: Icon, iconPos = 'inline', className
       <h3 className={`[grid-area:title] self-center ${iconPos === 'top' ? 'justify-self-center' : ''} text-2xl`}>
         {title}
       </h3>
-      <div className={`[grid-area:content] flex flex-col gap-4`}>{children}</div>
+      <div className={`[grid-area:content] flex flex-col justify-around gap-4`}>{children}</div>
     </div>
   );
 }
