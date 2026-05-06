@@ -29,6 +29,7 @@ export function SectionParallax({
   image,
   imageClassName,
   children,
+  className,
   containerClassName,
   ...rest
 }: SectionParallaxProps) {
@@ -38,6 +39,7 @@ export function SectionParallax({
       children={children}
       containerClassName={containerClassName}
       sectionChildren={<ParallaxImage image={image} imageClassName={imageClassName} />}
+      className={twMerge('relative bg-background/80', className)}
       {...rest}
     />
   );
