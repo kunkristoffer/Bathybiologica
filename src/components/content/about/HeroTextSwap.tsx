@@ -18,7 +18,7 @@ export async function AboutHero() {
         <h1 className='flex max-sm:flex-col justify-center items-center text-4xl sm:text-6xl md:text-8xl'>
           <span className='pr-8'>Open</span>
           <span className='relative w-34 sm:w-54 md:w-92 h-12 sm:h-14 md:h-24'>
-            <span className='absolute w1'>Waters</span>
+            <span className='absolute w1'>Fjords</span>
             <span className='absolute w2'>Science</span>
             <span className='absolute w3'>Futures</span>
           </span>
@@ -29,8 +29,7 @@ export async function AboutHero() {
         </span>
         <span className='flex justify-center gap-8'>
           <ButtonLink href='#mission' label='Our mission' className='shadow-surface' />
-          <ButtonLink href='#team' label='Meet the team' style='outline' className='shadow-panel max-md:hidden' />
-          <ButtonLink href='#get-involved' label='Get involved' style='outline' className='shadow-panel' />
+          <ButtonLink href='#contact' label='Contact us' className='shadow-panel max-md:hidden' />
         </span>
       </div>
     </HeroSection>
