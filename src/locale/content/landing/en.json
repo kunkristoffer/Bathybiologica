@@ -13,7 +13,9 @@
   "contactUs": {
     "title": "Contact us",
     "p1": "Have questions about our work or how you can get involved? ",
-    "p2": "We'd love to hear from you."
+    "p2": "We'd love to hear from you.",
+    "cookie1": "This contact form is currently unavailable because it requires Google reCAPTCHA to help protect the site from spam and abuse. To use the form, you must first consent to the storage and processing of the reCAPTCHA token.",
+    "cookie2": "Please review Google's <privacyLabel>Privacy Policy</privacyLabel> and <tosLabel>Terms of Service</tosLabel>. If you agree, click <cookieText>Enable contact form</cookieText> to provide your consent and activate the form."
   },
   "contactUsForm": {
     "firstName": "First name",

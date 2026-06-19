@@ -13,7 +13,9 @@
   "contactUs": {
     "title": "Kontakt oss",
     "p1": "Har du noen spørsmål om oss, eller lurer på hvordan du kan bli involvert?",
-    "p2": "Vi ser fram til å høre fra deg"
+    "p2": "Vi ser fram til å høre fra deg",
+    "cookie1": "Dette kontaktskjemaet er for øyeblikket deaktivert fordi det benytter Google reCAPTCHA for å beskytte nettstedet mot spam og misbruk. For å kunne bruke skjemaet må du først samtykke til lagring og behandling av reCAPTCHA-tokenet.",
+    "cookie2": "Du kan lese mer i Googles <privacyLabel>personvernerklæring</privacyLabel> og <tosLabel>bruksvilkår</tosLabel>. Hvis du samtykker, kan du klikke på <cookieText>Aktiver kontaktskjema</cookieText> for å aktivere skjemaet."
   },
   "contactUsForm": {
     "firstName": "Fornavn",

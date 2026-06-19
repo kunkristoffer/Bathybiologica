@@ -1,17 +1,20 @@
 'use server';
 
-import { ContactForm } from '@/components/forms/contact';
-import { Section } from '@/components/layout/base/section';
-import { checkConsent } from '@/libs/legal/consent';
-import { RecaptchaProvider } from '@/providers/recaptcha/provider';
 import { getTranslations } from 'next-intl/server';
+import { checkConsent } from '@/libs/legal/consent';
+import { Section } from '@/components/layout/base/section';
+import { RecaptchaProvider } from '@/providers/recaptcha/provider';
+import { ContactForm } from '@/components/forms/contact';
+import { LandingContactFallback } from '@/components/content/landingPage/contactFallback';
 
 export async function LandingContact() {
   // Get translations
   const t = await getTranslations('landing.contactUs');
 
   // Check cookie consent
-  const showForm = await checkConsent('reCAPTCHA');
+  const hasConsent = await checkConsent('reCAPTCHA');
+
+  if (!hasConsent) return <LandingContactFallback />;
 
   return (
     <Section sectionId='contact' sectionClassName='' className='md:flex-row gap-12'>
@@ -20,11 +23,9 @@ export async function LandingContact() {
         <p>{t('p1')}</p>
         <p>{t('p2')}</p>
       </div>
-      {showForm && (
-        <RecaptchaProvider>
-          <ContactForm className='flex-1' />
-        </RecaptchaProvider>
-      )}
+      <RecaptchaProvider>
+        <ContactForm className='flex-1' />
+      </RecaptchaProvider>
     </Section>
   );
 }
