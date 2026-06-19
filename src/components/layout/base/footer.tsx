@@ -42,8 +42,9 @@ export function Footer() {
           <h2>{t('sitemap.title')}</h2>
           <nav className='flex flex-col'>
             <Link href='/'>{t('sitemap.landing')}</Link>
-            <Link href='/about'>{t('sitemap.about')}</Link>
-            <Link href='/history'>{t('sitemap.history')}</Link>
+            <p>{t('sitemap.about')}</p>
+            <p>{t('sitemap.history')}</p>
+            <p>{t('sitemap.projects')}</p>
           </nav>
         </div>
         <div className='flex flex-col gap-4'>
